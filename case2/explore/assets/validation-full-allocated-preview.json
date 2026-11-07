@@ -1,0 +1,239 @@
+{
+  "render_type": "CPU_MODEL_DRAWING_NOT_BROWSER_SCREENSHOT",
+  "bundle_file": "E:/timber/workspace/project/outputs/timber-case2-contour-bench/web/data/case2.json",
+  "bundle_sha256": "9304ce7233781ebf02ae867be04bef3f39d2e8dedb4cac8f2eb316fe969ddd90",
+  "geometry_id": "GEOM_CASE2_FULL_f7c344c7a354e884",
+  "allocated_source_count": 6,
+  "assigned_part_count": 716,
+  "renderer_source_sha256": "b63cd0a6171eb5f66a0788a7545785b36784ede0252ad3875d86587c96f178ea",
+  "source_geometry_functions": [
+    "normalizePart",
+    "extrudePart",
+    "projectScene"
+  ],
+  "texture_records": [
+    {
+      "scope": "CURRENT_FULL_BENCH",
+      "material_id": "111574",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\111574\\full-representative-appearance.png",
+      "sha256": "7920d3955b292cda593d263b639f1e3f94243bc6addfe0bd50f3ea47a4573e91",
+      "size_px": [
+        1291,
+        332
+      ],
+      "display_mm_per_pixel": 2,
+      "basis": "Existing wood-face crop from a saved photograph present in this listing; reused unchanged as representative appearance.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "CURRENT_FULL_BENCH",
+      "material_id": "111575",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\111575\\full-representative-appearance.png",
+      "sha256": "7920d3955b292cda593d263b639f1e3f94243bc6addfe0bd50f3ea47a4573e91",
+      "size_px": [
+        1291,
+        332
+      ],
+      "display_mm_per_pixel": 2,
+      "basis": "Existing wood-face crop from a saved photograph present in this listing; reused unchanged as representative appearance.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "CURRENT_FULL_BENCH",
+      "material_id": "115792",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\115792\\full-representative-appearance.png",
+      "sha256": "bd0ac73e31fb27a3a98d4e3caaf14f6b0b3c78b4c9d23c5f2376b25078b959df",
+      "size_px": [
+        1337,
+        361
+      ],
+      "display_mm_per_pixel": 2,
+      "basis": "Existing wood-face crop from a saved photograph present in this listing; reused unchanged as representative appearance.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "CURRENT_FULL_BENCH",
+      "material_id": "115794",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\115794\\full-representative-appearance.png",
+      "sha256": "3f68797bd28486b55e51c956c6229232a2359acfae49a7d7ce8691af7f7800d7",
+      "size_px": [
+        432,
+        104
+      ],
+      "display_mm_per_pixel": 1.25,
+      "basis": "Visible wood-face crop from this listing's own saved photograph, inside its saved active mask.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "CURRENT_FULL_BENCH",
+      "material_id": "118093",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\118093\\full-representative-appearance.png",
+      "sha256": "f825336eaeb0ec8fb3c48d833a44ec5ac705d7b00b4665992d1605557d979864",
+      "size_px": [
+        1108,
+        195
+      ],
+      "display_mm_per_pixel": 2,
+      "basis": "Existing wood-face crop from a saved photograph present in this listing; reused unchanged as representative appearance.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "CURRENT_FULL_BENCH",
+      "material_id": "118127",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\118127\\full-representative-appearance.png",
+      "sha256": "385c0e4f16a82ab7a295951c24f8c07947f53869734b2b32fef8bbd06e9cc868",
+      "size_px": [
+        420,
+        240
+      ],
+      "display_mm_per_pixel": 1.25,
+      "basis": "Visible wood-face crop from this listing's own saved photograph, inside its saved active mask.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "PRESERVED_PROTOTYPE",
+      "material_id": "118769",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\118769\\representative-wood-crop.png",
+      "sha256": "17664145e56840770d4d40a12e3ae52ff3219b68b9dac0542b3ed72f4fa70380",
+      "size_px": [
+        432,
+        95
+      ],
+      "display_mm_per_pixel": 1.25,
+      "basis": "Visible wood-face crop from saved listing photograph, view 02; shared representative seller imagery.",
+      "physical_uv_correspondence": false
+    },
+    {
+      "scope": "PRESERVED_PROTOTYPE",
+      "material_id": "118773",
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-case2-contour-bench\\web\\assets\\materials\\118773\\representative-wood-crop.png",
+      "sha256": "17664145e56840770d4d40a12e3ae52ff3219b68b9dac0542b3ed72f4fa70380",
+      "size_px": [
+        432,
+        95
+      ],
+      "display_mm_per_pixel": 1.25,
+      "basis": "Visible wood-face crop from saved listing photograph, view 02; shared representative seller imagery.",
+      "physical_uv_correspondence": false
+    }
+  ],
+  "images": [
+    {
+      "path": "C:\\Users\\yixu1\\Documents\\Codex\\2026-09-26\\lai\\work\\case2-contour\\full-preview\\full-bench-allocated-assembled.png",
+      "size_px": [
+        1600,
+        1000
+      ],
+      "sha256": "8430f3bff2f75d251414e7120d7c8baf4b9d80812120f844a7cce4f6472c63fc",
+      "checks": [
+        {
+          "scope": "CURRENT_FULL_BENCH",
+          "source_geometry_id": "GEOM_CASE2_FULL_f7c344c7a354e884",
+          "part_count": 716,
+          "source_bound_projected_part_count": 716,
+          "material_ids": [
+            "111574",
+            "111575",
+            "115792",
+            "115794",
+            "118093",
+            "118127"
+          ],
+          "visible_face_count": 2148,
+          "finite_projection": true,
+          "inside_panel": true,
+          "rect": {
+            "x": 20,
+            "y": 152,
+            "w": 1560,
+            "h": 626
+          },
+          "camera": {
+            "yaw": 1.12,
+            "pitch": 0.53,
+            "zoom": 1,
+            "pan": [
+              0,
+              0
+            ]
+          },
+          "longitudinal_alignment": "Actual source_coordinate_transform longitudinal/width axes, using the UI paintRepresentative projection formula."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\yixu1\\Documents\\Codex\\2026-09-26\\lai\\work\\case2-contour\\full-preview\\full-bench-allocated-detail-and-preserved-prototype.png",
+      "size_px": [
+        1600,
+        1000
+      ],
+      "sha256": "515bb8402d3192e34b24f7c86a1af3e5c24f6f7a2a254594404a349227ea4022",
+      "checks": [
+        {
+          "scope": "CURRENT_FULL_BENCH",
+          "source_geometry_id": "GEOM_CASE2_FULL_f7c344c7a354e884",
+          "part_count": 27,
+          "source_bound_projected_part_count": 27,
+          "material_ids": [
+            "111574",
+            "111575",
+            "115792",
+            "115794"
+          ],
+          "visible_face_count": 81,
+          "finite_projection": true,
+          "inside_panel": true,
+          "rect": {
+            "x": 35,
+            "y": 219,
+            "w": 745,
+            "h": 490
+          },
+          "camera": {
+            "yaw": 0.58,
+            "pitch": 0.28,
+            "zoom": 1.02,
+            "pan": [
+              0,
+              0
+            ]
+          },
+          "longitudinal_alignment": "Actual source_coordinate_transform longitudinal/width axes, using the UI paintRepresentative projection formula."
+        },
+        {
+          "scope": "PRESERVED_PROTOTYPE",
+          "source_geometry_id": "GEOM_CASE2_PROTO_038f49e7d3d7c578",
+          "part_count": 27,
+          "source_bound_projected_part_count": 27,
+          "material_ids": [
+            "118769",
+            "118773"
+          ],
+          "visible_face_count": 81,
+          "finite_projection": true,
+          "inside_panel": true,
+          "rect": {
+            "x": 805,
+            "y": 219,
+            "w": 745,
+            "h": 490
+          },
+          "camera": {
+            "yaw": 0.58,
+            "pitch": 0.28,
+            "zoom": 1.02,
+            "pan": [
+              0,
+              0
+            ]
+          },
+          "longitudinal_alignment": "Actual source_coordinate_transform longitudinal/width axes, using the UI paintRepresentative projection formula."
+        }
+      ]
+    }
+  ],
+  "source_evidence_modified": false,
+  "prior_preview_files_modified": false,
+  "new_inference": false,
+  "physical_slot_uv_correspondence": false
+}

@@ -1,0 +1,145 @@
+{
+  "material_id": "115200",
+  "title": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+  "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+  "snapshot": "2026-09-11T07:04:03.409381+00:00",
+  "dimensions": {
+    "length_mm": 1104.9,
+    "width_mm": 187.325,
+    "thickness_mm": 180.975,
+    "dimension_status": "RESOLVED",
+    "length_status": "EXACT",
+    "section_shape_status": "RECTANGULAR_CANDIDATE"
+  },
+  "quantity": 1,
+  "cpu_category": "E",
+  "evidence_status": "Cross-view support unresolved",
+  "provenance": {
+    "source_manifest_sha256": "e36162860cd32d2e17774d0baeb364e17d04d883468d690718e993ca09625716",
+    "screen_revision": "SCREEN_e0c6229ee20dfd62",
+    "saved_cloud_sha256": "c8c412dcccb4590d2eee91a224ee2911e94086195273faf11994d86beda6699b",
+    "source_record_sha256": "2c039bed585d1bebd0a3f28ce2ea4de7a26fd30dc0d1d53b5d89b451a83ae841",
+    "saved_display_points_reused": true,
+    "new_inference": false,
+    "export_preview_only": true
+  },
+  "seller": {
+    "origin": "SELLER_REPORTED",
+    "title": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+    "description": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5 $79 This magnificent beam chunk have been milled at our Earthwise Salvage Lumber Warehouse. The top/bottom is roughly square. There is some nail stains and cracks that add some character to the pieces. 15.87 BF ",
+    "categories": [
+      "Beams",
+      "Lumber",
+      "Old Growth Beams"
+    ],
+    "grade_claims": [],
+    "roles": [
+      {
+        "role": "beam",
+        "origin": "SELLER_REPORTED",
+        "basis": "SELLER_DECLARATION",
+        "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+        "source_field": "title",
+        "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+        "reason": "Seller title explicitly mentions beam."
+      }
+    ],
+    "quantity": {
+      "value": 1,
+      "basis": "PIECE",
+      "reported_retail_quantity": 1,
+      "snapshot_quantity_interpretation": "PIECE",
+      "pricing_basis": "PER_PIECE",
+      "physical_count_status": "EXPLICIT_PIECE_COUNT",
+      "reported_quantity": 1,
+      "piece_count": 1,
+      "evidence_text": "Individually priced dimensioned seller item: Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5 | $79"
+    },
+    "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+    "snapshot": "2026-09-11T07:04:03.409381+00:00",
+    "active_supply": true,
+    "sold": false,
+    "dimension_note": "Recorded seller dimensions; no physical measurement claimed."
+  },
+  "potential_roles": [
+    {
+      "role": "beam",
+      "origin": "SELLER_REPORTED",
+      "basis": "SELLER_DECLARATION",
+      "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+      "source_field": "title",
+      "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+      "reason": "Seller title explicitly mentions beam."
+    },
+    {
+      "role": "post",
+      "origin": "ESTIMATED",
+      "basis": "SELLER_DIMENSION_HYPOTHESIS",
+      "reason": "Stocky section: both axes at least 70 mm, aspect ratio at most 2.",
+      "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+      "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5"
+    }
+  ],
+  "visual_assessment": {
+    "origin": "ESTIMATED",
+    "available": true,
+    "supported_faces": 1,
+    "estimated_surface_coverage": 0.00948537561385335,
+    "roles": [],
+    "lightweight_rule_met": false,
+    "assessment": "Limited surface support",
+    "condition": "Block-like observed profile",
+    "reason": "1 supported proxy faces; 0.9% estimated surface coverage from saved photo support.",
+    "condition_reason": "Shape assessment from saved proxy proportions; no saved defect classifier supports a strength or decay grade.",
+    "issues": [],
+    "version": "SAVED_ALPHA_PROXY_UNION_192_v1",
+    "revision": "6a1cc7fe41e5595a065b",
+    "faces": [
+      {
+        "face_id": "P1-",
+        "estimated_supported_fraction": 0.1780327690972222,
+        "supported": true,
+        "patch_ids": [
+          "115200:02:0",
+          "115200:02:1"
+        ]
+      },
+      {
+        "face_id": "P1+",
+        "estimated_supported_fraction": 0.0,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P2-",
+        "estimated_supported_fraction": 0.0,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P2+",
+        "estimated_supported_fraction": 0.0,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P3-",
+        "estimated_supported_fraction": 0.0,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P3+",
+        "estimated_supported_fraction": 0.0,
+        "supported": false,
+        "patch_ids": []
+      }
+    ],
+    "method": "Union of alpha AND source-map supported pixels projected onto six observed proxy faces, sampled at 192 \u00d7 192 cell centres. A face counts at 10% supported area. Approximately 3 faces and 60% total area is the exploration rule.",
+    "reference": "Existing VGGT_ESTIMATED observed proxy; uncalibrated, approximate surface reference.",
+    "inferred_fill_included": false,
+    "overlaps_counted_once": true,
+    "inference_executed": false
+  },
+  "data_limit": "Seller dimensions are nominal. VGGT scene units are uncalibrated; no timber strength grade or defect-free condition is inferred."
+}

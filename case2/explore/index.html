@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SECOND GRAIN Case 2: source-linked reclaimed timber, direct-overlap strips, stock allocation and traceable assembly.">
+  <title>Overlap Bench — SECOND GRAIN</title>
+  <link rel="stylesheet" href="./case2.css?v=verification_1c11941e1306">
+<link rel="stylesheet" href="/second-grain-timber/assets/research-nav.css"></head>
+<body><nav class="research-nav" aria-label="Research cases"><a href="/second-grain-timber/cases/">Three cases / overview</a><a href="/second-grain-timber/#allocation">01 Cubbyhouse</a><a href="/second-grain-timber/case2/explore/#assembly" aria-current="page">02 Contour Bench</a><a href="/second-grain-timber/case3/#assembly">03 Open Pavilion</a></nav>
+  <a class="skip" href="#workspace">Skip to the case</a>
+  <header class="topbar">
+    <a class="brand" href="/second-grain-timber/cases/">SECOND <b>GRAIN</b><small>TIMBER AI · MATERIAL-LED DESIGN</small></a>
+    <div class="case-stamp">CASE 02 <span>OVERLAP BENCH</span></div>
+    <a class="back-link" href="/second-grain-timber/cases/">Three cases ↗</a>
+  </header><aside class="research-scope" aria-label="Completed scope and remaining validation"><strong>Full-bench allocation and preliminary structural analysis completed.</strong><p>716 installed strips · 120 source bars · three saved R03 load cases.</p><p><small>Physical work still open: fastener capacity, bearing friction and six levelling bearings. The four terminal three-point ties are analysis idealizations. Saved calculations do not constitute fabrication or construction approval.</small></p><a href="/second-grain-timber/cases/#boundaries">Compare the completed scope and open questions →</a></aside>
+  <main id="workspace"><p class="caption"><a href="/second-grain-timber/case2/#film">Watch the 90-second case film →</a> · Explore the original saved interactive model below.</p>
+    <section class="case-intro">
+      <div><p class="eyebrow">FROM DISCRETE STOCK TO A CONTINUOUS SURFACE</p><h1>Many pieces.<br>One place to pause.</h1><p id="case-description">A straight-member bench that keeps every piece connected to its material source.</p></div>
+      <div class="intro-aside"><span class="case-number">02</span><p id="case-state" role="status">Loading the saved case…</p><p id="case-dimensions" class="mono"></p></div>
+    </section>
+    <nav class="workflow-tabs" aria-label="Case workflow" role="tablist">
+      <button id="tab-brief" data-tab="brief" role="tab" aria-selected="false" aria-controls="panel-brief" tabindex="-1"><span>01</span><b>Source Materials</b><small>Inventory & design intent</small></button>
+      <button id="tab-evidence" data-tab="evidence" role="tab" aria-selected="false" aria-controls="panel-evidence" tabindex="-1"><span>02</span><b>Usable Segments</b><small>Source · mask · points</small></button>
+      <button id="tab-allocation" data-tab="allocation" role="tab" aria-selected="false" aria-controls="panel-allocation" tabindex="-1"><span>03</span><b>Strip Allocation</b><small>Saved solver assignments</small></button>
+      <button id="tab-analysis" data-tab="analysis" role="tab" aria-selected="false" aria-controls="panel-analysis" tabindex="-1"><span>04</span><b>Straight Strip Cutting</b><small>Cut intervals & residuals</small></button>
+      <button id="tab-assembly" data-tab="assembly" role="tab" aria-selected="true" aria-controls="panel-assembly"><span>05</span><b>Bench Assembly</b><small>Three views & source tracing</small></button>
+      <button id="tab-verification" data-tab="verification" role="tab" aria-selected="false" aria-controls="panel-verification" tabindex="-1"><span>06</span><b>Verification</b><small>Connections & response</small></button>
+    </nav>
+    <div id="load-error" class="notice error" hidden></div>
+    <section id="case-metrics" class="metrics" aria-label="Saved case totals"></section>
+    <section id="scope-controls" class="scope-controls" hidden aria-label="Saved result scope"><div class="segmented"><button type="button" data-scope="full" aria-pressed="true">Full bench</button><button type="button" data-scope="detail" aria-pressed="false">S039–S041 detail</button><button type="button" data-scope="prototype" aria-pressed="false">Preserved prototype result</button></div><p id="scope-status" class="caption" role="status"></p></section>
+    <section id="panel-brief" role="tabpanel" aria-labelledby="tab-brief" hidden></section>
+    <section id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden></section>
+    <section id="panel-allocation" role="tabpanel" aria-labelledby="tab-allocation" hidden></section>
+    <section id="panel-assembly" role="tabpanel" aria-labelledby="tab-assembly">
+      <div id="prototype-summary" class="notice prototype-summary" hidden></div>
+      <div class="assembly-grid">
+        <section class="window model-window">
+          <div class="window-title"><strong>THE ASSEMBLED CASE / SELECT A PART TO FOLLOW ITS SOURCE</strong><span id="model-status" class="mono"></span></div>
+          <div id="allocation-playback-entry" class="model-toolbar playback-entry" hidden><div class="segmented" aria-label="Model display"><button type="button" data-model-mode="inspection" aria-pressed="true">Inspect model</button><button type="button" data-model-mode="allocation" aria-pressed="false">Cutting → allocation playback</button></div><span class="caption">Saved full-bench run · source bars → straight cuts → assigned strips</span></div>
+          <div id="inspection-toolbar" class="model-toolbar">
+            <div class="segmented" aria-label="Model arrangement"><button type="button" data-view="assembled" aria-pressed="true">Assembled</button><button type="button" data-view="exploded" aria-pressed="false">Exploded</button><button type="button" data-view="flat" aria-pressed="false">Laid flat</button></div>
+            <label>Station <select id="rib-filter"><option value="all">All stations</option></select></label>
+            <label class="appearance-toggle"><input id="show-appearance" type="checkbox" checked> Source appearance</label>
+            <button type="button" id="inspect-frame">Inspect one station</button><button type="button" id="reset-view">Reset view</button>
+          </div>
+          <div id="prototype-controls" class="model-toolbar prototype-controls" hidden><div class="segmented" aria-label="Prototype layout"><button id="layout-before" type="button" data-layout="before" aria-pressed="false">Before adaptation</button><button type="button" data-layout="after" aria-pressed="true">After adaptation</button></div><label><input id="show-context" type="checkbox" checked> Full bench context</label><button id="context-overview" type="button" aria-pressed="false">Full bench overview</button><span class="caption">Context appears in the assembled overview and cannot be selected.</span></div>
+          <div class="scene"><canvas id="case-model" tabindex="0" aria-label="Straight-member bench model. Drag to orbit, Shift-drag to pan, scroll to zoom. Select a part to inspect its source. Arrow keys orbit and zero resets."></canvas><div id="scene-label" class="scene-label">Loading saved geometry…</div><span class="scene-mark">SECOND GRAIN / CASE 02</span></div>
+          <div id="assembly-reveal-controls" class="assembly-player"><button id="play-assembly" type="button" aria-label="Reveal assembly">▶ Reveal assembly</button><label for="assembly-progress">Parts revealed</label><input id="assembly-progress" type="range" min="0" max="100" value="100"><output id="assembly-count"></output></div>
+          <div id="allocation-playback-controls" class="allocation-player" hidden><div class="allocation-player-row"><button id="play-allocation" type="button" disabled>Play</button><button id="replay-allocation" type="button" disabled>Replay</button><label for="allocation-timeline">Timeline</label><input id="allocation-timeline" type="range" min="0" max="58" step="0.05" value="0" disabled><output id="allocation-time">0:00 / 0:58</output></div><p id="allocation-playback-status" class="caption">Loading the saved allocation playback…</p><p class="caption">Click a strip to pause and inspect its saved source. This allocation visualization is not a validated assembly sequence.</p></div>
+          <div class="model-foot"><p>Drag to orbit · Shift-drag to pan · Scroll to zoom · Click a part to trace it.</p><p>Source-derived representative crops use an illustrative constant scale, with no tiling or exact UV claim. Unavailable appearance remains a diagram colour.</p><p>Full-thickness strips overlap on adjacent broad faces. No separate nodes or hardware are displayed.</p><p>Assembly order is an explanatory replay of saved parts, not an approved construction sequence.</p></div>
+        </section>
+        <aside id="selection-panel" class="window selection-panel" aria-live="polite"><div class="window-title"><strong>FOLLOW A PIECE</strong></div><div class="window-body"><p>Select a straight strip in any view.</p></div></aside>
+      </div>
+      <section class="window part-bank-window"><div class="window-title"><strong>MODELED MEMBER BANK</strong><label>Find <input id="part-search" type="search" placeholder="Part, frame, stock or material ID"></label></div><div id="part-bank" class="part-bank"></div></section>
+      <section id="allocation-video-window" class="window allocation-video-window" hidden><div class="window-title"><strong>CUTTING → ALLOCATION / SAVED VIDEO</strong><a href="./assets/case2-cutting-allocation.mp4" download>Download MP4</a></div><div class="window-body"><p><strong>Model/allocation animation; not a browser recording</strong></p><p class="caption">The full-bench allocation uses the same model renderer as the interactive playback above. It illustrates saved source intervals and assignments, not a validated assembly sequence.</p><video id="allocation-video" controls preload="metadata" aria-label="Saved full-bench cutting and allocation animation" src="./assets/case2-cutting-allocation.mp4"></video></div></section>
+    </section>
+    <section id="panel-analysis" role="tabpanel" aria-labelledby="tab-analysis" hidden></section>
+    <section id="panel-verification" role="tabpanel" aria-labelledby="tab-verification" hidden>
+      <div id="verification-run" class="notice" role="status">The latest analysis record has not been loaded.</div>
+      <div class="assembly-grid verification-grid">
+        <section class="window"><div class="window-title"><strong>FULL ASSEMBLED BENCH / PRELIMINARY RESPONSE</strong><button id="verification-reload" type="button">Reload saved analysis</button></div>
+          <div class="model-toolbar verification-toolbar"><label>Load case <select id="verification-loadcase" disabled><option>No saved load case</option></select></label><label>Colour <select id="verification-metric"><option value="displacement">Displacement</option><option value="axial">Axial force</option><option value="geometry">Geometry</option></select></label><label><input id="verification-deformed" type="checkbox" checked> Deformed node lines</label><label>Exaggeration ×<input id="verification-scale" type="number" value="50" min="1" max="5000" step="1"></label><label><input id="verification-reactions" type="checkbox"> Reactions</label><button id="verification-reset" type="button">Reset view</button></div>
+          <div class="scene verification-scene"><canvas id="verification-model" tabindex="0" aria-label="Complete assembled bench analysis model. Drag to orbit, shift-drag to pan, scroll to zoom. Select a strip, analytical element or support to inspect it."></canvas><div id="verification-scene-label" class="scene-label">Model render · undeformed assembled geometry</div></div>
+          <div class="model-foot"><p id="verification-deformation-label">Deformation results unavailable.</p><p>Model render, not a browser recording. The solid bench remains undeformed; deformed analytical node lines use linear interpolation. Dashed gray lines represent documented numerical offset arms.</p><p>Load and reaction arrows show location and direction at a common display length. One gravity indicator summarizes self-weight; its saved strip distribution remains in the table. Highlighted strips show the recorded seat patch. Read force magnitudes and totals in the saved result tables.</p><p>R03 is the accepted preliminary baseline. The former four terminal rotations are documented in the retained R02 history.</p><p>Drag to orbit · Shift-drag to pan · Scroll to zoom. Explosion and laid-flat controls remain in Assembly.</p></div>
+        </section>
+        <aside class="window selection-panel"><div class="window-title"><strong>INSPECT ANALYTICAL ELEMENT</strong></div><div class="window-body"><label class="verification-picker">Strip <select id="verification-strip"></select></label><label class="verification-picker">Element <select id="verification-element"></select></label><div id="verification-selection" aria-live="polite"></div></div></aside>
+      </div>
+      <section id="verification-results" class="window verification-section"></section>
+      <div class="two-columns verification-section"><section id="verification-connections" class="window"></section><section id="verification-assumptions" class="window"></section></div>
+      <section id="verification-issues" class="window verification-section"></section>
+    </section>
+    <footer class="case-footer"><div><p>Saved case records · Source evidence and representative appearance remain distinct.</p><p id="analysis-state">Full-bench allocation and preliminary structural analysis completed.</p><p id="case-assumptions">R03 uses three non-collinear ideal connection points at four terminal overlaps; the other 1,260 groups retain paired ties. Fastener capacity and bearing friction remain unverified. Six levelling bearings are unanchored; this is preliminary elastic analysis, not construction approval.</p></div><div id="case-downloads"></div></footer>
+  </main>
+  <script type="module" src="./case2.js?v=verification_1c11941e1306"></script>
+</body>
+</html>

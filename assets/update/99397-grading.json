@@ -1,0 +1,434 @@
+{
+  "schema": "PortfolioMaterialGradingEvidenceExtract/1",
+  "created_at_utc": "2026-10-01T16:47:38.455974+00:00",
+  "material_id": "99397",
+  "extract_only": true,
+  "original_record_locator": {
+    "path": "E:\\timber\\workspace\\project\\outputs\\timber-preliminary-grading-20260928\\roles.json",
+    "json_path": "$.materials[4]",
+    "material_id": "99397"
+  },
+  "snapshot_context": {
+    "schema": "TimberRoleSuitability/1",
+    "rule_version": "FUNCTIONAL_ROLES_AND_CURRENT_DEMAND_v2",
+    "project_id": "current-demo",
+    "input_revision": 2,
+    "input_hash": "51e5f7b7517f4aec44bfdd37dd48d4a91b2a5b9aaeaf44da581fc6875a89da02",
+    "geometry_revision": "GEOM_4d016625346d06b1",
+    "geometry_stale": false,
+    "screen_revision": "SCREEN_7d9b507bb35dbaab"
+  },
+  "source_files": [
+    {
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-preliminary-grading-20260928\\roles.json",
+      "sha256": "e661e4ece8e21c0da5d0e78a18cab81af3dfc7414cdbfd7f1a2135f2cb46eec0",
+      "bytes": 16065144
+    },
+    {
+      "path": "E:\\timber\\workspace\\project\\outputs\\timber-preliminary-grading-20260928\\screening.json",
+      "sha256": "5617f6790661ae3a2a647717b0db2b96d36516ae8a1b9b0d620e2ddf284f369f",
+      "bytes": 19345384
+    },
+    {
+      "path": "C:\\Users\\yixu1\\Documents\\Codex\\2026-09-26\\lai\\work\\portfolio-evidence\\material\\99397_material_record.json",
+      "sha256": "321579ebca6482eec3b418296b93e948d2c1e64dea4999bf36c025a8dd63f283",
+      "bytes": 8427
+    },
+    {
+      "path": "C:\\Users\\yixu1\\Documents\\Codex\\2026-09-26\\lai\\work\\portfolio-evidence\\material\\99397_cpu_result.json",
+      "sha256": "f3f0731a392279e5a4d63db909d436be04c9682419bee300775201833564bcd5",
+      "bytes": 6590
+    },
+    {
+      "path": "C:\\Users\\yixu1\\Documents\\Codex\\2026-09-26\\lai\\work\\portfolio-evidence\\material\\99397_photo_evidence_atlas.json",
+      "sha256": "f6954e7c0367811be57f73ac46fb221f1ad4f2a7e6f7743fddb818b44b33d0a4",
+      "bytes": 2486
+    },
+    {
+      "path": "C:\\Users\\yixu1\\Documents\\Codex\\2026-09-26\\lai\\work\\portfolio-evidence\\material\\99397_observed_proxy_box.json",
+      "sha256": "5230bb0e64c7a3ea8781719a26fb2ca088b4e1cf039a9b0a12b0c6daa7180ebe",
+      "bytes": 10659
+    },
+    {
+      "path": "E:\\timber\\workspace\\project\\timber-platform\\desk_preliminary.py",
+      "sha256": "eed70210e72e037d5be9e413b40f7c4a92d91bfde3fcbad51d51858e5c0154de",
+      "bytes": 17095
+    },
+    {
+      "path": "E:\\timber\\workspace\\project\\timber-platform\\desk_evidence.py",
+      "sha256": "704bea5ebdf15752bb5ab12548b5cae9c7e9350583cf653508ec24b5a590d3ae",
+      "bytes": 17679
+    }
+  ],
+  "referenced_visual_source_hash_checks": [
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-preview-20260926\\materials\\99397\\observed_proxy_box.json",
+      "recorded_sha256": "5230bb0e64c7a3ea8781719a26fb2ca088b4e1cf039a9b0a12b0c6daa7180ebe",
+      "actual_sha256": "5230bb0e64c7a3ea8781719a26fb2ca088b4e1cf039a9b0a12b0c6daa7180ebe",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-preview-20260926\\materials\\99397\\photo_evidence_atlas.json",
+      "recorded_sha256": "f6954e7c0367811be57f73ac46fb221f1ad4f2a7e6f7743fddb818b44b33d0a4",
+      "actual_sha256": "f6954e7c0367811be57f73ac46fb221f1ad4f2a7e6f7743fddb818b44b33d0a4",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\99397\\views\\01\\surface\\surface_fit.json",
+      "recorded_sha256": "f8be74afe85568258893bfa59d4f96e072851c2b1e2e8620dfadfa47949f7b52",
+      "actual_sha256": "f8be74afe85568258893bfa59d4f96e072851c2b1e2e8620dfadfa47949f7b52",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\99397\\views\\01\\surface\\textures\\patch_01.png",
+      "recorded_sha256": "b43cc7390bda694ea8a6682a715108a934a35d0f7737f95fb77d4f63e5f1b995",
+      "actual_sha256": "b43cc7390bda694ea8a6682a715108a934a35d0f7737f95fb77d4f63e5f1b995",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\99397\\views\\01\\surface\\textures\\patch_01_source.png",
+      "recorded_sha256": "5d1b228fa761fb6138ba328fd450d5e92be5d12219168d9ee4f9f19451ec5dcf",
+      "actual_sha256": "5d1b228fa761fb6138ba328fd450d5e92be5d12219168d9ee4f9f19451ec5dcf",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\99397\\views\\02\\surface\\surface_fit.json",
+      "recorded_sha256": "1ab12b45db8defe87b3691b200ea1dd764a9a4cabf2eaf23c05abb9eeb69902d",
+      "actual_sha256": "1ab12b45db8defe87b3691b200ea1dd764a9a4cabf2eaf23c05abb9eeb69902d",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\99397\\views\\02\\surface\\textures\\patch_01.png",
+      "recorded_sha256": "00bcb5994152057cfc073833a7b6050cdd733743c43c24ef64d91ac1d09c3d6f",
+      "actual_sha256": "00bcb5994152057cfc073833a7b6050cdd733743c43c24ef64d91ac1d09c3d6f",
+      "matches_recorded": true
+    },
+    {
+      "source_path": "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\99397\\views\\02\\surface\\textures\\patch_01_source.png",
+      "recorded_sha256": "bd305ac5929fd72baf7c182c0bf5c76369e2aecb45dea500419fc009084614b0",
+      "actual_sha256": "bd305ac5929fd72baf7c182c0bf5c76369e2aecb45dea500419fc009084614b0",
+      "matches_recorded": true
+    }
+  ],
+  "seller_reported": {
+    "origin": "SELLER_REPORTED",
+    "title": "Giant Live Edge Cedar Slab 5 x 31 x 82",
+    "description": "Giant Live Edge Cedar Slab 5 x 31 x 82 $706 A giant beautiful live edge cedar slab with flat bottom side in great condition. It does have some slight wear however it is otherwise undamaged and has a bunch of character. This wonderful cedar slab has quite the stature and deserves a one-of-a-kind project. 88.26 BF ",
+    "categories": [
+      "Cedar",
+      "Hardwood & Softwood Slabs",
+      "Lumber",
+      "Softwood"
+    ],
+    "grade_claims": [],
+    "roles": [
+      {
+        "role": "slab",
+        "origin": "SELLER_REPORTED",
+        "basis": "SELLER_DECLARATION",
+        "source": "https://ewsalvage.com/lumber-inventory/?item=99397-giant_live_edge_cedar_slab_5_x_31_x_82",
+        "source_field": "title",
+        "source_text": "Giant Live Edge Cedar Slab 5 x 31 x 82",
+        "reason": "Seller title explicitly mentions slab."
+      }
+    ],
+    "quantity": {
+      "value": 1,
+      "basis": "PIECE",
+      "reported_retail_quantity": 1,
+      "snapshot_quantity_interpretation": "PIECE",
+      "pricing_basis": "PER_PIECE",
+      "physical_count_status": "EXPLICIT_PIECE_COUNT",
+      "reported_quantity": 1,
+      "piece_count": 1,
+      "evidence_text": "Individually priced dimensioned seller item: Giant Live Edge Cedar Slab 5 x 31 x 82 | $706"
+    },
+    "source": "https://ewsalvage.com/lumber-inventory/?item=99397-giant_live_edge_cedar_slab_5_x_31_x_82",
+    "snapshot": "2026-09-11T07:04:06.693238+00:00",
+    "active_supply": true,
+    "sold": false,
+    "dimension_note": "Recorded seller dimensions; no physical measurement claimed."
+  },
+  "seller_dimensions": {
+    "thickness_mm": 127.0,
+    "width_mm": 787.4,
+    "length_mm": 2082.8,
+    "thickness_in": 5.0,
+    "width_in": 31.0,
+    "length_in": 82.0,
+    "dimension_status": "RESOLVED",
+    "length_status": "EXACT",
+    "section_shape_status": "RECTANGULAR_ENVELOPE_ONLY",
+    "dimension_evidence": {
+      "source": "https://ewsalvage.com/lumber-inventory/?item=99397-giant_live_edge_cedar_slab_5_x_31_x_82",
+      "captured_at": "2026-09-11T07:04:06.693238+00:00",
+      "evidence": [
+        {
+          "field": "title",
+          "text": "5 x 31 x 82",
+          "basis": "SELLER_TITLE_THICKNESS_WIDTH_LENGTH",
+          "unit_basis": "Explicit units where present; project-authorized Earthwise inch title convention"
+        }
+      ],
+      "measurement_status": "SELLER_REPORTED_NOT_INSPECTED"
+    }
+  },
+  "estimated": {
+    "origin": "ESTIMATED",
+    "available": true,
+    "supported_faces": 1,
+    "estimated_surface_coverage": 0.1973073762137606,
+    "assessment": "Limited surface support",
+    "condition": "Board-like observed profile",
+    "reason": "1 supported proxy faces; 19.7% estimated surface coverage from saved photo support.",
+    "condition_reason": "Shape assessment from saved proxy proportions; no saved defect classifier supports a strength or decay grade.",
+    "roles": [],
+    "lightweight_rule_met": false,
+    "faces": [
+      {
+        "face_id": "P1-",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.01334622148598972,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P1+",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.01334622148598972,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P2-",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.03362789823123593,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P2+",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.03362789823123593,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P3-",
+        "estimated_supported_fraction": 0.4649522569444444,
+        "reference_area_scene_units2": 0.2635390713677341,
+        "supported": true,
+        "patch_ids": [
+          "99397:01:0",
+          "99397:02:0"
+        ]
+      },
+      {
+        "face_id": "P3+",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.2635390713677341,
+        "supported": false,
+        "patch_ids": []
+      }
+    ],
+    "accepted_patches": [
+      {
+        "patch_id": "99397:01:0",
+        "face_id": "P3-",
+        "supported_cells": 14602,
+        "source": "/originals/workspace/project/outputs/timber-material-cpu-20260926-final/materials/99397/views/01/surface/surface_fit.json"
+      },
+      {
+        "patch_id": "99397:02:0",
+        "face_id": "P3-",
+        "supported_cells": 14944,
+        "source": "/originals/workspace/project/outputs/timber-material-cpu-20260926-final/materials/99397/views/02/surface/surface_fit.json"
+      }
+    ],
+    "omitted_patches": [],
+    "resolution": 192,
+    "version": "SAVED_ALPHA_PROXY_UNION_192_v1",
+    "revision": "24ff408e7a9eee64fd8f",
+    "method": "Union of alpha AND source-map supported pixels projected onto six observed proxy faces, sampled at 192 × 192 cell centres. A face counts at 10% supported area. Approximately 3 faces and 60% total area is the exploration rule.",
+    "reference": "Existing VGGT_ESTIMATED observed proxy; uncalibrated, approximate surface reference.",
+    "inferred_fill_included": false,
+    "overlaps_counted_once": true,
+    "inference_executed": false
+  },
+  "preliminary_classification": {
+    "version": "PRELIMINARY_SELLER_OR_ESTIMATED_v1",
+    "dimensional_hypotheses": [],
+    "potential_roles": [
+      {
+        "role": "slab",
+        "origin": "SELLER_REPORTED",
+        "basis": "SELLER_DECLARATION",
+        "source": "https://ewsalvage.com/lumber-inventory/?item=99397-giant_live_edge_cedar_slab_5_x_31_x_82",
+        "source_field": "title",
+        "source_text": "Giant Live Edge Cedar Slab 5 x 31 x 82",
+        "reason": "Seller title explicitly mentions slab."
+      }
+    ],
+    "candidate": true,
+    "candidate_roles": [
+      "slab"
+    ],
+    "classification_bucket": "both",
+    "structural_status": "NOT_STRUCTURALLY_VERIFIED",
+    "current_demand_compatibility": "Evaluated separately for the current geometry."
+  },
+  "source_evidence": {
+    "views": [
+      {
+        "view_id": "01",
+        "cloud_points": 7414,
+        "effective_mask_status": "MASK_OK",
+        "surface_status": "SUPPORTED_PARTIAL_PHOTO_PATCHES",
+        "supported_texture_patch_count": 1
+      },
+      {
+        "view_id": "02",
+        "cloud_points": 7872,
+        "effective_mask_status": "MASK_OK",
+        "surface_status": "SUPPORTED_PARTIAL_PHOTO_PATCHES",
+        "supported_texture_patch_count": 1
+      }
+    ],
+    "point_rows_total": 15286,
+    "cpu_category": "A",
+    "coherent_object_geometry": "NOT_CLAIMED",
+    "same_physical_piece_confirmed": "unknown",
+    "metric_accuracy_verified": false,
+    "seller_dimensions_used_for_geometry": false
+  },
+  "historical_strict_screen": {
+    "status": "Insufficient evidence",
+    "provisional_grade": "Abstain — observations, species/condition and applicable grading evidence are incomplete.",
+    "formal_grade": "Unknown — no traceable applicable grading certificate recorded.",
+    "gates": [
+      {
+        "id": "faces",
+        "name": "Three distinct supported faces",
+        "status": "Unknown",
+        "value": null,
+        "reason": "2 saved image patches; these are not registered, identified faces of one whole item."
+      },
+      {
+        "id": "coverage",
+        "name": "At least 60% of the entire proxy",
+        "status": "Unknown",
+        "value": null,
+        "reason": "No independent whole-item reference proxy with registered area support is recorded."
+      },
+      {
+        "id": "length",
+        "name": "Full intended length and both ends",
+        "status": "Unknown",
+        "value": null,
+        "reason": "The saved schema contains no verified full-length/end-support observation."
+      },
+      {
+        "id": "identity",
+        "name": "Usable images / masks and target identity",
+        "status": "Unknown",
+        "value": {
+          "usable_pairs": 2,
+          "identity_confirmed": false
+        },
+        "reason": "Usable pairs exist, but same-item identity is unresolved."
+      }
+    ],
+    "raw_atlas_coverage": null,
+    "note": "Historical independent whole-item/identity/end-support gate. Retained as a historical assessment, not the preliminary candidate gate. Unknown strict whole-object coverage is distinct from the new approximate proxy surface-coverage field."
+  },
+  "geometric_candidate_boundary": {
+    "saved_screen_revision": "SCREEN_7d9b507bb35dbaab",
+    "saved_screen_row_quantity": null,
+    "seller_piece_count": 1,
+    "saved_candidate_slots_for_99397": [],
+    "saved_excluded_slots_for_99397": [],
+    "saved_gate": "Seller-derived OR estimated potential role; independent of historical strict screening.",
+    "current_code_slab_role_map": [],
+    "current_code_locator": "desk_preliminary.py ROLE_MAP (lines16-19); assess(lines179-189); candidate_pool(lines191-224). Read only, not called.",
+    "interpretation": "The material is an active seller-derived slab candidate. It must not be described as an available framed-member allocation slot: no99397slot appears in this frozen pool, and the current slab role has no frame-member vocabulary mapping. No new inference of the original absence reason is made."
+  },
+  "saved_current_demand_assessment": {
+    "status": "no current demand match",
+    "current_demand_candidates": [],
+    "roles": [
+      {
+        "role": "deck",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "post",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "cladding",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "stud",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "joist",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "rail",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "roof",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      },
+      {
+        "role": "floor",
+        "status": "NO_CURRENT_DEMAND_MATCH",
+        "dimensional_fit": false,
+        "matching_element_ids": [],
+        "basis": "Nominal dimensions do not match this project role under fixed section/orientation and current cutting permission. This is not a permanent material rejection."
+      }
+    ],
+    "boundary": "These are the September28 snapshot and geometry revision above, not a fresh compatibility evaluation of the later building."
+  },
+  "proposed_english_copy": {
+    "assessment": "SELLER-LED SLAB REUSE CANDIDATE",
+    "assessment_origin": "Portfolio wording of saved candidate=true and seller-derived slab role; not a new material grade or application record.",
+    "seller_label": "Seller-reported / Live-edge cedar slab",
+    "seller_reason": "Seller describes slight wear and an otherwise undamaged condition.",
+    "dimension_caption": "127 × 787.4 × 2082.8 mm / 1 recorded seller piece",
+    "grade": "No named grade recorded.",
+    "estimated_label": "Estimated / Board-like observed profile",
+    "estimated_reason": "Limited surface support: one proxy region; 19.7% estimated surface coverage.",
+    "role_label": "Potential role: slab — seller-derived.",
+    "role_boundary": "No additional visually estimated or dimensional role is recorded.",
+    "design_boundary": "Retain as a slab reuse candidate; current building compatibility is a separate check.",
+    "surface_note": "Two photo patches support the same proxy face. Coverage is approximate and uncalibrated, not whole-object completeness.",
+    "no_new_damage_claim": "No C01 defect detection or trim scenario is transferred from115200 to99397."
+  },
+  "work_performed": "Read existing JSON and adapter source; write this compact portfolio extract only. No inference, solver, grading function, cache mutation or application record execution."
+}

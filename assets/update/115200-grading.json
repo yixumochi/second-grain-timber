@@ -1,0 +1,238 @@
+{
+  "schema": "SavedPreliminaryMaterialExtract/1",
+  "material_id": "115200",
+  "source_record": "E:\\timber\\workspace\\project\\outputs\\timber-preliminary-grading-20260928\\roles.json",
+  "source_record_sha256": "e661e4ece8e21c0da5d0e78a18cab81af3dfc7414cdbfd7f1a2135f2cb46eec0",
+  "snapshot_only": true,
+  "seller": {
+    "origin": "SELLER_REPORTED",
+    "title": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+    "description": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5 $79 This magnificent beam chunk have been milled at our Earthwise Salvage Lumber Warehouse. The top/bottom is roughly square. There is some nail stains and cracks that add some character to the pieces. 15.87 BF ",
+    "categories": [
+      "Beams",
+      "Lumber",
+      "Old Growth Beams"
+    ],
+    "grade_claims": [],
+    "roles": [
+      {
+        "role": "beam",
+        "origin": "SELLER_REPORTED",
+        "basis": "SELLER_DECLARATION",
+        "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+        "source_field": "title",
+        "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+        "reason": "Seller title explicitly mentions beam."
+      }
+    ],
+    "dimensions": {
+      "thickness_mm": 180.975,
+      "width_mm": 187.325,
+      "length_mm": 1104.9,
+      "length_min_mm": 1104.9,
+      "length_max_mm": 1104.9,
+      "dimension_status": "RESOLVED",
+      "length_status": "EXACT",
+      "dimension_evidence": {
+        "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+        "captured_at": "2026-09-11T07:04:03.409381+00:00",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "7.125 x 7.375 x 43.5",
+            "basis": "SELLER_TITLE_THICKNESS_WIDTH_LENGTH",
+            "unit_basis": "Explicit units where present; project-authorized Earthwise inch title convention"
+          }
+        ],
+        "measurement_status": "SELLER_REPORTED_NOT_INSPECTED"
+      },
+      "section_shape_status": "RECTANGULAR_CANDIDATE",
+      "thickness_in": 7.125,
+      "width_in": 7.375,
+      "length_in": 43.5,
+      "length_min_in": 43.5,
+      "length_max_in": 43.5,
+      "title_axes_in": {
+        "thickness": [
+          7.125,
+          7.125
+        ],
+        "width": [
+          7.375,
+          7.375
+        ],
+        "length": [
+          43.5,
+          43.5
+        ]
+      },
+      "thickness_min_in": 7.125,
+      "thickness_max_in": 7.125,
+      "thickness_min_mm": 180.975,
+      "thickness_max_mm": 180.975,
+      "width_min_in": 7.375,
+      "width_max_in": 7.375,
+      "width_min_mm": 187.325,
+      "width_max_mm": 187.325
+    },
+    "description_dimensions": null,
+    "quantity": {
+      "value": 1,
+      "basis": "PIECE",
+      "reported_retail_quantity": 1,
+      "snapshot_quantity_interpretation": "PIECE",
+      "pricing_basis": "PER_PIECE",
+      "physical_count_status": "EXPLICIT_PIECE_COUNT",
+      "reported_quantity": 1,
+      "piece_count": 1,
+      "evidence_text": "Individually priced dimensioned seller item: Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5 | $79"
+    },
+    "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+    "snapshot": "2026-09-11T07:04:03.409381+00:00",
+    "active_supply": true,
+    "sold": false,
+    "dimension_note": "Recorded seller dimensions; no physical measurement claimed."
+  },
+  "estimated": {
+    "origin": "ESTIMATED",
+    "available": true,
+    "faces": [
+      {
+        "face_id": "P1-",
+        "estimated_supported_fraction": 0.1780327690972222,
+        "reference_area_scene_units2": 0.041988800605710926,
+        "supported": true,
+        "patch_ids": [
+          "115200:02:0",
+          "115200:02:1"
+        ]
+      },
+      {
+        "face_id": "P1+",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.041988800605710926,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P2-",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.15203034553925673,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P2+",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.15203034553925673,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P3-",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.20002863578936458,
+        "supported": false,
+        "patch_ids": []
+      },
+      {
+        "face_id": "P3+",
+        "estimated_supported_fraction": 0.0,
+        "reference_area_scene_units2": 0.20002863578936458,
+        "supported": false,
+        "patch_ids": []
+      }
+    ],
+    "supported_faces": 1,
+    "estimated_surface_coverage": 0.00948537561385335,
+    "accepted_patches": [
+      {
+        "patch_id": "115200:02:0",
+        "face_id": "P1-",
+        "supported_cells": 5036,
+        "source": "/originals/workspace/project/outputs/timber-material-cpu-20260926-final/materials/115200/views/02/surface/surface_fit.json"
+      },
+      {
+        "patch_id": "115200:02:1",
+        "face_id": "P1-",
+        "supported_cells": 1667,
+        "source": "/originals/workspace/project/outputs/timber-material-cpu-20260926-final/materials/115200/views/02/surface/surface_fit.json"
+      }
+    ],
+    "omitted_patches": [
+      "115200:01:0",
+      "115200:01:1"
+    ],
+    "resolution": 192,
+    "roles": [],
+    "lightweight_rule_met": false,
+    "assessment": "Limited surface support",
+    "condition": "Block-like observed profile",
+    "reason": "1 supported proxy faces; 0.9% estimated surface coverage from saved photo support.",
+    "condition_reason": "Shape assessment from saved proxy proportions; no saved defect classifier supports a strength or decay grade.",
+    "issues": [],
+    "proxy_source": "/originals/workspace/project/outputs/timber-material-preview-20260926/materials/115200/observed_proxy_box.json",
+    "atlas_source": "/originals/workspace/project/outputs/timber-material-preview-20260926/materials/115200/photo_evidence_atlas.json",
+    "version": "SAVED_ALPHA_PROXY_UNION_192_v1",
+    "source_hashes": {
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-preview-20260926\\materials\\115200\\observed_proxy_box.json": "abadc80ed4d5502f9c7c0ba0774be1e5096137b356745184d743c3151959a0c4",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-preview-20260926\\materials\\115200\\photo_evidence_atlas.json": "9571c28ed75770cbc235957be558dc27d05f41328424b1ff4e59c9a3ebe546a3",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\01\\surface\\surface_fit.json": "001d3b69ab1fc1215d20cc18153ec08a25708d1e57814303cd613275dbc5a871",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\01\\surface\\textures\\patch_01.png": "8b8dcef868265293008f631db727430656f757bc54bdc5cbe710a7d14208b8af",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\01\\surface\\textures\\patch_01_source.png": "4da240ad963a5982d894f69914215f4746f91cf5ed3f9e7a26ec650469dc4b7c",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\01\\surface\\textures\\patch_02.png": "505c49a2db6a9c45b787ce1af1c4ed96b5f145175b74f300b3c039e2ddc6f584",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\01\\surface\\textures\\patch_02_source.png": "d872ce2b41da45306094fd069b0a1123008087e34a3e8e33f32476e0676103d8",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\02\\surface\\surface_fit.json": "b7fda04ee404b3c6a066e01af8a1dffb234653917e207efb7d2f17fca6fb6b81",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\02\\surface\\textures\\patch_01.png": "1eb8c553348831d012e00fe9e76af861dde0e19ceef9f7053b7e6eb2f421c5c3",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\02\\surface\\textures\\patch_01_source.png": "d6f2d1ecb2c4a65e2ece6d60375eac61b94c104bf73b7bf5dd0859dd56ecb4e6",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\02\\surface\\textures\\patch_02.png": "438be75c8aa094320d772037950c6f4c0e67cbb1b54d71a4288e4be12f9d94fd",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\02\\surface\\textures\\patch_02_source.png": "81d188a005ca7d6da3f290280a52c262178607d82245852d204d9925dcb36aef",
+      "E:\\timber\\workspace\\project\\outputs\\timber-material-cpu-20260926-final\\materials\\115200\\views\\03\\surface\\surface_fit.json": "e0c26b95fc89b8887ddf41bebbdc8c3f8357216cb9c74916208a09a149d44c90"
+    },
+    "revision": "6a1cc7fe41e5595a065b",
+    "method": "Union of alpha AND source-map supported pixels projected onto six observed proxy faces, sampled at 192 × 192 cell centres. A face counts at 10% supported area. Approximately 3 faces and 60% total area is the exploration rule.",
+    "reference": "Existing VGGT_ESTIMATED observed proxy; uncalibrated, approximate surface reference.",
+    "inferred_fill_included": false,
+    "overlaps_counted_once": true,
+    "inference_executed": false
+  },
+  "dimensional_hypotheses": [
+    {
+      "role": "post",
+      "origin": "ESTIMATED",
+      "basis": "SELLER_DIMENSION_HYPOTHESIS",
+      "reason": "Stocky section: both axes at least 70 mm, aspect ratio at most 2.",
+      "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+      "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5"
+    }
+  ],
+  "potential_roles": [
+    {
+      "role": "beam",
+      "origin": "SELLER_REPORTED",
+      "basis": "SELLER_DECLARATION",
+      "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+      "source_field": "title",
+      "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5",
+      "reason": "Seller title explicitly mentions beam."
+    },
+    {
+      "role": "post",
+      "origin": "ESTIMATED",
+      "basis": "SELLER_DIMENSION_HYPOTHESIS",
+      "reason": "Stocky section: both axes at least 70 mm, aspect ratio at most 2.",
+      "source": "https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5",
+      "source_text": "Rough Sawn Fir Beam Chunk 7.125 x 7.375 x 43.5"
+    }
+  ],
+  "classification_bucket": "both",
+  "candidate": true,
+  "current_demand_candidates": [],
+  "structural_status": "NOT_STRUCTURALLY_VERIFIED",
+  "species": {
+    "raw": "Fir",
+    "normalized": "fir",
+    "status": "EXPLICIT_ITEM"
+  },
+  "note": "Saved preliminary snapshot. Seller claim and dimension hypothesis remain independent of limited visual surface support. Current building compatibility must use its actual allocation run."
+}

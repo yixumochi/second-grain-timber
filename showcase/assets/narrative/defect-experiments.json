@@ -1,0 +1,208 @@
+[
+  {
+    "scenario_id": "CUT_8017f06906dc",
+    "record_sha256": "ca45ef0a63647512c6eddd2287949f3b7dc5368fa0d4456b2ac94f0b82d70563",
+    "status": "PROPOSED_SCENARIO_ONLY",
+    "configuration": {
+      "run_id": "DEFECT_115200_01_37b96e7a987af96d",
+      "candidate_ids": [
+        "C01"
+      ],
+      "stock_id": "115200_001",
+      "action": "trim",
+      "buffer_mm": 20,
+      "settings": {
+        "kerf_mm": 3,
+        "minimum_piece_length_mm": 300,
+        "allow_cut": true,
+        "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data."
+      },
+      "demands": [
+        {
+          "member_id": "ISOLATED_CUT_REQUEST_900MM",
+          "role": "POST",
+          "length_mm": 900,
+          "quantity": 1,
+          "section": {
+            "thickness_mm": 180.975,
+            "width_mm": 187.325
+          }
+        }
+      ],
+      "demand_basis": "Explicit isolated length-compatibility probe, not a recorded building member. Uses the real seller section and one existing slot; no new form or physical stock.",
+      "anchor": {
+        "status": "APPROXIMATE_VISIBLE_ENDPOINTS",
+        "endpoints_source_px": [
+          [
+            1870,
+            480
+          ],
+          [
+            1740,
+            3660
+          ]
+        ],
+        "basis": "115200 view 01 shows both ends of the illustrated beam. Source-photo top/bottom end positions selected for this demonstration; seller nominal length 1104.9 mm. Perspective and end placement are approximate. Not a scaled cloud."
+      }
+    },
+    "association": "Illustrated target mapped to one recorded representative slot for this scenario only; never copied to other quantity slots.",
+    "partition": {
+      "parts": [
+        {
+          "kind": "retained",
+          "interval_mm": [
+            0.0,
+            828.24
+          ],
+          "length_mm": 828.24
+        },
+        {
+          "kind": "preparation_kerf",
+          "interval_mm": [
+            828.24,
+            831.24
+          ],
+          "length_mm": 3.0
+        },
+        {
+          "kind": "excluded",
+          "interval_mm": [
+            831.24,
+            1104.9
+          ],
+          "length_mm": 273.6600000000001
+        }
+      ],
+      "totals": {
+        "excluded": 273.6600000000001,
+        "preparation_kerf": 3.0,
+        "retained": 828.24
+      },
+      "maximum_continuous_mm": 828.24,
+      "accounting_error_mm": 0.0
+    },
+    "before_status": "OPTIMAL",
+    "after_status": "INFEASIBLE",
+    "after_cutting": {
+      "source_length_mm": 1104.9,
+      "used_mm": 0.0,
+      "excluded_mm": 273.6600000000001,
+      "preparation_kerf_mm": 3.0,
+      "allocation_kerf_mm": 0.0,
+      "selected_offcut_mm": 0.0,
+      "retained_unselected_mm": 828.24,
+      "accounting_error_mm": 0.0,
+      "allocation_kerf_intervals": [],
+      "offcut_intervals": []
+    },
+    "current_project_modified": false
+  },
+  {
+    "scenario_id": "CUT_f53711f9ea12",
+    "record_sha256": "0d91be5f466a4ed637913a741ee396818c17898d31060a27fbe5235590a16241",
+    "status": "PROPOSED_SCENARIO_ONLY",
+    "configuration": {
+      "run_id": "DEFECT_115200_01_37b96e7a987af96d",
+      "candidate_ids": [
+        "C01"
+      ],
+      "stock_id": "115200_001",
+      "action": "trim",
+      "buffer_mm": 20,
+      "settings": {
+        "kerf_mm": 3,
+        "minimum_piece_length_mm": 300,
+        "allow_cut": true,
+        "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data."
+      },
+      "demands": [
+        {
+          "member_id": "ISOLATED_SHORTER_CUT_600MM",
+          "role": "POST",
+          "length_mm": 600,
+          "quantity": 1,
+          "section": {
+            "thickness_mm": 180.975,
+            "width_mm": 187.325
+          }
+        }
+      ],
+      "demand_basis": "Explicit isolated length-compatibility probe, not a recorded building member. Uses the real seller section and one existing slot; no new form or physical stock.",
+      "anchor": {
+        "status": "APPROXIMATE_VISIBLE_ENDPOINTS",
+        "endpoints_source_px": [
+          [
+            1870,
+            480
+          ],
+          [
+            1740,
+            3660
+          ]
+        ],
+        "basis": "115200 view 01 shows both ends of the illustrated beam. Source-photo top/bottom end positions selected for this demonstration; seller nominal length 1104.9 mm. Perspective and end placement are approximate. Not a scaled cloud."
+      }
+    },
+    "association": "Illustrated target mapped to one recorded representative slot for this scenario only; never copied to other quantity slots.",
+    "partition": {
+      "parts": [
+        {
+          "kind": "retained",
+          "interval_mm": [
+            0.0,
+            828.24
+          ],
+          "length_mm": 828.24
+        },
+        {
+          "kind": "preparation_kerf",
+          "interval_mm": [
+            828.24,
+            831.24
+          ],
+          "length_mm": 3.0
+        },
+        {
+          "kind": "excluded",
+          "interval_mm": [
+            831.24,
+            1104.9
+          ],
+          "length_mm": 273.6600000000001
+        }
+      ],
+      "totals": {
+        "excluded": 273.6600000000001,
+        "preparation_kerf": 3.0,
+        "retained": 828.24
+      },
+      "maximum_continuous_mm": 828.24,
+      "accounting_error_mm": 0.0
+    },
+    "before_status": "OPTIMAL",
+    "after_status": "OPTIMAL",
+    "after_cutting": {
+      "source_length_mm": 1104.9,
+      "used_mm": 600.0,
+      "excluded_mm": 273.6600000000001,
+      "preparation_kerf_mm": 3.0,
+      "allocation_kerf_mm": 3.0,
+      "selected_offcut_mm": 225.24,
+      "retained_unselected_mm": 0,
+      "accounting_error_mm": 0.0,
+      "allocation_kerf_intervals": [
+        [
+          600.0,
+          603.0
+        ]
+      ],
+      "offcut_intervals": [
+        [
+          603.0,
+          828.24
+        ]
+      ]
+    },
+    "current_project_modified": false
+  }
+]

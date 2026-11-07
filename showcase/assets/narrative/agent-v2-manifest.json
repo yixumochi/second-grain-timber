@@ -1,0 +1,29 @@
+[
+  {
+    "case": 1,
+    "path": "case1-agent-v2.mp4",
+    "duration": 23.333333333333332,
+    "playback_pace": 1.2,
+    "audio": "Original instrumental, no speech",
+    "geometry": "Saved geometry; mass/wireframe/model are presentation stages, not reconstructed historical iterations",
+    "full_decode": "PASS"
+  },
+  {
+    "case": 2,
+    "path": "case2-agent-v2.mp4",
+    "duration": 23.333333333333332,
+    "playback_pace": 1.2,
+    "audio": "Original instrumental, no speech",
+    "geometry": "Saved geometry; mass/wireframe/model are presentation stages, not reconstructed historical iterations",
+    "full_decode": "PASS"
+  },
+  {
+    "case": 3,
+    "path": "case3-agent-v2.mp4",
+    "duration": 23.333333333333332,
+    "playback_pace": 1.2,
+    "audio": "Original instrumental, no speech",
+    "geometry": "Saved geometry; mass/wireframe/model are presentation stages, not reconstructed historical iterations",
+    "full_decode": "PASS"
+  }
+]

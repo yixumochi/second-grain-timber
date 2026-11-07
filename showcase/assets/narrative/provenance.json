@@ -1,0 +1,15 @@
+{
+  "source_records": {
+    "assets/analysis/analysis.json": "6e10f75ec4b35b5398bf5ec8156641851794a3e19f49889917feefe0fdff6a0c",
+    "case2/explore/data/case2-analysis.json": "a6133266781de8c29c8f34195b3af8a346e52856aa6695829429dce82e2e819f",
+    "case3/data/case3.json": "a1aa9615f0cedeced390534d2660f65bdeeb0dc50ae3d20832029bf3613a442d",
+    "assets/update/allocation.json": "76733498411bb755668c6f302482cded38bda1235965677546ebd9d63d0c85a7",
+    "case2/explore/data/case2.json": "e42cfaccc9006320d183ef1383465b0e63e092e67726e1e669daeb617c76ad04"
+  },
+  "new_solve": false,
+  "new_inference": false,
+  "live_api": false,
+  "published": false,
+  "code_reference": "https://www.seattle.gov/documents/departments/sdci/codes/seattlebuildingcode/2021sbcchapter23.pdf",
+  "code_boundary": "Conditional used dimension-lumber pathway, not a photo-derived grade or generic defect tolerance."
+}

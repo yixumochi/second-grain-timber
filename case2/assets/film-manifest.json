@@ -1,0 +1,67 @@
+{
+  "schema": "CASE2_FILM_PRESENTATION/1",
+  "duration_seconds": 90,
+  "size_bytes": 4367797,
+  "sha256": "c59fb5ca07baff1899b5637efb5f0f2db6ee2e5ff03235df3db49c2a738d20e1",
+  "video": "H.264, 1280x720, 24 fps",
+  "audio": "AAC, English synthetic narration",
+  "captions": "Burned-in + WebVTT",
+  "original_58_second_video_unchanged": true,
+  "protected_records_checked": 1515,
+  "new_solver_runs": 0,
+  "browser_tested": false,
+  "full_media_decode": "PASS",
+  "public_export": "Integrated into the existing SECOND GRAIN public website.",
+  "source_record_extract": "assets/case.json",
+  "chapters": [
+    {
+      "start": 0,
+      "end": 12,
+      "title": "Same workflow. A different design problem.",
+      "text": "Case One assigns timber to building roles. Case Two asks how short, straight reclaimed strips can overlap to form a continuous seat and backrest."
+    },
+    {
+      "start": 12,
+      "end": 22,
+      "title": "Source stock to saved cutting marks",
+      "text": "The same source evidence, recorded dimensions and quantities feed the original allocation workflow. Each cutting mark belongs to a real parent stock interval."
+    },
+    {
+      "start": 22,
+      "end": 35,
+      "title": "One source. Many installed positions.",
+      "text": "A source bar can supply several different bench positions. Follow the highlighted strip from its cutting interval to its saved location. Surplus parts and retained residuals stay separate."
+    },
+    {
+      "start": 35,
+      "end": 47,
+      "title": "Straight strips, changing contour",
+      "text": "These are straight rectangular members, crosscut to length. Their orientation and overlap create the contour. There are no curved plywood ribs or contour machining in this version."
+    },
+    {
+      "start": 47,
+      "end": 60,
+      "title": "One shared ledger for the whole bench",
+      "text": "The remaining allocation accelerates using one shared stock ledger. The complete bench contains seven hundred and sixteen installed strips, cut from one hundred and twenty unique parent bars."
+    },
+    {
+      "start": 60,
+      "end": 70,
+      "title": "A complete, traceable assembly",
+      "text": "The bench is about six metres long at the recorded illustrative scale. Its source-linked appearance is representative, not an exact scanned surface map."
+    },
+    {
+      "start": 70,
+      "end": 78,
+      "title": "Contact is not verified connection capacity",
+      "text": "Four terminal overlaps use a third idealized point to prevent rotation. This does not verify fastener capacity."
+    },
+    {
+      "start": 78,
+      "end": 90,
+      "title": "Saved R03 preliminary analysis",
+      "text": "The saved R three analysis compares self weight and two one kilonewton load cases. Six unanchored levelling bearings remain explicit. Fastener capacity and bearing friction are still unverified."
+    }
+  ],
+  "public_route": "/second-grain-timber/case2/#film"
+}

@@ -1,0 +1,536 @@
+{
+  "schema": "MaterialEvidenceDecisionExtract/1",
+  "saved_records_only": true,
+  "new_solve": false,
+  "scope": "Evidence-to-decision review; independent defect experiment is not applied to Cases 1–3.",
+  "record_sources": [
+    {
+      "url": "/second-grain-timber/assets/update/allocation.json",
+      "sha256": "76733498411bb755668c6f302482cded38bda1235965677546ebd9d63d0c85a7"
+    },
+    {
+      "url": "/second-grain-timber/case2/explore/data/case2.json",
+      "sha256": "9304ce7233781ebf02ae867be04bef3f39d2e8dedb4cac8f2eb316fe969ddd90"
+    },
+    {
+      "url": "/second-grain-timber/case3/data/case3.json",
+      "sha256": "a1aa9615f0cedeced390534d2660f65bdeeb0dc50ae3d20832029bf3613a442d"
+    }
+  ],
+  "case1": {
+    "run_id": "ALLOC_20260929T103241_f1495f",
+    "installed_part_role_basis": {
+      "DIMENSIONS": 147,
+      "PHOTOS": 0,
+      "UNKNOWN": 0,
+      "SELLER": 8
+    },
+    "example": {
+      "part_id": "120448_001::P01",
+      "part_type_id": "P0000",
+      "stock_id": "120448_001",
+      "parent_stock_id": "120448_001",
+      "material_id": "120448",
+      "source": "https://ewsalvage.com/lumber-inventory/?item=120448-reclaimed_brushed_fir_board_3.75_x_5.5_x_168.625",
+      "interval_mm": [
+        0.0,
+        2418.25
+      ],
+      "source_interval_mm": [
+        0.0,
+        2418.25
+      ],
+      "source_length_mm": 4283.075,
+      "used_length_mm": 2418.25,
+      "cutting_pattern_id": "C00000^E0000",
+      "member_id": "A_POST_001",
+      "source_section_mm": {
+        "section_shape_status": "RECTANGULAR_CANDIDATE",
+        "actual_thickness_mm": 95.25,
+        "actual_width_mm": 139.7
+      },
+      "candidate_basis": [
+        {
+          "role": "post",
+          "origin": "ESTIMATED",
+          "basis": "SELLER_DIMENSION_HYPOTHESIS",
+          "reason": "Stocky section: both axes at least 70 mm, aspect ratio at most 2.",
+          "source": "https://ewsalvage.com/lumber-inventory/?item=120448-reclaimed_brushed_fir_board_3.75_x_5.5_x_168.625",
+          "source_text": "Reclaimed Brushed Fir Board 3.75 x 5.5 x 168.625"
+        }
+      ],
+      "verification": "Not structurally verified",
+      "role": "POST",
+      "part_order": 1,
+      "member_interval_mm": [
+        0.0,
+        2418.25
+      ],
+      "jointing_pattern_id": "J0^M000",
+      "machining": [],
+      "finished_section_mm": {
+        "thickness_mm": 95.25,
+        "width_mm": 139.7
+      },
+      "whole_board": false,
+      "interval_basis": "Recorded source stock coordinates; ordered support-bound member part",
+      "length_basis": "Nominal saved source dimensions; project-selected exclusions preserved"
+    }
+  },
+  "case2": {
+    "run_id": "ALLOC_CASE2_FULL_20261003T072129Z_464628f7",
+    "thin_family_bound": {
+      "sections_mm": [
+        [
+          19.05,
+          69.85
+        ],
+        [
+          19.05,
+          82.55
+        ],
+        [
+          19.05,
+          88.9
+        ]
+      ],
+      "source_slots": 68,
+      "max_parts_at_six": 408,
+      "total_length_mm": 148494.75,
+      "piece_shortfall": 308,
+      "source_length_shortfall_mm": 51153.228253928944
+    },
+    "bound_record_sha256": "3093b5d82b2bfb548656d54a2881317287fecfc3f8390893f92ff71eb3137a73",
+    "bound_scope": "Saved six-parts-per-bar pattern cap, not unlimited physical cutting capacity.",
+    "section_options": [
+      {
+        "section_mm": [
+          19.05,
+          69.85
+        ],
+        "recorded_slot_count": 6,
+        "recorded_usable_length_mm": 17621.25,
+        "geometry_valid": true,
+        "retained_contacts": 1264,
+        "solid_intersections": 0,
+        "repaired_member_count": 0,
+        "capacity_screen": "INSUFFICIENT_COUNT_OR_LENGTH",
+        "status": "REJECTED",
+        "maximum_parts_at_six": 36,
+        "part_count_shortfall": 680
+      },
+      {
+        "section_mm": [
+          19.05,
+          82.55
+        ],
+        "recorded_slot_count": 29,
+        "recorded_usable_length_mm": 60198.000000000015,
+        "geometry_valid": true,
+        "retained_contacts": 1264,
+        "solid_intersections": 0,
+        "repaired_member_count": 8,
+        "capacity_screen": "INSUFFICIENT_COUNT_OR_LENGTH",
+        "status": "REJECTED",
+        "maximum_parts_at_six": 174,
+        "part_count_shortfall": 542
+      },
+      {
+        "section_mm": [
+          19.05,
+          88.9
+        ],
+        "recorded_slot_count": 33,
+        "recorded_usable_length_mm": 70675.50000000001,
+        "geometry_valid": true,
+        "retained_contacts": 1264,
+        "solid_intersections": 0,
+        "repaired_member_count": 11,
+        "capacity_screen": "INSUFFICIENT_COUNT_OR_LENGTH",
+        "status": "REJECTED",
+        "maximum_parts_at_six": 198,
+        "part_count_shortfall": 518
+      },
+      {
+        "section_mm": [
+          38.1,
+          88.9
+        ],
+        "recorded_slot_count": 279,
+        "recorded_usable_length_mm": 674604.9500000012,
+        "geometry_valid": true,
+        "retained_contacts": 1264,
+        "solid_intersections": 0,
+        "repaired_member_count": 11,
+        "capacity_screen": "NECESSARY_COUNT_AND_LENGTH_PASS",
+        "status": "SELECTED_USER_APPROVED_AND_ALLOCATED",
+        "maximum_parts_at_six": 1674,
+        "part_count_shortfall": 0
+      }
+    ],
+    "reference_pitch_mm": 45.569601304345966,
+    "prototype_pitch_mm": 38.1,
+    "full_bench_pitch_mm": 76.2,
+    "adapted_bounds_mm": {
+      "min": [
+        -1.937607630317765,
+        0.0,
+        -11.156520940091703
+      ],
+      "max": [
+        1456.6162115615527,
+        6057.900000000001,
+        580.874119749042
+      ]
+    },
+    "defect_policy": {
+      "selected_scenarios": [],
+      "status": "NO_APPROVED_SOURCE_MATCHING_OVERLAY_SELECTED",
+      "note": "Saved scenarios belong to 115198,115200,78646; these four candidate families have no matching listing. Uninspected source stock is not defect-free."
+    }
+  },
+  "case3": {
+    "run_id": "ALLOC_CASE3_PAVILION_20261005T095835Z_bd90274c",
+    "example_cut_bar": {
+      "stock_id": "113926_001",
+      "parent_stock_id": "113926_001",
+      "material_id": "113926",
+      "length_mm": 2438.4,
+      "source_length_mm": 2438.4,
+      "usable_start_mm": 0,
+      "source_interval_mm": null,
+      "scenario_id": null,
+      "scenario_revision": null,
+      "pieces": [
+        {
+          "part_id": "113926_001::P01",
+          "part_type_id": "P0003",
+          "stock_id": "113926_001",
+          "parent_stock_id": "113926_001",
+          "material_id": "113926",
+          "source": "https://ewsalvage.com/lumber-inventory/?item=113926-remilled_s4s_fir_butcher_block_2_x_8_x_96",
+          "interval_mm": [
+            0,
+            2400
+          ],
+          "source_interval_mm": [
+            0,
+            2400
+          ],
+          "source_length_mm": 2438.4,
+          "used_length_mm": 2400,
+          "cutting_pattern_id": "C00000^E0017",
+          "member_id": "C3_BEAM_N_1",
+          "source_section_mm": {
+            "section_shape_status": "RECTANGULAR_CANDIDATE",
+            "actual_thickness_mm": 50.8,
+            "actual_width_mm": 203.2
+          },
+          "candidate_basis": [
+            {
+              "role": "deck",
+              "origin": "ESTIMATED",
+              "basis": "SELLER_DIMENSION_HYPOTHESIS",
+              "reason": "Board section: 20–65 mm thickness and width at least 1.5 times thickness.",
+              "source": "https://ewsalvage.com/lumber-inventory/?item=113926-remilled_s4s_fir_butcher_block_2_x_8_x_96",
+              "source_text": "Remilled S4S Fir Butcher Block 2 x 8 x 96"
+            },
+            {
+              "role": "stud",
+              "origin": "ESTIMATED",
+              "basis": "SELLER_DIMENSION_HYPOTHESIS",
+              "reason": "Nominal framing-sized section: 35–65 mm thickness, width at least 65 mm.",
+              "source": "https://ewsalvage.com/lumber-inventory/?item=113926-remilled_s4s_fir_butcher_block_2_x_8_x_96",
+              "source_text": "Remilled S4S Fir Butcher Block 2 x 8 x 96"
+            },
+            {
+              "role": "joist",
+              "origin": "ESTIMATED",
+              "basis": "SELLER_DIMENSION_HYPOTHESIS",
+              "reason": "Rectangular member section with depth at least 1.5 times thickness.",
+              "source": "https://ewsalvage.com/lumber-inventory/?item=113926-remilled_s4s_fir_butcher_block_2_x_8_x_96",
+              "source_text": "Remilled S4S Fir Butcher Block 2 x 8 x 96"
+            },
+            {
+              "role": "rail",
+              "origin": "ESTIMATED",
+              "basis": "SELLER_DIMENSION_HYPOTHESIS",
+              "reason": "Rectangular member section suitable for exploring horizontal rails.",
+              "source": "https://ewsalvage.com/lumber-inventory/?item=113926-remilled_s4s_fir_butcher_block_2_x_8_x_96",
+              "source_text": "Remilled S4S Fir Butcher Block 2 x 8 x 96"
+            }
+          ],
+          "verification": "Not structurally verified",
+          "role": "PRIMARY",
+          "part_order": 1,
+          "member_interval_mm": [
+            0,
+            2400
+          ],
+          "jointing_pattern_id": "J0^M003",
+          "machining": [],
+          "finished_section_mm": {
+            "thickness_mm": 50.8,
+            "width_mm": 203.2
+          },
+          "whole_board": false,
+          "interval_basis": "Recorded source stock coordinates; ordered support-bound member part",
+          "length_basis": "Nominal saved source dimensions; project-selected exclusions preserved",
+          "installed_axis_length_mm": 2400,
+          "end_operations": {
+            "type": "SQUARE_CROSSCUT",
+            "miter_from_square_deg": 0,
+            "angular_bounding_allowance_mm": 0,
+            "total_square_trim_allowance_mm": 0,
+            "removed_volume_mm3": 0,
+            "physical_connection_status": "Concept joint only; fastening and notch details unverified"
+          },
+          "finished_volume_mm3": 24774144,
+          "blank_volume_mm3": 24774144,
+          "machining_loss_mm_equivalent": 0
+        }
+      ],
+      "used_length_mm": 2400,
+      "kerf_loss_mm": 3,
+      "kerf_intervals_mm": [
+        [
+          2400,
+          2403
+        ]
+      ],
+      "end_loss_mm": 0,
+      "residual_mm": 35.40000000000009,
+      "residual_interval_mm": [
+        2403,
+        2438.4
+      ],
+      "accounting_error_mm": 0,
+      "cutting_pattern_id": "C00000^E0017",
+      "accounting_basis": "Source length = used parts + crosscut kerf + prior end losses + offcut. Ripping is accounted by volume separately.",
+      "length_basis": "PRELIMINARY_NOMINAL_LENGTH: no additional end trim modelled; physical end loss is unknown.",
+      "usable_interval_mm": [
+        0,
+        2438.4
+      ],
+      "parent_residual_intervals_mm": [
+        [
+          2403,
+          2438.4
+        ]
+      ]
+    },
+    "design_basis": "Authored stock-adapted layout checked by allocation; not geometry discovered by MILP.",
+    "defect_policy": {
+      "selected_scenarios": [],
+      "basis": "No source-matching selected saved defect scenario for chosen exact section families. Uninspected stock is not defect-free."
+    }
+  },
+  "isolated_defect_experiment": [
+    {
+      "scenario_id": "CUT_8017f06906dc",
+      "record_sha256": "ca45ef0a63647512c6eddd2287949f3b7dc5368fa0d4456b2ac94f0b82d70563",
+      "status": "PROPOSED_SCENARIO_ONLY",
+      "configuration": {
+        "run_id": "DEFECT_115200_01_37b96e7a987af96d",
+        "candidate_ids": [
+          "C01"
+        ],
+        "stock_id": "115200_001",
+        "action": "trim",
+        "buffer_mm": 20,
+        "settings": {
+          "kerf_mm": 3,
+          "minimum_piece_length_mm": 300,
+          "allow_cut": true,
+          "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data."
+        },
+        "demands": [
+          {
+            "member_id": "ISOLATED_CUT_REQUEST_900MM",
+            "role": "POST",
+            "length_mm": 900,
+            "quantity": 1,
+            "section": {
+              "thickness_mm": 180.975,
+              "width_mm": 187.325
+            }
+          }
+        ],
+        "demand_basis": "Explicit isolated length-compatibility probe, not a recorded building member. Uses the real seller section and one existing slot; no new form or physical stock.",
+        "anchor": {
+          "status": "APPROXIMATE_VISIBLE_ENDPOINTS",
+          "endpoints_source_px": [
+            [
+              1870,
+              480
+            ],
+            [
+              1740,
+              3660
+            ]
+          ],
+          "basis": "115200 view 01 shows both ends of the illustrated beam. Source-photo top/bottom end positions selected for this demonstration; seller nominal length 1104.9 mm. Perspective and end placement are approximate. Not a scaled cloud."
+        }
+      },
+      "association": "Illustrated target mapped to one recorded representative slot for this scenario only; never copied to other quantity slots.",
+      "partition": {
+        "parts": [
+          {
+            "kind": "retained",
+            "interval_mm": [
+              0.0,
+              828.24
+            ],
+            "length_mm": 828.24
+          },
+          {
+            "kind": "preparation_kerf",
+            "interval_mm": [
+              828.24,
+              831.24
+            ],
+            "length_mm": 3.0
+          },
+          {
+            "kind": "excluded",
+            "interval_mm": [
+              831.24,
+              1104.9
+            ],
+            "length_mm": 273.6600000000001
+          }
+        ],
+        "totals": {
+          "excluded": 273.6600000000001,
+          "preparation_kerf": 3.0,
+          "retained": 828.24
+        },
+        "maximum_continuous_mm": 828.24,
+        "accounting_error_mm": 0.0
+      },
+      "before_status": "OPTIMAL",
+      "after_status": "INFEASIBLE",
+      "after_cutting": {
+        "source_length_mm": 1104.9,
+        "used_mm": 0.0,
+        "excluded_mm": 273.6600000000001,
+        "preparation_kerf_mm": 3.0,
+        "allocation_kerf_mm": 0.0,
+        "selected_offcut_mm": 0.0,
+        "retained_unselected_mm": 828.24,
+        "accounting_error_mm": 0.0,
+        "allocation_kerf_intervals": [],
+        "offcut_intervals": []
+      },
+      "current_project_modified": false
+    },
+    {
+      "scenario_id": "CUT_f53711f9ea12",
+      "record_sha256": "0d91be5f466a4ed637913a741ee396818c17898d31060a27fbe5235590a16241",
+      "status": "PROPOSED_SCENARIO_ONLY",
+      "configuration": {
+        "run_id": "DEFECT_115200_01_37b96e7a987af96d",
+        "candidate_ids": [
+          "C01"
+        ],
+        "stock_id": "115200_001",
+        "action": "trim",
+        "buffer_mm": 20,
+        "settings": {
+          "kerf_mm": 3,
+          "minimum_piece_length_mm": 300,
+          "allow_cut": true,
+          "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data."
+        },
+        "demands": [
+          {
+            "member_id": "ISOLATED_SHORTER_CUT_600MM",
+            "role": "POST",
+            "length_mm": 600,
+            "quantity": 1,
+            "section": {
+              "thickness_mm": 180.975,
+              "width_mm": 187.325
+            }
+          }
+        ],
+        "demand_basis": "Explicit isolated length-compatibility probe, not a recorded building member. Uses the real seller section and one existing slot; no new form or physical stock.",
+        "anchor": {
+          "status": "APPROXIMATE_VISIBLE_ENDPOINTS",
+          "endpoints_source_px": [
+            [
+              1870,
+              480
+            ],
+            [
+              1740,
+              3660
+            ]
+          ],
+          "basis": "115200 view 01 shows both ends of the illustrated beam. Source-photo top/bottom end positions selected for this demonstration; seller nominal length 1104.9 mm. Perspective and end placement are approximate. Not a scaled cloud."
+        }
+      },
+      "association": "Illustrated target mapped to one recorded representative slot for this scenario only; never copied to other quantity slots.",
+      "partition": {
+        "parts": [
+          {
+            "kind": "retained",
+            "interval_mm": [
+              0.0,
+              828.24
+            ],
+            "length_mm": 828.24
+          },
+          {
+            "kind": "preparation_kerf",
+            "interval_mm": [
+              828.24,
+              831.24
+            ],
+            "length_mm": 3.0
+          },
+          {
+            "kind": "excluded",
+            "interval_mm": [
+              831.24,
+              1104.9
+            ],
+            "length_mm": 273.6600000000001
+          }
+        ],
+        "totals": {
+          "excluded": 273.6600000000001,
+          "preparation_kerf": 3.0,
+          "retained": 828.24
+        },
+        "maximum_continuous_mm": 828.24,
+        "accounting_error_mm": 0.0
+      },
+      "before_status": "OPTIMAL",
+      "after_status": "OPTIMAL",
+      "after_cutting": {
+        "source_length_mm": 1104.9,
+        "used_mm": 600.0,
+        "excluded_mm": 273.6600000000001,
+        "preparation_kerf_mm": 3.0,
+        "allocation_kerf_mm": 3.0,
+        "selected_offcut_mm": 225.24,
+        "retained_unselected_mm": 0,
+        "accounting_error_mm": 0.0,
+        "allocation_kerf_intervals": [
+          [
+            600.0,
+            603.0
+          ]
+        ],
+        "offcut_intervals": [
+          [
+            603.0,
+            828.24
+          ]
+        ]
+      },
+      "current_project_modified": false
+    }
+  ]
+}

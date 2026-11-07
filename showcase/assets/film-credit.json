@@ -1,0 +1,15 @@
+{
+  "source_video": "/second-grain-timber/assets/timber-stock-to-assembly.mp4",
+  "output": "/second-grain-timber/cases/assets/case1-allocation-instrumental.mp4",
+  "duration_seconds": 60,
+  "size_bytes": 3600106,
+  "original_video_bitstream_preserved": true,
+  "video_sha256": "SHA256=53cd465b50f83418dcbf2cb3d52c0893e0f5b04e82a744cbef16e67d198e6ded",
+  "score": "Original procedural composition: percussion, bass, plucked chords; no vocals or external music samples.",
+  "bpm": 112,
+  "audio": "AAC stereo, 48 kHz, 160 kb/s",
+  "audio_peak": 0.42001134157180786,
+  "audio_rms": 0.06240690127015114,
+  "full_decode": "PASS",
+  "original_assets_unchanged": true
+}

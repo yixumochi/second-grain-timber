@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1050" viewBox="0 0 1340 1050">
+<rect width="1340" height="1050" fill="#f4f1e9"/><g font-family="Arial,sans-serif" fill="#243d3a">
+<text x="30" y="38" font-size="24" font-weight="bold">Case 2 | actual overlap samples and terminal R03 kinematics</text>
+<text x="30" y="65" font-size="14">Working millimetres / geometry-derived dimensions / analytical details, not fabrication or fastener approval</text>
+<text x="30" y="108" font-size="18" font-weight="bold">R02 | terminal original pair</text>
+<polygon points="95.00,285.87 95.15,339.65 135.50,380.00 304.12,379.54 303.77,252.90 215.87,165.00" fill="#ddd2a4" stroke="#37514c" stroke-width="2"/>
+<line x1="225.4905080421818" y1="285.4519943478723" x2="173.42711381468513" y2="307.10103320411247" stroke="#a04740" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="225.4905080421818" cy="285.4519943478723" r="5" fill="#a04740"/><text x="233.4905080421818" y="277.4519943478723" font-size="13">T1</text>
+<circle cx="173.42711381468513" cy="307.10103320411247" r="5" fill="#a04740"/><text x="181.42711381468513" y="299.10103320411247" font-size="13">T2</text>
+<path d="M95,391v10 M95,396H304.1173965176828 M304.1173965176828,391v10" fill="none" stroke="#37514c"/>
+<text x="199.5586982588414" y="416" text-anchor="middle" font-size="12">XZ overlap width 89.01 mm</text>
+<text x="34" y="153" font-size="12">Z span</text><text x="34" y="170" font-size="12">91.51 mm</text>
+<text x="465" y="108" font-size="18" font-weight="bold">R03 | same face + T3</text>
+<polygon points="530.00,285.87 530.15,339.65 570.50,380.00 739.12,379.54 738.77,252.90 650.87,165.00" fill="#ddd2a4" stroke="#37514c" stroke-width="2"/>
+<polygon points="660.49,285.45 608.43,307.10 688.43,330.93" fill="#b37a2b25" stroke="#b37a2b" stroke-width="2"/>
+<line x1="660.4905080421818" y1="285.4519943478723" x2="608.4271138146851" y2="307.10103320411247" stroke="#a04740" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="660.4905080421818" cy="285.4519943478723" r="5" fill="#a04740"/><text x="668.4905080421818" y="277.4519943478723" font-size="13">T1</text>
+<circle cx="608.4271138146851" cy="307.10103320411247" r="5" fill="#a04740"/><text x="616.4271138146851" y="299.10103320411247" font-size="13">T2</text>
+<circle cx="688.4289966093178" cy="330.93256004298667" r="5" fill="#b37a2b"/><text x="696.4289966093178" y="322.93256004298667" font-size="13">T3</text>
+<line x1="688.4289966093178" y1="330.93256004298667" x2="668.1865378254504" y2="282.2518255865208" stroke="#b37a2b" stroke-dasharray="3 3"/>
+<path d="M530,391v10 M530,396H739.1173965176828 M739.1173965176828,391v10" fill="none" stroke="#37514c"/>
+<text x="634.5586982588413" y="416" text-anchor="middle" font-size="12">XZ overlap width 89.01 mm</text>
+<text x="469" y="153" font-size="12">Z span</text><text x="469" y="170" font-size="12">91.51 mm</text>
+<text x="900" y="108" font-size="18" font-weight="bold">Ordinary | C2CONTACT_0626</text>
+<polygon points="1014.80,174.39 965.09,199.24 965.00,258.93 1025.35,379.65 1255.00,380.00 1152.30,174.60" fill="#ddd2a4" stroke="#37514c" stroke-width="2"/>
+<line x1="1120.6407064693458" y1="296.34342862839486" x2="1073.67806631974" y2="266.93691506999005" stroke="#a04740" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="1120.6407064693458" cy="296.34342862839486" r="5" fill="#a04740"/><text x="1128.6407064693458" y="288.34342862839486" font-size="13">T1</text>
+<circle cx="1073.67806631974" cy="266.93691506999005" r="5" fill="#a04740"/><text x="1081.67806631974" y="258.93691506999005" font-size="13">T2</text>
+<path d="M965,391v10 M965,396H1255.0 M1255.0,391v10" fill="none" stroke="#37514c"/>
+<text x="1110.0" y="416" text-anchor="middle" font-size="12">XZ overlap width 125.61 mm</text>
+<text x="904" y="153" font-size="12">Z span</text><text x="904" y="170" font-size="12">89.06 mm</text>
+<text x="30" y="460" font-size="14" font-weight="normal">C2CONTACT_0001 | S001 B01 / B02 | shared area 5956.41 mm²</text>
+<text x="30" y="484" font-size="14" font-weight="normal">T1–T2 24.00 mm | pair rank 5/6, 1 free relative rotation | triangle rank 6/6</text>
+<text x="30" y="508" font-size="14" font-weight="normal">T3 lever arm 22.44 mm | triangle area 269.29 mm² | minimum edge distance 20.75 mm</text>
+<text x="30" y="548" font-size="14" font-weight="normal">Terminal tie coordinates (X, Y, Z), mm:</text>
+<text x="30" y="572" font-size="14" font-weight="normal">T1: (354.644, 38.100, 152.281)</text>
+<text x="30" y="595" font-size="14" font-weight="normal">T2: (332.484, 38.100, 143.066)</text>
+<text x="30" y="618" font-size="14" font-weight="normal">T3: (366.536, 38.100, 132.923)</text>
+<text x="715" y="460" font-size="14" font-weight="normal">S040 B02 / B03 | shared area 8389.46 mm²</text>
+<text x="715" y="484" font-size="14" font-weight="normal">Pair spacing 24.00 mm | rank 5/6</text>
+<text x="715" y="508" font-size="14" font-weight="normal">Minimum tie-to-face-edge distance 35.85 mm</text>
+<text x="715" y="548" font-size="14" font-weight="normal">Ordinary tie coordinates (X, Y, Z), mm:</text>
+<text x="715" y="572" font-size="14" font-weight="normal">T1: (167.898, 3009.900, 216.816)</text>
+<text x="715" y="595" font-size="14" font-weight="normal">T2: (147.557, 3009.900, 229.553)</text>
+<text x="30" y="678" font-size="16" font-weight="bold">S039–S041 sample boundary | actual network context</text>
+<text x="30" y="812" font-size="14" font-weight="normal">27 members | 40 internal contacts / 80 ties | 16 contacts / 32 ties cross sample boundary</text>
+<text x="30" y="838" font-size="14" font-weight="normal">Retained real supports: PAD03 at S040 B01 and PAD04 at S040 B09 (UZ only; no new restraints).</text>
+<text x="30" y="864" font-size="14" font-weight="normal">Cross-boundary connections continue to S038 and S042; an isolated crop is not the full bench.</text>
+<text x="30" y="913" font-size="14" font-weight="bold">Decision: preserve R03. No evidence here warrants R04 or a new whole-bench/native solve.</text>
+<text x="30" y="939" font-size="14" font-weight="normal">Physical hold: fastener layout/product, grain/end/edge rules, slip/rotational stiffness, bearing, withdrawal and pad friction.</text>
+<text x="30" y="974" font-size="14" font-weight="normal">All edge distances are geometric measurements only. Timber remains 38.1 × 88.9 mm; no member or stock change.</text>
+<text x="30" y="1000" font-size="14" font-weight="normal">Source-bound R03 forces are extracted separately; timber section forces are not individual fastener demands.</text>
+<rect x="100" y="713" width="180" height="60" rx="7" fill="#e4e3dd" stroke="#536b61"/><text x="190" y="749" font-size="19" text-anchor="middle">S038</text>
+<path d="M280,743H348" stroke="#a67b36" stroke-width="4"/>
+<rect x="348" y="713" width="180" height="60" rx="7" fill="#d1e0d7" stroke="#536b61"/><text x="438" y="749" font-size="19" text-anchor="middle">S039</text>
+<path d="M528,743H596" stroke="#a67b36" stroke-width="4"/>
+<rect x="596" y="713" width="180" height="60" rx="7" fill="#d1e0d7" stroke="#536b61"/><text x="686" y="749" font-size="19" text-anchor="middle">S040</text>
+<path d="M776,743H844" stroke="#a67b36" stroke-width="4"/>
+<rect x="844" y="713" width="180" height="60" rx="7" fill="#d1e0d7" stroke="#536b61"/><text x="934" y="749" font-size="19" text-anchor="middle">S041</text>
+<path d="M1024,743H1092" stroke="#a67b36" stroke-width="4"/>
+<rect x="1092" y="713" width="180" height="60" rx="7" fill="#e4e3dd" stroke="#536b61"/><text x="1182" y="749" font-size="19" text-anchor="middle">S042</text>
+<rect x="327" y="699" width="710" height="88" rx="10" fill="none" stroke="#395e51" stroke-dasharray="6 4"/></g></svg>

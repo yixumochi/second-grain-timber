@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#166c80"/></marker><clipPath id="detail"><rect x="45" y="132" width="915" height="550"/></clipPath></defs><style>text{font-family:Arial,sans-serif;fill:#203239} .small{font-size:15px}.label{font-size:17px}.muted{fill:#596b71}.blue{fill:#166c80}.warn{fill:#a34b2d} .panel{fill:white;stroke:#cbd6d7} .axis{stroke:#166c80;stroke-width:2;stroke-dasharray:6 4;fill:none}</style><rect width="1600" height="1120" fill="#edf2f1"/><text x="40" y="43" font-size="27" font-weight="bold">CASE 3 / F04 north eave → middle north base</text><text x="40" y="74" class="label">Saved R02 geometry and demands · mm / kN · no fasteners, anchors or capacity approved</text><rect x="30" y="100" width="945" height="600" rx="8" class="panel"/><rect x="995" y="100" width="575" height="600" rx="8" class="panel"/><rect x="30" y="720" width="1540" height="365" rx="8" class="panel"/><text x="50" y="127" class="label" font-weight="bold">A / Actual solid envelopes, axonometric detail</text>
+<g clip-path="url(#detail)">
+<polygon points="407.60999999999984,1794.38 479.2379999999999,1809.62 552.3900000000001,1809.62 480.7620000000001,1794.38" fill="#bc9170" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="407.60999999999984,552.38 480.7620000000001,552.38 552.3900000000001,567.62 479.2379999999999,567.62" fill="#bc9170" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="407.60999999999984,1794.38 480.7620000000001,1794.38 480.7620000000001,552.38 407.60999999999984,552.38" fill="#bc9170" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="480.7620000000001,1794.38 552.3900000000001,1809.62 552.3900000000001,567.62 480.7620000000001,552.38" fill="#bc9170" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="552.3900000000001,1809.62 479.2379999999999,1809.62 479.2379999999999,567.62 552.3900000000001,567.62" fill="#bc9170" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="479.2379999999999,1809.62 407.60999999999984,1794.38 407.60999999999984,552.38 479.2379999999999,567.62" fill="#bc9170" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M480,1802 L480,560" class="axis"/>
+<polygon points="-1259.938,557.46 -1259.938,447.7320000000001 -1236.062,452.8120000000001 -1236.062,562.54" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="468.062,557.46 491.938,562.54 491.938,452.8120000000001 468.062,447.7320000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="-1259.938,557.46 -1236.062,562.54 491.938,562.54 468.062,557.46" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="-1236.062,562.54 -1236.062,452.8120000000001 491.938,452.8120000000001 491.938,562.54" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="-1236.062,452.8120000000001 -1259.938,447.7320000000001 468.062,447.7320000000001 491.938,452.8120000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="-1259.938,447.7320000000001 -1259.938,557.46 468.062,557.46 468.062,447.7320000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M-1248,505.136 L480,505.136" class="axis"/>
+<polygon points="468.062,557.46 468.062,447.7320000000001 491.938,452.8120000000001 491.938,562.54" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="2196.062,557.46 2219.938,562.54 2219.938,452.8120000000001 2196.062,447.7320000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="468.062,557.46 491.938,562.54 2219.938,562.54 2196.062,557.46" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="491.938,562.54 491.938,452.8120000000001 2219.938,452.8120000000001 2219.938,562.54" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="491.938,452.8120000000001 468.062,447.7320000000001 2196.062,447.7320000000001 2219.938,452.8120000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="468.062,447.7320000000001 468.062,557.46 2196.062,557.46 2196.062,447.7320000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M480,505.136 L2208,505.136" class="axis"/>
+<polygon points="498.28800000000007,450.2720000000001 498.28800000000007,340.5440000000002 461.71199999999993,340.5440000000002 461.71199999999993,450.2720000000001" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="1626.288,690.2720000000002 1589.712,690.2720000000002 1589.712,580.5440000000002 1626.288,580.5440000000002" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="498.28800000000007,450.2720000000001 461.71199999999993,450.2720000000001 1589.712,690.2720000000002 1626.288,690.2720000000002" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="461.71199999999993,450.2720000000001 461.71199999999993,340.5440000000002 1589.712,580.5440000000002 1589.712,690.2720000000002" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="461.71199999999993,340.5440000000002 498.28800000000007,340.5440000000002 1626.288,580.5440000000002 1589.712,580.5440000000002" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="498.28800000000007,340.5440000000002 498.28800000000007,450.2720000000001 1626.288,690.2720000000002 1626.288,580.5440000000002" fill="#d9b68b" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M480,395.40800000000013 L1608,635.4080000000001" class="axis"/>
+<polygon points="455.22,479.74059618640894 455.22,389.0754038135914 427.7879999999997,389.0754038135914 427.7879999999997,479.74059618640894" fill="#bd834e" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="1089.72,128.74059618640888 1062.2879999999998,128.74059618640888 1062.2879999999998,38.07540381359138 1089.72,38.07540381359138" fill="#bd834e" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="455.22,479.74059618640894 427.7879999999997,479.74059618640894 1062.2879999999998,128.74059618640888 1089.72,128.74059618640888" fill="#bd834e" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="427.7879999999997,479.74059618640894 427.7879999999997,389.0754038135914 1062.2879999999998,38.07540381359138 1062.2879999999998,128.74059618640888" fill="#bd834e" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="427.7879999999997,389.0754038135914 455.22,389.0754038135914 1089.72,38.07540381359138 1062.2879999999998,38.07540381359138" fill="#bd834e" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="455.22,389.0754038135914 455.22,479.74059618640894 1089.72,128.74059618640888 1089.72,38.07540381359138" fill="#bd834e" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M441.5039999999999,434.40800000000013 L1076.004,83.40800000000013" class="axis"/>
+<polygon points="471.0465,865.6479235568121 471.0465,790.542076443188 488.9535,794.3520764431879 488.9535,869.457923556812" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="831.0465,540.7839235568123 848.9535,544.5939235568122 848.9535,469.4880764431879 831.0465,465.67807644318793" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="471.0465,865.6479235568121 488.9535,869.457923556812 848.9535,544.5939235568122 831.0465,540.7839235568123" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="488.9535,869.457923556812 488.9535,794.3520764431879 848.9535,469.4880764431879 848.9535,544.5939235568122" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="488.9535,794.3520764431879 471.0465,790.542076443188 831.0465,465.67807644318793 848.9535,469.4880764431879" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="471.0465,790.542076443188 471.0465,865.6479235568121 831.0465,540.7839235568123 831.0465,465.67807644318793" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M480,830 L840,505.136" class="axis"/>
+<polygon points="493.7160000000001,875.4843370120786 493.7160000000001,784.5156629879214 466.2839999999999,784.5156629879214 466.2839999999999,875.4843370120786" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="728.7160000000001,490.8923370120788 701.2839999999999,490.8923370120788 701.2839999999999,399.9236629879215 728.7160000000001,399.9236629879215" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="493.7160000000001,875.4843370120786 466.2839999999999,875.4843370120786 701.2839999999999,490.8923370120788 728.7160000000001,490.8923370120788" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="466.2839999999999,875.4843370120786 466.2839999999999,784.5156629879214 701.2839999999999,399.9236629879215 701.2839999999999,490.8923370120788" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="466.2839999999999,784.5156629879214 493.7160000000001,784.5156629879214 728.7160000000001,399.9236629879215 701.2839999999999,399.9236629879215" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<polygon points="493.7160000000001,784.5156629879214 493.7160000000001,875.4843370120786 728.7160000000001,490.8923370120788 728.7160000000001,399.9236629879215" fill="#cea177" fill-opacity="0.24" stroke="#8c6d50" stroke-width="1.1"/>
+<path d="M480,830 L715,445.40800000000013" class="axis"/>
+<polygon points="498.28800000000007,350.0754038135914 498.28800000000007,440.7405961864089 629.1002227989226,368.3763878295582 510.7317772010774,343.1916121704422" fill="#dd6a35" fill-opacity="0.5" stroke="#a34b2d" stroke-width="2"/>
+<path d="M480,560 L480,505.136" stroke="#a34b2d" stroke-width="4" stroke-dasharray="5 4"/><circle cx="480" cy="560" r="5" fill="white" stroke="#a34b2d"/>
+<path d="M480,560 L480,505.136" stroke="#a34b2d" stroke-width="4" stroke-dasharray="5 4"/><circle cx="480" cy="560" r="5" fill="white" stroke="#a34b2d"/>
+<path d="M480,505.136 L480,395.40800000000013" stroke="#a34b2d" stroke-width="4" stroke-dasharray="5 4"/><circle cx="480" cy="505.136" r="5" fill="white" stroke="#a34b2d"/>
+<path d="M480,395.40800000000013 L512.0039999999999,395.40800000000013" stroke="#a34b2d" stroke-width="4" stroke-dasharray="5 4"/><circle cx="480" cy="395.40800000000013" r="5" fill="white" stroke="#a34b2d"/>
+</g><rect x="595" y="554" width="365" height="101" rx="4" fill="white" fill-opacity="0.95"/><rect x="45" y="658" width="915" height="29" fill="white" fill-opacity="0.95"/>
+<text x="54" y="164" class="small">C3_F04_RAFTER_N · 38.1 × 139.7</text>
+<text x="54" y="185" class="small">120235_007::P01 · plumb ends 33.690°</text>
+<text x="54" y="214" class="warn">Side-face contact at x = 2425.4</text>
+<text x="54" y="237" class="warn">No horizontal rafter seat is modelled.</text>
+<text x="54" y="593" class="small">C3_POST_2400_N · 101.6 × 152.4</text>
+<text x="54" y="616" class="small">120271_001::P01 · z = 0 to 2300</text>
+<text x="605" y="575" class="small">C3_F04_TIE · 50.8 × 203.2</text>
+<text x="605" y="598" class="small">78642_001::P01</text>
+<text x="605" y="626" class="small">C3_BEAM_N_1 + N_2 butt at x = 2400</text>
+<text x="605" y="649" class="small">113926_001::P01 / 113926_002::P01</text>
+<text x="54" y="675" class="small">Dashed blue = saved centreline. Orange = ideal connector. Translucent overlap ≠ finished joinery.</text>
+<text x="1018" y="130" class="label">B / Declared load path and freedoms</text>
+<text x="1018" y="175" class="small">C3_F04_RAFTER_N</text>
+<text x="1018" y="207" class="small warn">F04_EAVE_N · offset 44.45 along X · release Rx</text>
+<text x="1018" y="257" class="small">C3_F04_TIE</text>
+<text x="1018" y="290" class="small warn">F04_BEARING_N · offset 203.2 Z · release Rx</text>
+<text x="1018" y="340" class="small">C3_BEAM_N_2 (+ N_1 at column cap)</text>
+<text x="1018" y="373" class="small warn">COLUMN_CAP_2400_N · offset 101.6 Z · release Ry</text>
+<text x="1018" y="423" class="small">C3_POST_2400_N · knee braces join at z = 1800</text>
+<text x="1018" y="507" class="small">BASE node 98 · (2400, 0, 0)</text>
+<path d="M1260,217 L1260,240" stroke="#166c80" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M1260,300 L1260,323" stroke="#166c80" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M1260,383 L1260,406" stroke="#166c80" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M1260,443 L1260,466" stroke="#166c80" stroke-width="2" marker-end="url(#arr)"/>
+<text x="1018" y="543" class="small">Ux, Uy, Uz fixed; Rx, Ry, Rz free.</text>
+<text x="1018" y="568" class="warn">Conceptual pinned anchor support; no anchor geometry.</text>
+<text x="1018" y="603" class="small">One hinge axis is free at each listed connection.</text>
+<text x="1018" y="628" class="small">Other two rotations tied by conceptual lateral cleat.</text>
+<text x="1018" y="661" class="warn">Those stiffness assumptions need physical justification.</text>
+<text x="52" y="756" class="label">C / Recomputed checks and demand envelope</text>
+<text x="52" y="796" class="label">Maximum base tension 6.029 kN</text>
+<text x="52" y="822" class="small">SW_WIND_Y_POS · node 98 · C3_POST_2400_N</text>
+<text x="52" y="848" class="small">Same case / same base shear 2.875 kN</text>
+<text x="52" y="874" class="small">Maximum shear 2.893 kN at node 100</text>
+<text x="52" y="900" class="small">SW_WIND_Y_POS · C3_POST_2400_S</text>
+<text x="52" y="926" class="small">Concurrent compression 9.201 kN</text>
+<text x="550" y="796" class="label">Rafter blank allowance is explicit</text>
+<text x="550" y="822" class="small">1622.498 axis + 93.133 angular</text>
+<text x="550" y="848" class="small">+ 40.000 trim = 1755.631 mm blank</text>
+<text x="550" y="874" class="small">7 selected members; 7 source bars including shared pieces.</text>
+<text x="550" y="900" class="small">End machining saved; extra joint cuts remain unknown.</text>
+<text x="550" y="926" class="small">8 / 8 force and moment equilibrium checks pass.</text>
+<text x="1080" y="796" class="label">Wind |u|max = 54.942 mm</text>
+<text x="1080" y="822" class="small">SW_WIND_Y_NEG · node 158</text>
+<text x="1080" y="848" class="small">C3_F07_RAFTER_N, end x = 4844.45</text>
+<text x="1080" y="874" class="small">Physical geometry, display scale = 1.</text>
+<text x="1080" y="900" class="small">Demand only; no serviceability limit assigned.</text>
+<text x="1080" y="926" class="small">No solver rerun / no support changes.</text>
+<text x="52" y="981" class="label">DECISION: Retain the saved baseline as a conceptual digital model.</text>
+<text x="52" y="1009" class="warn">Separate physical design is required for side cleats, knee joinery, beam-cap transfer, hold-downs and foundation.</text>
+<text x="52" y="1037" class="small">Reanalyse after actual detail changes affect stiffness, releases, offsets, section removal, bracing, supports or loads.</text>
+<text x="52" y="1065" class="small">Companion JSON contains exact stock intervals, all 48 reactions, 7 joint mappings, contact areas and SHA-256 evidence.</text>
+</svg>

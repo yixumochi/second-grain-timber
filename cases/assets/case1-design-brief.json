@@ -1,0 +1,15 @@
+{
+  "location": "Seattle, Washington, United States",
+  "jurisdiction": "Seattle \u00b7 2021 Seattle Building Code",
+  "building_use": "PUBLIC_EXHIBITION",
+  "area_m2": 2.9972,
+  "height_m": 2.05,
+  "internal_columns_allowed": false,
+  "jointing_allowed": true,
+  "cutting_allowed": true,
+  "kerf_mm": 3,
+  "minimum_piece_length_mm": 300,
+  "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data.",
+  "stock_policy": "existing_reclaimed_stock_only",
+  "enclosure_intent": "Deck, wall cladding and timber roof surface; weatherproofing unresolved"
+}

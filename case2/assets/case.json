@@ -1,0 +1,176 @@
+{
+  "schema": "CASE2_PRESENTATION_EXTRACT/1",
+  "extract_only": true,
+  "allocation_run_id": "ALLOC_CASE2_FULL_20261003T072129Z_464628f7",
+  "analysis_run_id": "CASE2_KARAMBA_20261003T084216Z_R03_TERMINAL_TRIANGLES",
+  "geometry_id": "GEOM_CASE2_FULL_f7c344c7a354e884",
+  "dimensions_mm": {
+    "length": 6057.900000000001,
+    "depth": 1458.5538191918706,
+    "height": 592.0306406891337
+  },
+  "dimension_note": "Working scale: 100 mm/source unit; not physically measured",
+  "section_mm": [
+    38.1,
+    88.9
+  ],
+  "pitch_mm": 76.2,
+  "summary": {
+    "allocated_members": 716,
+    "source_bars_used": 120,
+    "installed_length_mm": 199647.978238,
+    "surplus_length_mm": 1089.543866,
+    "selected_stock_length_mm": 238366.29999999946,
+    "residual_length_mm": 35468.77789599996,
+    "kerf_loss_mm": 2160.0,
+    "cut_operations": 720,
+    "installed_parts": 716,
+    "surplus_cut_parts": 4,
+    "produced_cut_pieces": 720,
+    "defect_trim_loss_mm": 0,
+    "contour_removed_volume_mm3": 0,
+    "machining_loss_mm3": 0,
+    "volume": {
+      "selected_stock_mm3": 807368111.0669982,
+      "installed_blank_mm3": 676225670.6101475,
+      "finished_contour_mm3": 676225670.6101475,
+      "contour_removal_mm3": 0.0,
+      "surplus_cut_blank_mm3": 3690383.13308994,
+      "crosscut_kerf_mm3": 7316114.4,
+      "residual_mm3": 120135942.92376252,
+      "prior_end_loss_mm3": 0.0
+    },
+    "untouched_stock_count": 986,
+    "untouched_compatible_stock_count": 159,
+    "source_bar_usage": {
+      "untouched": 986,
+      "selected_partial": 120,
+      "multi_part": 120
+    },
+    "denominator": "Selected stock only. Surplus cuts, crosscut kerf and residuals are distinct; untouched stock is separate."
+  },
+  "allocation_optimum_scope": "Bounded two-partition stock-cutting menu, original MILP objective and constraints.",
+  "selected_defect_policy": {
+    "selected_scenarios": [],
+    "status": "NO_APPROVED_SOURCE_MATCHING_OVERLAY_SELECTED",
+    "note": "Saved scenarios belong to 115198,115200,78646; these four candidate families have no matching listing. Uninspected source stock is not defect-free."
+  },
+  "load_cases": [
+    {
+      "id": "SW_ONLY",
+      "description": "Explicit self-weight only; density 500 kg/m\u00b3 and gravity 9.81 m/s\u00b2.",
+      "max_displacement_mm": 1.2794852201944873,
+      "critical_strip_id": "C2O_S040_B01",
+      "position_mm": [
+        256.339816667803,
+        2990.8500000000004,
+        58.12061174089781
+      ],
+      "vector_mm": [
+        -0.214641019236381,
+        0.272126584653979,
+        -1.2316488068771325
+      ],
+      "reaction_balance": {
+        "status": "PASS",
+        "force_residual_N": [
+          -8.778683335819478e-08,
+          7.818376544824039e-06,
+          3.5525793973256725e-06
+        ],
+        "moment_residual_Nmm": [
+          0.0039499914450402684,
+          -0.0037488102622162955,
+          0.011512092761003937
+        ],
+        "relative_error": 2.5892062979281393e-09
+      },
+      "resting_support_valid": true
+    },
+    {
+      "id": "SW_CENTRAL_1KN",
+      "description": "Explicit self-weight only; density 500 kg/m\u00b3 and gravity 9.81 m/s\u00b2. Plus 1 kN TOTAL over 14 upper-edge points: S037\u2013S043, B03 and B07; 71.428571 N per strip.",
+      "max_displacement_mm": 1.950174041016667,
+      "critical_strip_id": "C2O_S040_B01",
+      "position_mm": [
+        256.339816667803,
+        2990.8500000000004,
+        58.12061174089781
+      ],
+      "vector_mm": [
+        -0.29862467182889024,
+        0.36717274114948184,
+        -1.8918737467883897
+      ],
+      "reaction_balance": {
+        "status": "PASS",
+        "force_residual_N": [
+          1.5871284841928457e-06,
+          -2.5454598418418135e-06,
+          5.83393444664182e-07
+        ],
+        "moment_residual_Nmm": [
+          0.007048663430708757,
+          -0.001448637654277718,
+          -0.013215683856825014
+        ],
+        "relative_error": 7.079006648569063e-10
+      },
+      "resting_support_valid": true
+    },
+    {
+      "id": "SW_ASYMMETRIC_1KN",
+      "description": "Explicit self-weight only; density 500 kg/m\u00b3 and gravity 9.81 m/s\u00b2. Plus 1 kN TOTAL over 7 upper-edge points: S013\u2013S019, B07; 142.857143 N per strip.",
+      "max_displacement_mm": 2.6873676600258465,
+      "critical_strip_id": "C2O_S019_B09",
+      "position_mm": [
+        1359.7667026665886,
+        1390.65,
+        47.15387076327215
+      ],
+      "vector_mm": [
+        -0.4552666031110035,
+        0.24189307197054616,
+        -2.6374542653811486
+      ],
+      "reaction_balance": {
+        "status": "PASS",
+        "force_residual_N": [
+          5.598752017554882e-07,
+          1.324435666899559e-05,
+          3.839730144949982e-06
+        ],
+        "moment_residual_Nmm": [
+          -8.349942959284817e-05,
+          -0.0005779001721606392,
+          0.016872951644963406
+        ],
+        "relative_error": 3.196999632264606e-09
+      },
+      "resting_support_valid": true
+    }
+  ],
+  "source_records": [
+    {
+      "sha256": "9304ce7233781ebf02ae867be04bef3f39d2e8dedb4cac8f2eb316fe969ddd90",
+      "record": "Saved complete-bench allocation snapshot"
+    },
+    {
+      "sha256": "2830ad0c40ede2f85fcc9b2d4ae558c97962e57a160178e4e6384e1ad1d8c8b2",
+      "record": "Saved R03 result extract"
+    },
+    {
+      "sha256": "8dc774b78451953f1456384dc27e9d554ee6dd166a974849d9d735184460a001",
+      "record": "Accepted R03 presentation index"
+    },
+    {
+      "sha256": "4b347d479f744690e93c79851963a8d99e6661fec45581d6b19c4d30996600c1",
+      "record": "Preserved 58-second allocation animation"
+    }
+  ],
+  "new_solver_runs": 0,
+  "new_model_calls": 0,
+  "original_video_modified": false,
+  "media_type": "CPU model/allocation animation and saved-result presentation edit; not browser recording",
+  "narration": "English synthetic narration, Microsoft Zira Desktop"
+}

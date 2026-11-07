@@ -1,0 +1,56 @@
+[
+  {
+    "case": 1,
+    "agent": {
+      "file": "case1-agent.mp4",
+      "duration": 28,
+      "size": 231219,
+      "basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query."
+    },
+    "allocation": {
+      "file": "case1-allocation.mp4",
+      "duration": 26.5,
+      "size": 2041358,
+      "source": "assets\\update\\stock-cut-part-building.mp4",
+      "video_stream_unchanged": true,
+      "audio": "Original instrumental composition, no voice; 112 BPM"
+    },
+    "full_decode": "PASS"
+  },
+  {
+    "case": 2,
+    "agent": {
+      "file": "case2-agent.mp4",
+      "duration": 28,
+      "size": 185516,
+      "basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query."
+    },
+    "allocation": {
+      "file": "case2-allocation.mp4",
+      "duration": 58,
+      "size": 4356742,
+      "source": "case2\\explore\\assets\\case2-cutting-allocation.mp4",
+      "video_stream_unchanged": true,
+      "audio": "Original instrumental composition, no voice; 112 BPM"
+    },
+    "full_decode": "PASS"
+  },
+  {
+    "case": 3,
+    "agent": {
+      "file": "case3-agent.mp4",
+      "duration": 28,
+      "size": 175276,
+      "basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query."
+    },
+    "allocation": {
+      "file": "case3-allocation.mp4",
+      "duration": 48,
+      "size": 1985586,
+      "source": "case3\\assets\\case3-allocation.mp4",
+      "video_stream_unchanged": true,
+      "audio": "Original instrumental composition, no voice; 112 BPM"
+    },
+    "full_decode": "PASS"
+  }
+]

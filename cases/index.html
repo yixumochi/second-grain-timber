@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SECOND GRAIN — From real data to timber design</title>
+<meta name="description" content="An AI-assisted reclaimed-timber workflow: source-linked material evidence, constrained allocation and three independent design cases.">
+<link rel="stylesheet" href="workflow.css">
+<script type="module" src="workflow.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to research</a>
+<header class="mast"><a class="brand" href="/second-grain-timber/cases/">SECOND GRAIN<small>TIMBER AI / COMPUTATIONAL DESIGN RESEARCH</small></a><a href="technical.html">Technical evidence ↗</a></header>
+<nav class="chapter-nav" aria-label="Research chapters">
+ <a href="#materials" aria-current="page"><b>01</b> Material intelligence</a>
+ <a href="#algorithm"><b>02</b> Allocation &amp; form</a>
+ <a href="#cases"><b>03</b> Three design cases</a>
+</nav>
+<main id="main">
+<p id="load-status" class="caption" role="status">Loading saved material and allocation records…</p>
+<div data-chapter="materials">
+ <div class="hero">
+  <div><p class="kicker">01 / Real materials. Incomplete information.</p><h1>Make the material<br>readable first.</h1><p class="lead">Turn sparse seller photographs and uneven listing data into an inspectable material record—before asking what to build.</p></div>
+  <div class="hero-note"><span class="pill ai">AI-ASSISTED OBSERVATION</span><span class="pill rule">RULE-BASED MATCHING</span><span class="pill human">HUMAN DESIGN DECISIONS</span><p>SECOND GRAIN connects visual evidence to a constrained design workflow. Every claim retains its source and its uncertainty.</p></div>
+ </div>
+ <div class="metrics" aria-label="Recorded dataset size"><div><b>762</b><span>seller listings</span></div><div><b>2,161</b><span>saved photographs &amp; paired masks</span></div><div><b>375</b><span>saved point-cloud records</span></div><div><b>1,106</b><span>nominal candidate stock slots</span></div></div>
+ <div class="split">
+  <article class="sheet">
+   <div class="sheet-head"><span>EARTHWISE / SOURCE EVIDENCE</span><span>115200</span></div>
+   <img class="listing-photo" id="source-photo" src="../assets/update/115200_photo_01.jpg" alt="Original Earthwise seller photograph of a rough sawn fir beam chunk">
+   <div class="source-bottom"><h3>Rough Sawn Fir Beam Chunk</h3><p>7.125 × 7.375 × 43.5 in · $79 in the saved listing</p><blockquote>“There is some nail stains and cracks that add some character to the pieces.”</blockquote><p class="caption">Archived seller photograph and text, 11 Sep 2026. This source extract is not a live website screenshot; present availability may differ.</p><a href="https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5" target="_blank" rel="noopener">Open the original Earthwise listing ↗</a></div>
+  </article>
+  <article class="sheet">
+   <div class="sheet-head"><span>EXTRACTED / NORMALIZED RECORD</span><span>SELLER → DATA</span></div>
+   <div class="pad"><dl class="fieldlist">
+    <div><dt>Material ID</dt><dd>115200<small>Stable link to the source listing and saved images</small></dd></div>
+    <div><dt>L × W × T</dt><dd id="source-dimensions">1104.90 × 187.325 × 180.975 mm</dd></div>
+    <div><dt>Piece count</dt><dd>1<small>Explicit piece-count interpretation</small></dd></div>
+    <div><dt>Seller wording</dt><dd>Fir · beam · rough sawn<small>Seller-reported categories; no strength grade stated</small></dd></div>
+    <div><dt>Potential roles</dt><dd>Beam / post candidate<small>Beam from seller wording; post from dimensional rules</small></dd></div>
+   </dl><div class="controls"><button id="unit-toggle" type="button" aria-pressed="false">Show source inches</button></div><p class="caption">Unit normalization uses 25.4 mm/in. Nominal dimensions, physical quantities and missing fields are kept distinct.</p></div>
+  </article>
+ </div>
+ <section class="section" aria-labelledby="pipeline-title">
+  <div class="section-intro"><div><p class="kicker">A traceable processing pipeline</p><h2 id="pipeline-title">Click through one material.</h2></div><p>Follow the same saved record from seller evidence to a material passport. Rotate the recovered points to see what the photographs actually support.</p></div>
+  <div class="steps" aria-label="Material pipeline stages">
+   <button type="button" data-step="0" aria-pressed="true"><small>01 / DATA</small><b>Normalize</b>Source fields</button>
+   <button type="button" data-step="1" aria-pressed="false"><small>02 / AI</small><b>Segment</b>SAM 2 masks</button>
+   <button type="button" data-step="2" aria-pressed="false"><small>03 / AI</small><b>Reconstruct</b>VGGT points</button>
+   <button type="button" data-step="3" aria-pressed="false"><small>04 / RULES</small><b>Interpret</b>Potential uses</button>
+   <button type="button" data-step="4" aria-pressed="false"><small>05 / RECORD</small><b>Document</b>Material passport</button>
+  </div>
+  <div class="workbench"><div class="visual">
+   <img id="evidence-image" src="../assets/update/115200_photo_01.jpg" alt="Saved material evidence">
+   <canvas id="cloud" hidden tabindex="0" aria-label="Saved VGGT point cloud. Drag or use arrow keys to rotate; scroll or plus and minus to zoom."></canvas>
+   <div id="record-visual" class="record-visual" hidden></div>
+   <div class="controls" id="photo-controls"><label>Saved view <select id="photo-view"><option value="0">Photo 01</option></select></label></div>
+   <div class="controls" id="cloud-controls" hidden><label><input type="checkbox" id="cloud-box" checked> Observed box</label><label><input type="checkbox" id="cloud-color"> By source view</label><label>Points <select id="cloud-filter"><option value="all">All views</option></select></label><button id="cloud-reset" type="button">Reset view</button></div>
+  </div><div class="work-copy" id="step-copy"></div></div>
+  <div class="takeaway"><h3>Useful evidence can<br>still be incomplete.</h3><p>This sample supports a beam label and a dimensional post hypothesis, but its saved reconstruction has unresolved cross-view support. Documenting that gap prevents a partial point cloud from becoming an unsupported strength or condition claim.</p></div>
+  <details><summary>Dataset coverage, classification and reproducibility</summary><p>The inventory contains 762 listings and 2,161 saved image/mask pairs. The 375 saved cloud records include 172 partial-evidence cases, 25 failed common-scene cases and 178 unresolved cross-view cases; 387 listings have no saved CPU reconstruction run. These categories describe evidence quality, not timber grades.</p><p>Existing pretrained SAM 2 and VGGT outputs are reused. The website does not train a model or run new inference. Repeated views of a listing do not establish that they show the same physical board.</p><p><a href="/second-grain-timber/#observation">Inspect all three published material records ↗</a> · <a href="assets/material-passport-115200.json" download>Download this passport ↓</a> · <a href="../assets/observation/catalog.json" download>Download the dataset summary ↓</a></p></details>
+  <details><summary>Did visual defects change the final allocations?</summary><p>All three final cases use recorded dimensions, quantities and preliminary role eligibility, with zero selected defect-trim scenarios. A separate saved experiment on source 115200 changes a 900 mm demand from feasible to infeasible after a proposed exclusion; a 600 mm demand remains feasible. The retained segment is 828.24 mm. This is an approximate source-matched scenario, not a measured crack-depth assessment.</p><p><a href="technical.html#evidence">Inspect the controlled experiment and its limits ↗</a></p></details>
+ </section>
+ <div class="next"><p>The next step translates material records into feasible cutting patterns and design decisions.</p><a class="button primary" href="#algorithm">02 / Allocation &amp; form →</a></div>
+</div>
+<div data-chapter="algorithm" hidden>
+ <div class="hero"><div><p class="kicker">02 / From evidence to constrained decisions</p><h1>Let the stock<br>shape the options.</h1><p class="lead">A designer sets the brief. Material rules filter candidates. A pattern-based MILP matches the resulting demand to finite stock.</p></div><div class="hero-note"><p>The AI components support observation. The allocation is explicit mathematical optimization. Geometry changes remain authored design decisions, checked against inventory.</p></div></div>
+ <div class="method-flow" aria-label="Allocation method"><div><span class="micro">01 / Human + agent</span><b>Review the brief</b><p>Use, form and design parameters</p></div><div><span class="micro">02 / Rules</span><b>Filter candidates</b><p>Role, section, usable length and quantity</p></div><div><span class="micro">03 / Patterns</span><b>Enumerate options</b><p>Crosscuts, allowed joins and kerf</p></div><div><span class="micro">04 / MILP</span><b>Select a combination</b><p>Meet demand without exceeding stock</p></div><div><span class="micro">05 / Trace</span><b>Map each part</b><p>Source interval → installed position</p></div></div>
+ <section class="section">
+  <div class="section-intro"><div><p class="kicker">Case 1 / allocation replay</p><h2>From one stock ledger<br>to a complete building.</h2></div><p>155 installed parts, 125 design members and 87 source bars. Existing allocation animation, with an instrumental soundtrack and no narration.</p></div>
+  <div class="film"><video id="allocation-film" controls playsinline preload="metadata" poster="../assets/film-poster.jpg"><source src="assets/case1-allocation-instrumental.mp4" type="video/mp4"><track kind="captions" src="../assets/film-captions.vtt" srclang="en" label="English"></video><div class="film-footer"><span>60 seconds · saved allocation visualization<br><span class="caption">Not a validated physical assembly sequence.</span></span><div class="controls"><button id="film-mute" type="button">Music on · mute</button><button id="film-replay" type="button">Replay</button><a href="assets/case1-allocation-instrumental.mp4" download>Download MP4 ↓</a></div></div></div>
+ </section>
+ <section class="section">
+  <div class="section-intro"><div><p class="kicker">One source → several installed positions</p><h2>Inspect the actual match.</h2></div><p>Select a cut part or click the model. Its original interval and parent board remain attached to its installed position.</p></div>
+  <div class="controls"><label>Parent stock <select id="stock-select" aria-label="Select parent stock"></select></label></div>
+  <div id="cutting-bar" class="ledger-bar" aria-label="Saved source cutting intervals"></div><div id="part-buttons" class="part-list"></div><p id="bar-account" class="caption"></p>
+  <div class="trace-grid"><div><canvas id="assembly" tabindex="0" aria-label="Case 1 allocated assembly. Drag or arrow keys to rotate; click to inspect a part."></canvas><div class="controls"><button type="button" data-view="assembled" aria-pressed="true">Assembled</button><button type="button" data-view="exploded" aria-pressed="false">Exploded</button><button type="button" data-view="laid-flat" aria-pressed="false">Laid flat</button></div><p class="caption">Source-linked representative appearance; not a measured UV scan.</p></div><div id="trace-detail" class="trace-detail" aria-live="polite"></div></div>
+ </section>
+ <details><summary>Original MILP formulation and search limits</summary><p>The existing Cubbyhouse formulation uses integer variables for cutting-pattern counts and member jointing-pattern counts. Constraints ensure that produced parts cover required parts, stock use stays within recorded quantities, and member demand is met.</p><div class="formula">minimize: cutting-pattern waste<br>+ surplus-part length<br>+ number of parts required by selected member patterns</div><p>The original objective is retained, including its length and part-count terms. It is not a carbon score or a verified fabrication-cost model. Pattern menus are bounded; an optimal result refers to the submitted menu. The solver does not discover an unrestricted global form.</p><p>Case 1 permits supported multi-part members. Case 2 and Case 3 retain one continuous stock part per required strip/member. Angle machining and section changes require explicit geometry and separate accounting.</p><p><a href="../assets/update/allocation.json" download>Saved Case 1 result ↓</a> · <a href="technical.html#comparison">Detailed cross-case method records ↗</a></p></details>
+ <details><summary>Fabrication settings, tolerances and local regulations</summary><div class="table-wrap"><table><caption>Recorded computational settings. Workshop tolerances and statutory compliance are separate.</caption><thead><tr><th>Item</th><th>Case 1</th><th>Case 2</th><th>Case 3</th></tr></thead><tbody>
+  <tr><th>Crosscut kerf</th><td>3 mm</td><td>3 mm</td><td>3 mm</td></tr>
+  <tr><th>Minimum finished length</th><td>300 mm baseline; role-specific constraints also apply</td><td>125 mm full-bench demonstration profile</td><td>300 mm</td></tr>
+  <tr><th>Additional processing</th><td>8 recorded rips; losses reported by volume</td><td>No ripping or contour machining</td><td>Angled-end and trim allowances included in blanks</td></tr>
+  <tr><th>Allowance example</th><td>Supported seam positions are constrained</td><td>Whole stock section retained</td><td>Representative rafter: 93.133 mm angled-end allowance + 40 mm trim</td></tr>
+  <tr><th>Physical tolerance</th><td colspan="3">No project-wide measured fabrication tolerance has been validated. Saw kerf, trim allowance and numerical equality tolerance are different quantities.</td></tr>
+  <tr><th>Recorded jurisdiction</th><td>Seattle, Washington; public exhibition. The saved brief names the 2021 Seattle Building Code.</td><td>Furniture demonstration; no completed furniture-standard approval</td><td>Open pavilion research case; site-specific compliance remains unresolved</td></tr>
+  <tr><th>Regulatory validation</th><td colspan="3">Naming a code in the brief is not a completed compliance assessment. Saved loads and connections are preliminary research assumptions; applicable code editions, load combinations, physical details and acceptance criteria require project-specific review.</td></tr>
+ </tbody></table></div><p>The 3 mm kerf and Case 1 300 mm minimum are saved design-research assumptions, not local-code requirements. The Case 2 short-piece threshold is not a workshop safety rule. <a href="assets/case1-design-brief.json" download>Read the saved Case 1 brief ↓</a></p></details>
+ <div class="next"><p>Each case tests a different way that the same inventory can influence design.</p><a class="button primary" href="#cases">03 / Compare the cases →</a></div>
+</div>
+<div data-chapter="cases" hidden>
+ <div class="hero"><div><p class="kicker">03 / Same workflow. Different design questions.</p><h1>Three ways to<br>design with what exists.</h1><p class="lead">Material roles, overlapping strips and an adaptable frame test different decisions against the same recorded inventory.</p></div><div class="hero-note"><p>Each case is an independent scenario. Stock consumed in one case is not subtracted from the next.</p><p><span class="status-dot"></span>Allocation solved.<br>Preliminary structural models evaluated.</p></div></div>
+ <div class="case-list">
+  <article class="case-card"><img src="../case2/assets/case1-building.jpg" alt="Complete allocated Case 1 Cubbyhouse"><div><p class="micro">01 / Material → role</p><h3>Cubbyhouse</h3><p>Heterogeneous timber supplies framing and enclosure through role eligibility, cuts and supported seams.</p><p class="lesson"><b>Finding:</b> one inventory can supply different building roles, with every installed part traced to its source.</p><p class="caption">Open question: brace/backing interfaces, physical joints and usable headroom.</p><a href="/second-grain-timber/#allocation">Explore Case 1 →</a></div></article>
+  <article class="case-card"><img src="../case2/assets/case2-bench.jpg" alt="Complete 716-strip Case 2 Contour Bench"><div><p class="micro">02 / Strip → contour</p><h3>Contour Bench</h3><p>Straight strips form a continuous seat through changing orientations, spacing and broad-face overlaps.</p><p class="lesson"><b>Finding:</b> available section families change the repeating pitch and the final bench length.</p><p class="caption">Open question: physical fastener slip, terminal rotation and bearing friction.</p><a href="/second-grain-timber/case2/explore/#assembly">Explore Case 2 →</a></div></article>
+  <article class="case-card"><img src="../case3/assets/pavilion-complete.jpg" alt="Complete stock-adapted Case 3 open timber pavilion"><div><p class="micro">03 / Stock → frame</p><h3>Open Pavilion</h3><p>Spans, sections and framing rhythm adapt together while retaining an open gable-roof character.</p><p class="lesson"><b>Finding:</b> inventory can inform architectural dimensions before allocation verifies the chosen layout.</p><p class="caption">Open question: cleat/knee details, wind anchorage and foundations.</p><a href="/second-grain-timber/case3/#assembly">Explore Case 3 →</a></div></article>
+ </div>
+ <section class="section"><p class="kicker">Comparable accounting, explicit denominators</p><h2>What was used—and what remains?</h2><div class="table-wrap"><table><caption>Independent saved runs. Residual means retained length within selected bars; untouched inventory is counted separately.</caption><thead><tr><th>Recorded result</th><th>Cubbyhouse</th><th>Contour Bench</th><th>Open Pavilion</th></tr></thead><tbody id="comparison-body"></tbody></table></div><p class="caption">Crosscut length totals do not measure volume yield. Case 1 rip losses and Case 3 angled-end machining are accounted separately in the case ledgers. Different demands and sections prevent a direct efficiency ranking from these totals.</p></section>
+ <div class="takeaway"><h3>The common contribution.</h3><p>A source-linked workflow makes inventory constraints visible in design decisions, part assignments and preliminary analysis. The three cases demonstrate its range; they do not establish superiority over a manual-design baseline.</p></div>
+ <details><summary>Geometry changes, analysis and remaining physical work</summary><div class="table-wrap"><table><thead><tr><th>Case</th><th>Key recorded adaptation</th><th>Validation boundary</th></tr></thead><tbody><tr><th>Cubbyhouse</th><td>125 design members → 155 installed parts, including supported seams and 8 rips</td><td>15 saved load cases. Six brace/backing intersections still require physical detailing.</td></tr><tr><th>Contour Bench</th><td>38.1 × 88.9 mm strips; 76.2 mm repeat pitch; approximately 6057.9 × 1458.6 × 592.0 mm</td><td>R03: three load cases. Third terminal connection points are idealizations; friction and fastener capacity remain unverified. Scale is a design assumption.</td></tr><tr><th>Open Pavilion</th><td>Reference 10515.6 × 6817.6 × 4638.1 mm → working 4907.95 × 2700 × 3563.55 mm</td><td>Eight saved load cases. Connection and anchored-base demands require physical detailing and capacity verification.</td></tr></tbody></table></div><p><a href="technical.html#nodes">Inspect terminal connections and node studies ↗</a> · <a href="technical.html#boundaries">Read the complete scope record ↗</a></p></details>
+ <div class="next"><p>Inspect the evidence at the level you need: a material record, a single assigned part, or the full technical archive.</p><a class="button" href="technical.html">Open technical evidence →</a></div>
+</div>
+<noscript><p class="limits">Interactive record inspection requires JavaScript. <a href="technical.html">Read the complete static research archive</a> or <a href="assets/case1-allocation-instrumental.mp4">watch the allocation film</a>.</p></noscript>
+</main><footer class="footer"><span>SECOND GRAIN — TIMBER AI · Source-linked computational design</span><span><a href="#materials">Material intelligence</a> · <a href="technical.html">Evidence &amp; records</a></span></footer>
+</body></html>

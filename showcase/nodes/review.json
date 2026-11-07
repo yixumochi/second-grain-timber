@@ -1,0 +1,376 @@
+{
+  "schema": "ThreeCaseRepresentativeNodeReview/1",
+  "date": "2026-10-07",
+  "scope": "New digital geometry/kinematic checks and saved-result audits; no physical sample fabricated or load-tested.",
+  "baseline_geometry_changed": false,
+  "allocation_reruns": 0,
+  "native_karamba_reruns": 0,
+  "case1": {
+    "schema": "CASE1_DIGITAL_NODE_VALIDATION/1",
+    "status": "GEOMETRIC_CLASHES_CLEARED_IN_LOCAL_CANDIDATE_ONLY_HOLD_PROMOTION",
+    "counts": {
+      "baseline_installed_parts": 155,
+      "changed_backing_parts": 6,
+      "unchanged_braces": 2,
+      "target_clashes_before": 6,
+      "target_clashes_after": 0,
+      "changed_vs_all_pair_tests": 924,
+      "new_interferences": 0,
+      "lost_cladding_contact_patches": 10
+    },
+    "stock_consequences": {
+      "new_source_bars": 0,
+      "new_cut_parts": 0,
+      "cut_lengths_changed": false,
+      "source_intervals_changed": false,
+      "extra_groove_operations": 6,
+      "removed_volume_mm3": 1185519.028161166,
+      "removed_volume_litre": 1.185519028161166,
+      "source_cut_kerf_accounting_unchanged": true,
+      "candidate_machining_waste_accounted_separately": true,
+      "physical_remachining_reversible": false,
+      "digital_candidate_reversible": true
+    },
+    "section_consequences": {
+      "backing_original_wall_normal_depth_mm": 88.9,
+      "backing_minimum_remaining_depth_mm": 48.8,
+      "other_section_dimension_mm": 38.1,
+      "minimum_remaining_area_mm2": 1859.28,
+      "area_ratio": 0.5489313835770528,
+      "one_bending_inertia_ratio": 0.5489313835770528,
+      "other_bending_inertia_ratio": 0.16540711357862647,
+      "interpretation": "Local rectangular residual section only. Stress concentrations, shear, splitting, grain defects, connection effects and notch design remain unchecked."
+    },
+    "preservation": {
+      "brace_boxes_and_post_bearings_unchanged": true,
+      "enclosure_external_envelope_unchanged": true,
+      "no_added_supports_or_fasteners": true,
+      "no_new_source_parts": true,
+      "local_cladding_bearing_contact_reduced": true,
+      "baseline_files_unchanged": true
+    },
+    "promotion_decision": {
+      "geometry": "HOLD: retain reversible digital candidate; do not replace accepted geometry.",
+      "analysis": "HOLD: saved full-section backing and load-bearing assumptions do not describe this machined candidate. No MILP/Karamba rerun performed.",
+      "reason": "Clashes clear geometrically but local backing area falls 45.11%, one second moment falls 83.46%, and cladding face contact is removed locally. Physical fit plus competent notch/connection and load-path review must choose a defensible detail before rerun.",
+      "rerun_if_detail_is_accepted": [
+        "Bind six explicit groove geometries and source machining operations.",
+        "Model reduced backing sections and revised cladding bearings/loads.",
+        "Keep brace/post bearings unless an explicitly justified redesign changes them.",
+        "Then rerun the affected structural cases and compare; no full allocation MILP is implied by these unchanged stock intervals."
+      ]
+    },
+    "physical_test_status": "NOT_PERFORMED"
+  },
+  "case2": {
+    "run_id": "CASE2_KARAMBA_20261003T084216Z_R03_TERMINAL_TRIANGLES",
+    "geometry_id": "GEOM_CASE2_FULL_f7c344c7a354e884",
+    "allocation_run_id": "ALLOC_CASE2_FULL_20261003T072129Z_464628f7",
+    "full_bench_counts": {
+      "members": 716,
+      "contacts": 1264,
+      "ties": 2532,
+      "supports": 6
+    },
+    "controlled_change_decision": {
+      "revision": "RETAIN_R03",
+      "r04_warranted": false,
+      "new_native_solve": false,
+      "geometry_changed": false,
+      "allocation_rerun": false,
+      "reason": "Actual face membership and noncollinear terminal triangle pass. Existing R03 native and full-assembly certificate remain source-bound; no corrected analysis input is justified.",
+      "physical_status": "HOLD_FOR_CONNECTION_AND_SUPPORT_SPECIFICATION",
+      "required_evidence": [
+        "Measured member scale and condition/grade",
+        "Fastener type/diameter/count, hole and assembly specification",
+        "Grain-dependent end/edge spacing and splitting/bearing/withdrawal checks",
+        "Connection slip and rotational stiffness or a substantiated mechanical model",
+        "Pad bearing and friction evidence"
+      ],
+      "next_revision_gate": "A demonstrated physical-model discrepancy or specified/calibrated connection law may justify a controlled R04 comparison; missing physical data alone does not justify invented springs or another arbitrary native solve."
+    },
+    "test_summary": [
+      "R03 input/result/geometry/native bindings and SHA-256 verified",
+      "Current input members/supports/loads/materials equal R02 baseline; exactly four ties added",
+      "Independent rectangle intersection reproduces saved overlap areas",
+      "All actual tie nodes coincide with saved coordinates and lie on both member broad faces",
+      "Geometric edge/end distances computed without design-rule pass claims",
+      "Actual two-point rank 5 and residual rotation verified; terminal three-point rank 6 at three tolerances",
+      "Terminal residual rotation at T3 equals geometric transverse lever arm",
+      "S039-S041 internal and cross-boundary contact census; only actual PAD03/PAD04 retained",
+      "Extracted element-local force rows and pad reactions cross-checked against native unit conversion",
+      "All read source hashes rechecked unchanged after extraction"
+    ]
+  },
+  "case3": {
+    "schema": "CASE3_NODE_SUMMARY/1",
+    "representative": "F04 north at x=2400 mm",
+    "validation": {
+      "passed": true,
+      "errors": [],
+      "tolerances": {
+        "length_mm": 1e-05,
+        "geometry_station_mm": 0.0001,
+        "volume_mm3": 0.01
+      }
+    },
+    "binding": {
+      "geometry_matches_analysis": true,
+      "allocation_matches_analysis": true,
+      "input_matches_result": true,
+      "public_geometry_id_matches": true,
+      "public_analysis_run_matches": true,
+      "public_result_hash_matches": true
+    },
+    "selection": {
+      "member_ids": [
+        "C3_POST_2400_N",
+        "C3_BEAM_N_1",
+        "C3_BEAM_N_2",
+        "C3_F04_TIE",
+        "C3_F04_RAFTER_N",
+        "C3_KNEE_2400_N_L",
+        "C3_KNEE_2400_N_T"
+      ],
+      "connection_ids": [
+        "COLUMN_CAP_2400_N",
+        "F04_BEARING_N",
+        "F04_EAVE_N",
+        "C3_KNEE_2400_N_L_FOOT",
+        "C3_KNEE_2400_N_L_HEAD",
+        "C3_KNEE_2400_N_T_FOOT",
+        "C3_KNEE_2400_N_T_HEAD"
+      ],
+      "base_node": 98
+    },
+    "actual_contact_surfaces": [
+      {
+        "members": [
+          "C3_POST_2400_N",
+          "C3_BEAM_N_1"
+        ],
+        "surfaces": [
+          {
+            "area_mm2": 2580.6400000000076,
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "horizontal_bearing": true
+          }
+        ],
+        "direct_connection_groups": [
+          "COLUMN_CAP_2400_N"
+        ]
+      },
+      {
+        "members": [
+          "C3_POST_2400_N",
+          "C3_BEAM_N_2"
+        ],
+        "surfaces": [
+          {
+            "area_mm2": 2580.640000000008,
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "horizontal_bearing": true
+          }
+        ],
+        "direct_connection_groups": [
+          "COLUMN_CAP_2400_N"
+        ]
+      },
+      {
+        "members": [
+          "C3_BEAM_N_1",
+          "C3_BEAM_N_2"
+        ],
+        "surfaces": [
+          {
+            "area_mm2": 10322.559999999987,
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "horizontal_bearing": false
+          }
+        ],
+        "direct_connection_groups": [
+          "COLUMN_CAP_2400_N"
+        ]
+      },
+      {
+        "members": [
+          "C3_BEAM_N_1",
+          "C3_F04_TIE"
+        ],
+        "surfaces": [
+          {
+            "area_mm2": 645.1600000000035,
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "horizontal_bearing": true
+          }
+        ],
+        "direct_connection_groups": []
+      },
+      {
+        "members": [
+          "C3_BEAM_N_2",
+          "C3_F04_TIE"
+        ],
+        "surfaces": [
+          {
+            "area_mm2": 645.1600000000021,
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "horizontal_bearing": true
+          }
+        ],
+        "direct_connection_groups": [
+          "F04_BEARING_N"
+        ]
+      },
+      {
+        "members": [
+          "C3_F04_TIE",
+          "C3_F04_RAFTER_N"
+        ],
+        "surfaces": [
+          {
+            "area_mm2": 25587.73206966182,
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "horizontal_bearing": false
+          }
+        ],
+        "direct_connection_groups": [
+          "F04_EAVE_N"
+        ]
+      }
+    ],
+    "maximum_tension": {
+      "loadcase": "SW_WIND_Y_POS",
+      "node": 98,
+      "member_id": "C3_POST_2400_N",
+      "strip_x_mm": 2400,
+      "side": "N",
+      "xyz_mm": [
+        2400,
+        0,
+        0
+      ],
+      "force_kN": [
+        -0.11426526025994202,
+        -2.8726691838180964,
+        -6.029456526115698
+      ],
+      "moment_kNm": [
+        0,
+        0,
+        0
+      ],
+      "tension_demand_kN": 6.029456526115698,
+      "horizontal_shear_demand_kN": 2.8749408323234062,
+      "compression_reaction_kN": 0
+    },
+    "maximum_horizontal_shear": {
+      "loadcase": "SW_WIND_Y_POS",
+      "node": 100,
+      "member_id": "C3_POST_2400_S",
+      "strip_x_mm": 2400,
+      "side": "S",
+      "xyz_mm": [
+        2400,
+        2400,
+        0
+      ],
+      "force_kN": [
+        0.12396015546124622,
+        -2.8905490153136326,
+        9.200710915489138
+      ],
+      "moment_kNm": [
+        0,
+        0,
+        0
+      ],
+      "tension_demand_kN": 0,
+      "horizontal_shear_demand_kN": 2.893205787715867,
+      "compression_reaction_kN": 9.200710915489138
+    },
+    "maximum_wind": {
+      "case": "SW_WIND_Y_NEG",
+      "node": 158,
+      "vector_mm": [
+        -2.754304660591438,
+        -54.873012433039754,
+        -0.050216090671982745
+      ],
+      "magnitude_mm": 54.94211689856565,
+      "horizontal_mm": 54.942093950266326,
+      "location": {
+        "id": 158,
+        "xyz_m": [
+          4.84445,
+          -0.15,
+          2.5048
+        ],
+        "kind": "TIMBER_CENTRELINE",
+        "member_id": "C3_F07_RAFTER_N",
+        "station_mm": 0
+      }
+    },
+    "analysis_scope": {
+      "status": "COMPLETED_CONCEPTUAL",
+      "solver_executed": true,
+      "saved_rigid_body_modes": 0,
+      "assumptions": {
+        "roof_projected_area_m2": 13.251465,
+        "anchor_capacity_verified": false,
+        "roof_cover_procured": false,
+        "foundation_designed": false,
+        "grade_strength_verified": false,
+        "angle_joints_verified": false,
+        "connection_model": "In-plane hinge with lateral cleat; two out-of-plane rotations restrained locally by ideal connector; NOT all joints rigid."
+      },
+      "warnings": [
+        "Preliminary elastic study, not strength/furniture/building-code or construction approval.",
+        "Anchored pinned bases, in-plane hinges and conceptual out-of-plane lateral cleats; fastener, anchor, plate and joint capacities unverified.",
+        "Roof cover 0.25 kPa, snow sensitivity 1.2 kPa and 卤wind/uplift 0.5 kPa are explicit study assumptions; not site-verified loads.",
+        "Connection offsets use massless finite rigid arms at factor 1000; no ground stabilization springs."
+      ],
+      "not_structurally_verified": true
+    },
+    "decision": {
+      "retain_baseline": true,
+      "modify_supports_or_releases": false,
+      "rerun_now": false,
+      "physical_design_required_before_design_acceptance": true,
+      "reason": "Numerical source geometry, releases, blank accounting and response equilibrium remain reproducible. Physical load transfer through lateral rafter/tie cleat, knot-free bearing, knee joinery and tension/shear anchors is not established. Develop separate physical details with verified stiffness/capacity; then reanalyse only if their releases, offsets, section removal, bracing, supports or loads change.",
+      "capacity_approval": false
+    },
+    "findings": [
+      "Rafter/tie share a vertical side face; its nonzero contact area is not a horizontal gravity bearing or verified shear/hold-down joint.",
+      "Both eave beam halves touch the tie at the cap; F04_BEARING_N names only C3_BEAM_N_2. The unassigned N1 tie contact is geometry-only, not a second load path.",
+      "Knee ends and the three-way knee foot interpenetrate solid timber envelopes. Their notch/plate/fastener geometry and any extra material removal remain unresolved.",
+      "Cap has two coincident numerical offset elements to the two beam halves: documented implementation, not two physical cleats.",
+      "Base translations are fixed and all base rotations free. Zero reaction moment reflects that assumption; anchor layout, eccentricity, foundation and timber connection capacity are unavailable.",
+      "Saved wind deformation is absolute linear-elastic displacement at real nodes with display magnification removed. No code or serviceability limit is assumed."
+    ]
+  }
+}

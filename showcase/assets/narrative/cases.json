@@ -1,0 +1,810 @@
+[
+  {
+    "id": 1,
+    "title": "Timber Shelter",
+    "use": "A small public exhibition shelter",
+    "material": "Mixed sections / multiple building roles",
+    "challenge": "Connect framing, enclosure and supported seams within a finite stock pool.",
+    "change": "Allocated braces and revised backing are represented in the saved building; loads from covering parts transfer to framing.",
+    "finding": "One inventory supplies a hierarchy of parts, rather than one repeated component.",
+    "cover": "../assets/garden-arrival.webp",
+    "cover_note": "Atmosphere study; inspect the saved allocated model below for exact geometry.",
+    "model": "../assets/update/assembled.webp",
+    "detail": "/second-grain-timber/#analysis",
+    "run": "ALLOC_20260929T103241_f1495f",
+    "analysis_run": "KARAMBA_BUILDING_20260929T103501_27f3a8",
+    "installed": 155,
+    "bars": 87,
+    "record": "../assets/analysis/analysis.json",
+    "allocation_record": "../assets/update/allocation.json",
+    "algorithm": [
+      "Role + section eligibility",
+      "Supported multi-part members",
+      "Crosscut and allowed joint patterns",
+      "MILP \u2192 155 installed parts"
+    ],
+    "assumptions": "Four fixed post bases; declared simple bearings and fork restraints; three allocated braces. Foundation, fasteners and physical joint capacity remain unverified.",
+    "request": "Design a small public-exhibition timber shelter in Seattle, using the recorded reclaimed stock. Keep the interior free of columns.",
+    "dialogue": [
+      [
+        "USER",
+        "Design a small public-exhibition timber shelter in Seattle. Use the recorded reclaimed stock; keep the interior free of columns."
+      ],
+      [
+        "AGENT",
+        "The saved brief identifies Seattle and the 2021 Seattle Building Code. A specific site, exposure and permit scope still need confirmation; today's weather is not a design load."
+      ],
+      [
+        "USER",
+        "Allow cutting and supported jointing. Include the approved visible braces and backing in the material ledger."
+      ],
+      [
+        "AGENT",
+        "Saved result: 155 installed parts from 87 source bars. Review the saved load cases and critical backing response separately from connection capacity."
+      ]
+    ],
+    "results": [
+      {
+        "id": "SENSITIVITY_D_WY_POS",
+        "name": "SENSITIVITY D WY POS",
+        "maximum_mm": 18.051708028351143,
+        "critical": "WALL_STUD_SOUTH_1",
+        "node": 363,
+        "vector_mm": [
+          0.009885671303229867,
+          11.77693842031595,
+          -13.680927836167623
+        ],
+        "position_mm": [
+          1181.731965,
+          69.85,
+          1099.739076
+        ],
+        "force_kN": [
+          0.0,
+          2.24495,
+          -6.48395796462042
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SENSITIVITY_D_WY_POS.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SENSITIVITY_D_WY_NEG",
+        "name": "SENSITIVITY D WY NEG",
+        "maximum_mm": 18.037754495305556,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 272,
+        "vector_mm": [
+          0.0006091374783265835,
+          -11.760761194697627,
+          -13.67644262895735
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1099.739076
+        ],
+        "force_kN": [
+          0.0,
+          -2.24495,
+          -6.48395796462042
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SENSITIVITY_D_WY_NEG.svg",
+        "magnification": 8
+      },
+      {
+        "id": "WX_NEG",
+        "name": "WX NEG",
+        "maximum_mm": 14.523329219419397,
+        "critical": "WALL_STUD_EAST_1",
+        "node": 450,
+        "vector_mm": [
+          -14.523328247043251,
+          -0.004553269995973323,
+          0.002740804482467379
+        ],
+        "position_mm": [
+          2309.2000000000003,
+          635.0,
+          1025.0
+        ],
+        "force_kN": [
+          -1.2080875000000002,
+          0.0,
+          0.0
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-WX_NEG.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SENSITIVITY_D_WX_NEG",
+        "name": "SENSITIVITY D WX NEG",
+        "maximum_mm": 14.51340174019864,
+        "critical": "WALL_STUD_EAST_1",
+        "node": 450,
+        "vector_mm": [
+          -14.512252786617493,
+          0.01010257517102201,
+          -0.1823377845885078
+        ],
+        "position_mm": [
+          2309.2000000000003,
+          635.0,
+          1025.0
+        ],
+        "force_kN": [
+          -1.2080875000000002,
+          0.0,
+          -6.48395796462042
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SENSITIVITY_D_WX_NEG.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SERVICE_D_S",
+        "name": "SERVICE D S",
+        "maximum_mm": 13.689655101240621,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 283,
+        "vector_mm": [
+          0.03134987919547018,
+          0.3319567770423122,
+          -13.685593837103799
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1961.1000000000001
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -10.08059796462049
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SERVICE_D_S.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SERVICE_D_L",
+        "name": "SERVICE D L",
+        "maximum_mm": 13.685054951018808,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 283,
+        "vector_mm": [
+          0.019524887571869393,
+          0.3205808794659368,
+          -13.681285600808518
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1961.1000000000001
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -20.83462918610615
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SERVICE_D_L.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SENSITIVITY_D_WX_POS",
+        "name": "SENSITIVITY D WX POS",
+        "maximum_mm": 13.68327965081196,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 283,
+        "vector_mm": [
+          0.0797655585568199,
+          0.3224198572153238,
+          -13.679247965208688
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1961.1000000000001
+        ],
+        "force_kN": [
+          0.45142750000000004,
+          0.0,
+          -6.48395796462042
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SENSITIVITY_D_WX_POS.svg",
+        "magnification": 8
+      },
+      {
+        "id": "D",
+        "name": "D",
+        "maximum_mm": 13.682488550915988,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 283,
+        "vector_mm": [
+          0.019691298475932664,
+          0.3205815807322646,
+          -13.67871823851952
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1961.1000000000001
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -6.48395796462042
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-D.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SENSITIVITY_D_W_UP",
+        "name": "SENSITIVITY D W UP",
+        "maximum_mm": 13.679508124401288,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 283,
+        "vector_mm": [
+          0.01483355650935262,
+          0.3158419155838183,
+          -13.675853405748487
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1961.1000000000001
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -4.985357964620388
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-SENSITIVITY_D_W_UP.svg",
+        "magnification": 8
+      },
+      {
+        "id": "WY_POS",
+        "name": "WY POS",
+        "maximum_mm": 11.793470272535137,
+        "critical": "WALL_STUD_SOUTH_1",
+        "node": 363,
+        "vector_mm": [
+          -0.0005083302285678515,
+          11.793470254143111,
+          0.0004188221577851708
+        ],
+        "position_mm": [
+          1181.731965,
+          69.85,
+          1099.739076
+        ],
+        "force_kN": [
+          0.0,
+          2.24495,
+          0.0
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-WY_POS.svg",
+        "magnification": 8
+      },
+      {
+        "id": "WY_NEG",
+        "name": "WY NEG",
+        "maximum_mm": 11.793002494482234,
+        "critical": "WALL_STUD_NORTH_1",
+        "node": 272,
+        "vector_mm": [
+          -0.009564439745900452,
+          -11.792997579033342,
+          0.00494542923459386
+        ],
+        "position_mm": [
+          1181.731965,
+          1200.15,
+          1099.739076
+        ],
+        "force_kN": [
+          0.0,
+          -2.24495,
+          0.0
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-WY_NEG.svg",
+        "magnification": 8
+      },
+      {
+        "id": "L",
+        "name": "L",
+        "maximum_mm": 1.9483259911019568,
+        "critical": "SECONDARY_FLOOR_003",
+        "node": 102,
+        "vector_mm": [
+          -4.117974412078411e-07,
+          -1.7116337788063355e-09,
+          -1.9483259911019135
+        ],
+        "position_mm": [
+          1137.6,
+          823.383333,
+          -304.8
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -14.350671221485598
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-L.svg",
+        "magnification": 8
+      },
+      {
+        "id": "WX_POS",
+        "name": "WX POS",
+        "maximum_mm": 0.7060457682214673,
+        "critical": "JAMB_WEST_1",
+        "node": 492,
+        "vector_mm": [
+          0.706045759886127,
+          1.1295404524438842e-08,
+          0.00010849084392139627
+        ],
+        "position_mm": [
+          47.625,
+          70.819872,
+          2018.25
+        ],
+        "force_kN": [
+          0.45142750000000004,
+          0.0,
+          0.0
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-WX_POS.svg",
+        "magnification": 8
+      },
+      {
+        "id": "S",
+        "name": "S",
+        "maximum_mm": 0.6026319909703659,
+        "critical": "ROOF_BACKING_002",
+        "node": 197,
+        "vector_mm": [
+          0.009709721405513759,
+          0.009444664637270884,
+          -0.6024797392120534
+        ],
+        "position_mm": [
+          1180.0,
+          644.128205,
+          1675.35
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -3.5966400000000003
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-S.svg",
+        "magnification": 8
+      },
+      {
+        "id": "W_UP",
+        "name": "W UP",
+        "maximum_mm": 0.25109666290402527,
+        "critical": "ROOF_BACKING_002",
+        "node": 197,
+        "vector_mm": [
+          -0.004045717252315867,
+          -0.003935276931921715,
+          0.251033224671399
+        ],
+        "position_mm": [
+          1180.0,
+          644.128205,
+          1675.35
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          1.4986
+        ],
+        "load_description": "D = dead/self-weight; L = live; S = snow; W = wind. SERVICE is the recorded sum; SENSITIVITY_D_W is a saved dead + wind scenario.",
+        "image": "assets/narrative/case1-W_UP.svg",
+        "magnification": 8
+      }
+    ],
+    "dialogue_basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.",
+    "film": "assets/narrative/case1-allocation.mp4",
+    "agent_film": "assets/narrative/case1-agent-v2.mp4"
+  },
+  {
+    "id": 2,
+    "title": "Contour Bench",
+    "use": "A continuous seat for resting and gathering",
+    "material": "Straight strips / broad-face overlap",
+    "challenge": "Retain the changing contour while fitting the complete demand to real stock quantities.",
+    "change": "38.1 \u00d7 88.9 mm sections and 76.2 mm station pitch replace the thin prototype family; all 716 strip IDs are retained.",
+    "finding": "The stock section changes the repeating pitch and therefore the overall length.",
+    "cover": "assets/narrative/case2-garden-render.png",
+    "cover_note": "AI-assisted atmosphere render / inspect saved geometry inside",
+    "model": "../case2/assets/case2-bench.jpg",
+    "detail": "/second-grain-timber/case2/explore/#verification",
+    "run": "ALLOC_CASE2_FULL_20261003T072129Z_464628f7",
+    "analysis_run": "CASE2_KARAMBA_20261003T084216Z_R03_TERMINAL_TRIANGLES",
+    "installed": 716,
+    "bars": 120,
+    "record": "../case2/explore/data/case2-analysis.json",
+    "allocation_record": "../case2/explore/data/case2.json",
+    "algorithm": [
+      "Exact stock-section reuse",
+      "One continuous piece per strip",
+      "Shared ledger / bounded cut patterns",
+      "MILP \u2192 716 installed strips"
+    ],
+    "assumptions": "R03: four terminal groups use three non-collinear idealized ties; other groups retain their recorded connections. Six unanchored levelling pads. Fastener capacity and bearing friction are unverified. R02 remains mechanism-diagnosis history.",
+    "request": "Keep the approved changing-contour bench. Use straight overlapping strips and allocate the complete bench from the independent inventory snapshot.",
+    "dialogue": [
+      [
+        "USER",
+        "Keep the approved contour. Use straight strips with direct overlap; do not replace them with curved plywood ribs."
+      ],
+      [
+        "AGENT",
+        "The thin-section stock cannot cover the full demand in the saved bounded pattern menu. A 38.1 \u00d7 88.9 mm family is available; section and spacing must change together."
+      ],
+      [
+        "USER",
+        "Approve the full-stock version and the 125 mm computational minimum. Preserve the accepted local prototype."
+      ],
+      [
+        "AGENT",
+        "Saved result: 716 strips, one shared stock ledger. Compare self-weight, central TOTAL 1 kN and eccentric TOTAL 1 kN under the accepted R03 connections."
+      ]
+    ],
+    "results": [
+      {
+        "id": "SW_ASYMMETRIC_1KN",
+        "name": "Self-weight + asymmetric seat patch / 1 kN total",
+        "maximum_mm": 2.6873676600258465,
+        "critical": "C2O_S019_B09",
+        "node": 6138,
+        "vector_mm": [
+          -0.4552666031110035,
+          0.24189307197054616,
+          -2.6374542653811486
+        ],
+        "position_mm": [
+          1359.7667026665886,
+          1390.65,
+          47.15387076327215
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -4.316886914342773
+        ],
+        "load_description": "Explicit self-weight only; density 500 kg/m\u00b3 and gravity 9.81 m/s\u00b2. Plus 1 kN TOTAL over 7 upper-edge points: S013\u2013S019, B07; 142.857143 N per strip.",
+        "image": "assets/narrative/case2-SW_ASYMMETRIC_1KN.svg",
+        "magnification": 50
+      },
+      {
+        "id": "SW_CENTRAL_1KN",
+        "name": "Self-weight + central seat patch / 1 kN total",
+        "maximum_mm": 1.950174041016667,
+        "critical": "C2O_S040_B01",
+        "node": 237,
+        "vector_mm": [
+          -0.29862467182889024,
+          0.36717274114948184,
+          -1.8918737467883897
+        ],
+        "position_mm": [
+          256.339816667803,
+          2990.8500000000004,
+          58.12061174089781
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -4.316886914342773
+        ],
+        "load_description": "Explicit self-weight only; density 500 kg/m\u00b3 and gravity 9.81 m/s\u00b2. Plus 1 kN TOTAL over 14 upper-edge points: S037\u2013S043, B03 and B07; 71.428571 N per strip.",
+        "image": "assets/narrative/case2-SW_CENTRAL_1KN.svg",
+        "magnification": 50
+      },
+      {
+        "id": "SW_ONLY",
+        "name": "Self-weight",
+        "maximum_mm": 1.2794852201944873,
+        "critical": "C2O_S040_B01",
+        "node": 237,
+        "vector_mm": [
+          -0.214641019236381,
+          0.272126584653979,
+          -1.2316488068771325
+        ],
+        "position_mm": [
+          256.339816667803,
+          2990.8500000000004,
+          58.12061174089781
+        ],
+        "force_kN": [
+          0.0,
+          0.0,
+          -3.3168869143427737
+        ],
+        "load_description": "Explicit self-weight only; density 500 kg/m\u00b3 and gravity 9.81 m/s\u00b2.",
+        "image": "assets/narrative/case2-SW_ONLY.svg",
+        "magnification": 50
+      }
+    ],
+    "dialogue_basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.",
+    "film": "assets/narrative/case2-allocation.mp4",
+    "agent_film": "assets/narrative/case2-agent-v2.mp4"
+  },
+  {
+    "id": 3,
+    "title": "Open Pavilion",
+    "use": "An open, gable-roof gathering space",
+    "material": "Repeated frames / stock-adapted spans",
+    "challenge": "Keep architectural scale and the open pavilion character while coordinating sections, spans and subdivisions.",
+    "change": "The stock-adapted working layout retains repeated gable frames; angled-end allowances are included in cutting blanks.",
+    "finding": "Inventory informs architectural dimensions before allocation checks the selected layout.",
+    "cover": "assets/narrative/case3-garden-render.png",
+    "cover_note": "AI-assisted atmosphere render / inspect saved geometry inside",
+    "model": "../case3/assets/pavilion-complete.jpg",
+    "detail": "/second-grain-timber/case3/#verification",
+    "run": "ALLOC_CASE3_PAVILION_20261005T095835Z_bd90274c",
+    "analysis_run": "CASE3_KARAMBA_20261005T101702Z_PINNED_CLEATS_R02",
+    "installed": 98,
+    "bars": 52,
+    "record": "../case3/data/case3.json",
+    "allocation_record": "../case3/data/case3.json",
+    "algorithm": [
+      "Coordinated spans + sections",
+      "Explicit angled-end blank allowances",
+      "Independent full inventory",
+      "MILP \u2192 98 installed members"
+    ],
+    "assumptions": "R02 pinned-cleat connection model and six conceptually anchored pinned foundations. Wind cases require unverified anchorage; roof covering, foundation design and joint capacity are unresolved.",
+    "request": "Adapt the reference open pavilion to the complete stock snapshot. Preserve gable form and useful architectural scale; coordinate dimensions and sections.",
+    "dialogue": [
+      [
+        "USER",
+        "Use the pavilion as a design reference. Keep the open sides and gable roof, but adapt dimensions and framing to the full inventory."
+      ],
+      [
+        "AGENT",
+        "This is an independent inventory scenario, not Case 2 leftovers. Coordinate spans, sections and subdivisions; include angled-cut blank allowances."
+      ],
+      [
+        "USER",
+        "Preserve architectural scale and trace every installed member back to real stock. Use explicit connections, supports and load assumptions."
+      ],
+      [
+        "AGENT",
+        "Saved result: 98 installed members. The preliminary wind response requires anchorage assumptions; site-specific compliance and physical anchor capacity remain unresolved."
+      ]
+    ],
+    "results": [
+      {
+        "id": "SW_WIND_Y_NEG",
+        "name": "SW WIND Y NEG",
+        "maximum_mm": 54.94211689856565,
+        "critical": "C3_F07_RAFTER_N",
+        "node": 158,
+        "vector_mm": [
+          -2.754304660591438,
+          -54.873012433039754,
+          -0.050216090671982745
+        ],
+        "position_mm": [
+          4844.45,
+          -150.0,
+          2504.7999999999997
+        ],
+        "force_kN": [
+          0,
+          -8.74486261125,
+          -6.864315648504338
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": true,
+        "image": "assets/narrative/case3-SW_WIND_Y_NEG.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_WIND_Y_POS",
+        "name": "SW WIND Y POS",
+        "maximum_mm": 54.92832848867484,
+        "critical": "C3_F07_RAFTER_S",
+        "node": 161,
+        "vector_mm": [
+          -2.719743728998279,
+          54.86092117014616,
+          -0.05994139931383373
+        ],
+        "position_mm": [
+          4844.45,
+          2550.0000000342843,
+          2504.799999977143
+        ],
+        "force_kN": [
+          0,
+          8.74486261125,
+          -6.864315648504338
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": true,
+        "image": "assets/narrative/case3-SW_WIND_Y_POS.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_WIND_X_POS",
+        "name": "SW WIND X POS",
+        "maximum_mm": 34.037561095290464,
+        "critical": "C3_F03_KING, C3_F03_RAFTER_N, C3_F03_RAFTER_S",
+        "node": 30,
+        "vector_mm": [
+          34.03419222178801,
+          0.006383357148873408,
+          -0.47883648437313114
+        ],
+        "position_mm": [
+          1644.45,
+          1200.0,
+          3404.7999999999997
+        ],
+        "force_kN": [
+          4.810792499999999,
+          0,
+          -6.864315648504338
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": true,
+        "image": "assets/narrative/case3-SW_WIND_X_POS.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_WIND_X_NEG",
+        "name": "SW WIND X NEG",
+        "maximum_mm": 33.48929106290525,
+        "critical": "C3_F03_KING, C3_F03_RAFTER_N, C3_F03_RAFTER_S",
+        "node": 30,
+        "vector_mm": [
+          -33.48884936909092,
+          0.008494990171136294,
+          0.17178959650238182
+        ],
+        "position_mm": [
+          1644.45,
+          1200.0,
+          3404.7999999999997
+        ],
+        "force_kN": [
+          -4.810792499999999,
+          0,
+          -6.864315648504338
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": true,
+        "image": "assets/narrative/case3-SW_WIND_X_NEG.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_SNOW",
+        "name": "SW SNOW",
+        "maximum_mm": 1.2979533207270557,
+        "critical": "C3_F03_RAFTER_S",
+        "node": 128,
+        "vector_mm": [
+          1.0987217192504046,
+          -0.03254230148030347,
+          -0.6902422799627616
+        ],
+        "position_mm": [
+          1644.45,
+          1875.0000000171422,
+          2954.7999999885715
+        ],
+        "force_kN": [
+          0,
+          0,
+          -22.766073648504342
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": false,
+        "image": "assets/narrative/case3-SW_SNOW.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_ROOF_DEAD",
+        "name": "SW ROOF DEAD",
+        "maximum_mm": 0.3239706519110034,
+        "critical": "C3_F07_TIE",
+        "node": 71,
+        "vector_mm": [
+          0.3156039144503245,
+          -0.0038561747193552667,
+          -0.07304986242154461
+        ],
+        "position_mm": [
+          4800.0,
+          1200.0,
+          2604.7999999999997
+        ],
+        "force_kN": [
+          0,
+          0,
+          -6.864315648504338
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": false,
+        "image": "assets/narrative/case3-SW_ROOF_DEAD.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_ONLY",
+        "name": "SW ONLY",
+        "maximum_mm": 0.12898659564593276,
+        "critical": "C3_KNEE_4800_N_L, C3_KNEE_4800_N_T, C3_POST_4800_N",
+        "node": 88,
+        "vector_mm": [
+          0.12640944804075213,
+          -0.022692637410305482,
+          -0.011968187403452204
+        ],
+        "position_mm": [
+          4800.0,
+          0,
+          1800.0
+        ],
+        "force_kN": [
+          0,
+          0,
+          -3.5514493985043414
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": false,
+        "image": "assets/narrative/case3-SW_ONLY.svg",
+        "magnification": 8
+      },
+      {
+        "id": "SW_UPLIFT",
+        "name": "SW UPLIFT",
+        "maximum_mm": 0.08620945103752589,
+        "critical": "C3_F03_RAFTER_S",
+        "node": 128,
+        "vector_mm": [
+          -0.065961654063803,
+          0.00818132114678539,
+          0.05490169055367893
+        ],
+        "position_mm": [
+          1644.45,
+          1875.0000000171422,
+          2954.7999999885715
+        ],
+        "force_kN": [
+          0,
+          0,
+          -0.23858314850434137
+        ],
+        "load_description": "Saved self-weight + stated roof/snow/wind scenario. Site-specific code design loads remain unverified.",
+        "anchor_tension_required": true,
+        "image": "assets/narrative/case3-SW_UPLIFT.svg",
+        "magnification": 8
+      }
+    ],
+    "dialogue_basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.",
+    "film": "assets/narrative/case3-allocation.mp4",
+    "agent_film": "assets/narrative/case3-agent-v2.mp4"
+  }
+]
