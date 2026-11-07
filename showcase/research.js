@@ -6,7 +6,7 @@ function start(path) {
       const status=document.getElementById('load-status');
       if(!status.classList.contains('error')){status.hidden=false;status.textContent='Loading saved evidence…';}
     }
-    started.set(path, import(path).catch(() => {
+    started.set(path, import(path+'?v=20261107').catch(() => {
       started.delete(path);
       const status=document.getElementById('load-status');
       status.hidden=false;status.className='error';

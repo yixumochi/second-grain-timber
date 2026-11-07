@@ -1,4 +1,4 @@
-import {mountCloud} from './material-cloud.js';
+import {mountCloud} from './material-cloud.js?v=20261107';
 import {mount as mountAssembly} from '../assets/analysis/desk-scene.js';
 const $=s=>document.querySelector(s), all=s=>[...document.querySelectorAll(s)];
 const esc=v=>String(v??'Not recorded').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
