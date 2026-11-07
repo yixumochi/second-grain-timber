@@ -115,10 +115,18 @@ function correspondence(){
  if(bar.residual_interval_mm){sc.fillStyle='rgba(181,67,42,.45)';sc.fillRect(25+430*bar.residual_interval_mm[0]/L,78,430*bar.residual_mm/L,23);}
  text(sc,'Green: installed   Amber: surplus   Red: residual',25,249,11);
 }
+let lastOptTime,lastExample,lastSplitTime,lastCurrent,lastTexture,lastMini;
 function animate(now){
  requestAnimationFrame(animate);const dt=Math.min(.1,(now-(last??now))/1000);last=now;
  if(document.hidden||document.body.dataset.activeChapter!=='algorithm')return;
- if(opt.dataset.onScreen==='yes'){if(!optPause)optTime=(optTime+dt)%14;optimization();}
- if(split.dataset.onScreen==='yes'){if(!splitPause)splitTime=(splitTime+dt)%10;correspondence();}
+ if(opt.dataset.onScreen==='yes'){
+  if(!optPause)optTime=(optTime+dt)%14;
+  if(lastOptTime!==optTime||lastExample!==example){optimization();lastOptTime=optTime;lastExample=example;}
+ }
+ if(split.dataset.onScreen==='yes'){
+  if(!splitPause)splitTime=(splitTime+dt)%10;
+  if(lastSplitTime!==splitTime||lastCurrent!==current||lastTexture!==tex||lastMini!==mini){correspondence();lastSplitTime=splitTime;lastCurrent=current;lastTexture=tex;lastMini=mini;}
+ }
 }
 requestAnimationFrame(animate);
+document.dispatchEvent(new CustomEvent('trace-viewer-ready'));

@@ -20,7 +20,7 @@ all('[data-logic]').forEach(b=>b.addEventListener('click',()=>{
  pane.append(h,pre,small);
 }));
 $('[data-logic="solver"]')?.click();
-fetch('assets/narrative/cases.json').then(r=>r.json()).then(cases=>{
+fetch('assets/narrative/cases.json').then(r=>{if(!r.ok)throw Error('Case records unavailable');return r.json();}).then(cases=>{
  let c=cases[0];
  function result(){
   const r=c.results[Number($('#method-load').value)];
@@ -42,6 +42,10 @@ fetch('assets/narrative/cases.json').then(r=>r.json()).then(cases=>{
  all('[data-agent-case]').forEach(b=>b.addEventListener('click',()=>setCase(Number(b.dataset.agentCase))));
  $('#response-case').addEventListener('change',e=>setCase(Number(e.target.value)));
  setCase(1);
+}).catch(()=>{
+ const status=$('#method-response-values');
+ status.innerHTML='<p class="figure-error">Saved load definitions could not load. <a href="assets/narrative/cases.json">Open the case records</a> or <a href="">reload the page</a>.</p>';
+ status.closest('details').open=true;
 });
 // Native playback keeps user gesture/audio permissions. Expose buffering and failure.
 all('video').forEach(v=>{
@@ -53,9 +57,13 @@ all('video').forEach(v=>{
 });
 const canvas=$('#trace-loop'),ctx=canvas?.getContext('2d');
 let selected=null,texture=null,scene=null,base=null,paused=matchMedia('(prefers-reduced-motion: reduce)').matches,start=performance.now(),stamp=0;
+let traceVisible=false,traceDirty=true;
+if(canvas)new IntersectionObserver(entries=>{traceVisible=entries[0].isIntersecting;traceDirty=true;}).observe(canvas);
+const traceToggle=$('#trace-loop-toggle');
+if(traceToggle){traceToggle.textContent=paused?'Play loop':'Pause loop';traceToggle.setAttribute('aria-pressed',String(!paused));}
 const textures=new Map();
 $('#trace-loop-toggle')?.addEventListener('click',e=>{
- paused=!paused;e.currentTarget.textContent=paused?'Play loop':'Pause loop';e.currentTarget.setAttribute('aria-pressed',String(!paused));
+ paused=!paused;traceDirty=true;e.currentTarget.textContent=paused?'Play loop':'Pause loop';e.currentTarget.setAttribute('aria-pressed',String(!paused));
 });
 function paintBar(){
  if(!selected)return;
@@ -67,23 +75,27 @@ function paintBar(){
  strip.querySelectorAll('.residual').forEach(b=>b.style.background='rgba(185,65,47,.25)');
 }
 document.addEventListener('trace-selection',async e=>{
- const token=++stamp;selected=e.detail;start=performance.now();texture=null;paintBar();
+ const token=++stamp;selected=e.detail;start=performance.now();frame.last=start;texture=null;traceDirty=true;paintBar();
  const {member,bar,members}=selected;
  const sourceMember=member||members.find(m=>m.stock_id===bar.stock_id);
  $('#trace-loop-label').textContent=`${bar.stock_id} → ${selected.part.part_id}. Saved allocation correspondence; looping placement is illustrative. Grain is representative, not a measured surface map.`;
  base=document.createElement('canvas');base.width=520;base.height=285;
  scene=draw(base.getContext('2d'),members,520,285,{yaw:.65,pitch:.42,selected:member?.member_id});
  if(sourceMember?.appearance?.texture){
-  const im=new Image();im.onload=()=>{if(token===stamp)texture=im;};im.src=sourceMember.appearance.texture;
+  const im=new Image();im.onload=()=>{if(token===stamp){texture=im;traceDirty=true;}};im.src=sourceMember.appearance.texture;
   const data=await decodeAppearance(sourceMember.appearance.texture).catch(()=>null);
   if(token!==stamp)return;
-  if(data){textures.set(sourceMember.material_id,data);scene=draw(base.getContext('2d'),members,520,285,{yaw:.65,pitch:.42,selected:member?.member_id,textures});}
+  if(data){textures.set(sourceMember.material_id,data);scene=draw(base.getContext('2d'),members,520,285,{yaw:.65,pitch:.42,selected:member?.member_id,textures});traceDirty=true;}
  }
 });
 function frame(now){
- requestAnimationFrame(frame);if(!ctx||!selected||document.body.dataset.activeChapter!=='algorithm')return;
- if(paused)start+=now-(frame.last||now);frame.last=now;
- const t=((now-start)/1000)%8,{bar,part,member}=selected,L=bar.source_length_mm||bar.length_mm;
+ requestAnimationFrame(frame);
+ const delta=now-(frame.last||now);frame.last=now;
+ const inactive=document.hidden||!traceVisible||document.body.dataset.activeChapter!=='algorithm';
+ if(paused||inactive)start+=delta;
+ if(!ctx||!selected||inactive||(paused&&!traceDirty))return;
+ traceDirty=false;
+ const t=Math.max(0,(now-start)/1000)%8,{bar,part,member}=selected,L=bar.source_length_mm||bar.length_mm;
  ctx.fillStyle='#e3e7d7';ctx.fillRect(0,0,520,460);
  ctx.fillStyle='#30422f';ctx.font='12px monospace';
  ctx.fillText(['01 / SOURCE + SAVED CUT MARKS','02 / RETAIN THE CUT PART','03 / LOCATE THE TARGET','04 / PLACE INTO THE MODEL'][Math.min(3,Math.floor(t/2))],20,26);
@@ -114,3 +126,4 @@ function frame(now){
  }else{ctx.fillStyle='#795830';ctx.fillText('Surplus stays in the source ledger / not installed',20,145);}
 }
 requestAnimationFrame(frame);
+document.dispatchEvent(new CustomEvent('trace-viewer-ready'));

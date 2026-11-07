@@ -4,24 +4,14 @@ const $=s=>document.querySelector(s), all=s=>[...document.querySelectorAll(s)];
 const esc=v=>String(v??'Not recorded').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=(n,p=2)=>Number(n).toLocaleString('en-US',{maximumFractionDigits:p});
 const get=async p=>{const r=await fetch(p);if(!r.ok)throw Error('Saved record could not be loaded ('+r.status+').');return r.json();};
-let activeChapter;
 let material,research,cloudDispose,assembly,bar,selected,partMembers,allBars,step=0;
-const aliases={evidence:'materials',comparison:'cases',boundaries:'cases',nodes:'technical', 'revision-decisions':'technical'};
 function route(){
- let hash=location.hash.slice(1)||'materials';
- if(aliases[hash]==='technical'){location.replace('technical.html#'+hash);return;}
- const target=aliases[hash]||hash;
- const id=['materials','algorithm','cases','case1','case2','case3'].includes(target)?target:'materials';
- all('[data-chapter]').forEach(e=>e.hidden=e.dataset.chapter!==id);
- all('.chapter-nav a').forEach(e=>e.setAttribute('aria-current',e.hash==='#'+(id.startsWith('case')&&id!=='cases'?'cases':id)?'page':'false'));
- document.body.dataset.activeChapter=id;
- if(activeChapter&&activeChapter!==id)window.scrollTo({top:0,behavior:'instant'});
- activeChapter=id;
- all('video').forEach(v=>{if(v.closest('[data-chapter]')?.hidden)v.pause();});
+ const id=document.body.dataset.activeChapter;
  if(id==='materials'&&material)showStep(step);
  if(id==='algorithm'&&partMembers&&!assembly)mountBench();
 }
-addEventListener('hashchange',route);route();
+addEventListener('research:chapter',route);route();
+document.addEventListener('trace-viewer-ready',()=>{if(selected)selectPart(selected);});
 function showStep(){
  if(!material||cloudDispose)return;
  cloudDispose=mountCloud($('#cloud'),material.cloud,{box:$('#cloud-box'),color:$('#cloud-color'),filter:$('#cloud-filter'),reset:$('#cloud-reset')});
@@ -96,10 +86,13 @@ Promise.all([get('assets/material.json'),get('assets/research.json'),get('../ass
  $('#stock-select').innerHTML=allBars.map(b=>`<option value="${esc(b.stock_id)}">${esc(b.stock_id)} · ${b.pieces.length} cut parts</option>`).join('');
  $('#cloud-filter').innerHTML='<option value="all">All views</option>'+Object.entries(m.cloud.view_labels||{}).map(([k,v])=>`<option value="${esc(k)}">View ${esc(v)}</option>`).join('');
  $('#source-photo').src=m.views[0].photo;
- showStep();chooseBar('118095_001');compare(r);route();
- $('#load-status').hidden=true;
+ chooseBar('118095_001');compare(r);route();
+ if(!$('#load-status').classList.contains('error'))$('#load-status').hidden=true;
  document.dispatchEvent(new CustomEvent('material-ready',{detail:m}));
-}).catch(e=>{$('#load-status').hidden=false;$('#load-status').className='error';$('#load-status').textContent=e.message+' The original case pages and technical records remain linked below.';});
+}).catch(()=>{
+ const status=$('#load-status');status.hidden=false;status.className='error';
+ status.innerHTML='Some interactive evidence could not load. <a href="">Reload this page</a> or <a href="technical.html">read the saved evidence archive</a>. The overview and case navigation remain available.';
+});
 
 all('[data-scroll]').forEach(a=>a.addEventListener('click',e=>{
  e.preventDefault();const target=document.getElementById(a.dataset.scroll);

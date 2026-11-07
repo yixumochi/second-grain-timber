@@ -1,22 +1,33 @@
 const $=s=>document.querySelector(s);
 const cache=new Map(),states=[],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const get=id=>{
- if(!cache.has(id))cache.set(id,fetch(`assets/narrative/case${id}-response-motion.json`).then(r=>{if(!r.ok)throw Error('Saved response unavailable');return r.json();}));
+ if(!cache.has(id))cache.set(id,fetch(`assets/narrative/case${id}-response-motion.json`).then(r=>{if(!r.ok)throw Error('Saved response unavailable');return r.json();}).catch(error=>{cache.delete(id);throw error;}));
  return cache.get(id);
 };
-const observer=new IntersectionObserver(es=>es.forEach(e=>e.target.dataset.visible=e.isIntersecting?'yes':'no'));
+const observer=new IntersectionObserver(es=>es.forEach(e=>{
+ e.target.dataset.visible=e.isIntersecting?'yes':'no';
+ const state=states.find(s=>s.canvas===e.target);if(e.isIntersecting&&state)ensureResult(state);
+}));
 const projection=p=>[p[0]*.82-p[1]*.57,p[0]*.24+p[1]*.34-p[2]*.91];
 function create(canvas,key){
- const s={canvas,ctx:canvas.getContext('2d'),key,time:reduce?3:0,paused:reduce,token:0};states.push(s);observer.observe(canvas);
+ const s={canvas,ctx:canvas.getContext('2d'),key,time:reduce?3:0,paused:reduce,token:0,dirty:true};states.push(s);observer.observe(canvas);
  const play=$(`[data-response-play="${key}"]`);
  const label=()=>{play.textContent=s.paused?'Play deformation':'Pause deformation';play.setAttribute('aria-pressed',String(!s.paused));};
- play.onclick=()=>{s.paused=!s.paused;label();};
- $(`[data-response-reset="${key}"]`).onclick=()=>{s.time=0;s.paused=false;label();};
+ play.onclick=()=>{s.paused=!s.paused;s.dirty=true;label();};
+ $(`[data-response-reset="${key}"]`).onclick=()=>{s.time=0;s.paused=false;s.dirty=true;label();};
  label();return s;
 }
 const method=create($('#method-response-canvas'),'method');
 const details=[1,2,3].map(n=>create($(`[data-response-canvas="${n}"]`),String(n)));
+function selectResult(s,id,index=0){s.requested={id,index};ensureResult(s);}
+function ensureResult(s){
+ if(!s.requested||s.canvas.dataset.visible!=='yes')return;
+ const {id,index}=s.requested,signature=`${id}:${index}`;
+ if(s.signature===signature)return;
+ s.signature=signature;load(s,id,index);
+}
 async function load(s,id,index=0){
+ s.signature=`${id}:${index}`;
  const token=++s.token;
  try{
   const data=await get(id);if(token!==s.token)return;
@@ -35,8 +46,30 @@ async function load(s,id,index=0){
    const label=document.createElement('span');label.textContent=`MAX DISPLACEMENT · ${r.critical}`;
    $('#method-response-max').append(strong,label);$('#method-response-scale').textContent=scaleNote;
   }else $(`[data-response-scale="${s.key}"]`).textContent=scaleNote;
-  s.canvas.dataset.loadCase=r.id;s.canvas.dataset.run=data.run_id;paint(s);
- }catch(e){s.canvas.setAttribute('aria-label',e.message);if(s===method)$('#method-response-max').textContent=e.message;}
+  s.canvas.hidden=false;
+  const fallback=s===method?$('#method-response-image'):$(`[data-result-image="${s.key}"]`);
+  if(fallback)fallback.hidden=true;
+  s.error?.remove();s.error=null;
+  $(`[data-response-play="${s.key}"]`).disabled=false;
+  $(`[data-response-reset="${s.key}"]`).disabled=false;
+  s.canvas.dataset.loadCase=r.id;s.canvas.dataset.run=data.run_id;s.dirty=true;paint(s);
+ }catch(e){
+  if(token!==s.token)return;
+  s.canvas.hidden=true;
+  const fallback=s===method?$('#method-response-image'):$(`[data-result-image="${s.key}"]`);
+  if(fallback)fallback.hidden=false;
+  $(`[data-response-play="${s.key}"]`).disabled=true;
+  $(`[data-response-reset="${s.key}"]`).disabled=true;
+  if(!s.error){
+   s.error=document.createElement('div');s.error.className='figure-error';s.error.setAttribute('role','status');
+   s.canvas.after(s.error);
+  }
+  const text=document.createElement('p');text.textContent='Animated response is unavailable. The archived static drawing and saved result remain available.';
+  const retry=document.createElement('button');retry.type='button';retry.textContent='Retry animation';
+  retry.onclick=()=>{retry.disabled=true;load(s,s.requested.id,s.requested.index);};
+  const record=document.createElement('a');record.href=`assets/narrative/case${id}-response-motion.json`;record.textContent='Open saved response data';
+  s.error.replaceChildren(text,retry,record);
+ }
 }
 function paint(s){
  if(!s.p)return;const {ctx:c,canvas,p,d,data,result:r}=s;
@@ -63,13 +96,13 @@ function animate(now){
  requestAnimationFrame(animate);const dt=Math.min(.1,(now-(last||now))/1000);last=now;
  for(const s of states)if(!s.paused&&!document.hidden&&s.canvas.dataset.visible==='yes')s.time+=dt;
  if(now-lastFrame<32)return;lastFrame=now;
- for(const s of states)if(s.canvas.dataset.visible==='yes'&&!document.hidden)paint(s);
+ for(const s of states)if(s.canvas.dataset.visible==='yes'&&!document.hidden&&(!s.paused||s.dirty)){paint(s);s.dirty=false;}
 }
 requestAnimationFrame(animate);
-document.addEventListener('response-case-selected',e=>load(method,Number(e.detail),0));
-$('#method-load').addEventListener('change',e=>load(method,Number($('#response-case').value),Number(e.target.value)));
+document.addEventListener('response-case-selected',e=>selectResult(method,Number(e.detail),0));
+$('#method-load').addEventListener('change',e=>selectResult(method,Number($('#response-case').value),Number(e.target.value)));
 details.forEach((s,i)=>{
- $(`[data-result-select="${i+1}"]`).addEventListener('change',e=>load(s,i+1,Number(e.target.value)));
- load(s,i+1);
+ $(`[data-result-select="${i+1}"]`).addEventListener('change',e=>selectResult(s,i+1,Number(e.target.value)));
+ selectResult(s,i+1,Number($(`[data-result-select="${i+1}"]`).value)||0);
 });
-load(method,Number($('#response-case').value)||1);
+selectResult(method,Number($('#response-case').value)||1,Number($('#method-load').value)||0);

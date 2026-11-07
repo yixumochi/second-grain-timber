@@ -106,7 +106,7 @@ export function mountCloud(canvas,data,controls){
   }
   all('[data-inspection-stage]').forEach(b=>b.addEventListener('click',()=>{stop();setStage(b.dataset.inspectionStage);}));
   all('[data-material-step]').forEach(b=>b.addEventListener('click',()=>{
-   stop();if(b.dataset.materialStep==='defect'){$('#material-decisions').scrollIntoView({behavior:'smooth',block:'start'});detail.request();}
+   stop();if(b.dataset.materialStep==='defect'){$('#material-decisions').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});detail.request();}
    else setStage(b.dataset.materialStep,true);
   }));
   // A source button keeps photographs, points and texture patches linked.
@@ -132,6 +132,14 @@ export function mountCloud(canvas,data,controls){
   addEventListener('hashchange',stop);
   document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
   controls.filter.value='0';views([0],'View 01 / original photo colors');setStage('mask');
- }).catch(e=>{$('#view-progress').textContent=e.message;});
+ }).catch(()=>{
+  const section=$('#material-inspection');
+  if(!section.querySelector('.figure-error')){
+   const error=document.createElement('p');error.className='figure-error';error.setAttribute('role','status');
+   error.innerHTML='The spatial evidence could not load. The original photographs and masks remain available. <a href="">Reload this page</a><a href="assets/inspection/evidence.json">Open the saved inspection record</a>';
+   section.prepend(error);
+  }
+  all('[data-material-step],[data-inspection-stage]').forEach(button=>button.disabled=true);
+ });
  return ()=>{disposed=true;clearInterval(timer);main?.dispose();detail?.dispose();};
 }

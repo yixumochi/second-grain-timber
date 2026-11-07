@@ -5,7 +5,15 @@ const get=async url=>{const r=await fetch(url);if(!r.ok)throw Error(`Record unav
 function barMarkup(length,segments){
  return `<div class="saved-bar">${segments.map(s=>`<span class="${s.kind}" style="width:${100*s.length/length}%" title="${esc(s.label)}: ${fmt(s.length)} mm"></span>`).join('')}</div><div class="bar-caption">${segments.map(s=>`${esc(s.label)} ${fmt(s.length)} mm`).join(' · ')}</div>`;
 }
-Promise.all([get('assets/narrative/cases.json'),get('../assets/update/allocation.json'),get('assets/narrative/defect-experiments.json'),get('../assets/analysis/members.json')]).then(([cases,allocation,experiments,geometry])=>{
+function unavailable(target,record,label){
+ const host=$(target);if(!host)return;
+ const message=document.createElement('p');message.className='figure-error';message.setAttribute('role','status');
+ message.append(document.createTextNode(label+' could not load. '));
+ const link=document.createElement('a');link.href=record;link.textContent='Open the saved record';
+ const reload=document.createElement('a');reload.href='';reload.textContent='Reload this page';
+ message.append(link,reload);host.prepend(message);
+}
+Promise.all([get('../assets/update/allocation.json'),get('../assets/analysis/members.json')]).then(([allocation,geometry])=>{
  // These are view-only summaries of existing saved intervals.
  const multi=allocation.cut_bars.filter(b=>b.pieces.length>1&&b.residual_mm>20);
  const surplus=multi.find(b=>b.pieces.some(p=>p.assignment_status==='SURPLUS_CUT_PART'));
@@ -23,6 +31,8 @@ Promise.all([get('assets/narrative/cases.json'),get('../assets/update/allocation
   const bar=card.querySelector('.saved-bar');bar.style.backgroundImage=`url("${url}")`;bar.style.backgroundSize='100% 100%';
   bar.querySelectorAll('span').forEach(s=>{if(s.className==='installed')s.style.background='rgba(42,105,57,.28)';if(s.className==='residual')s.style.background='rgba(173,59,40,.25)';if(s.className==='surplus')s.style.background='rgba(183,119,44,.38)';});
  });
+}).catch(()=>unavailable('#static-cuts','../assets/update/allocation.json','The cutting ledger'));
+get('assets/narrative/defect-experiments.json').then(experiments=>{
  function defect(demand){
   const e=experiments.find(e=>e.configuration.demands[0].length_mm===demand),r=e.after_cutting;
   const segments=demand===600?[
@@ -40,6 +50,8 @@ Promise.all([get('assets/narrative/cases.json'),get('../assets/update/allocation
   all('[data-demand]').forEach(b=>b.setAttribute('aria-pressed',Number(b.dataset.demand)===demand?'true':'false'));
  }
  all('[data-demand]').forEach(b=>b.addEventListener('click',()=>defect(Number(b.dataset.demand))));defect(900);
+}).catch(()=>unavailable('#defect-ledger','assets/narrative/defect-experiments.json','The saved trim scenario'));
+get('assets/narrative/cases.json').then(cases=>{
  for(const c of cases){
   const select=$(`[data-result-select="${c.id}"]`);
   select.innerHTML=c.results.map((r,i)=>`<option value="${i}">${esc(r.name)} · ${fmt(r.maximum_mm,3)} mm</option>`).join('');
@@ -56,6 +68,9 @@ Promise.all([get('assets/narrative/cases.json'),get('../assets/update/allocation
   $('#agent-basis').textContent=c.dialogue_basis;
   all('[data-agent-case]').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
  }));
-}).catch(e=>{const p=document.createElement('p');p.className='error';p.textContent=e.message;$('#main').prepend(p);});
+}).catch(()=>{
+ for(const id of [1,2,3])unavailable(`[data-result-summary="${id}"]`,'assets/narrative/cases.json','The case result');
+ unavailable('#agent-basis','assets/narrative/cases.json','The case dialogue');
+});
 // Prevent overlapping soundtracks, without autoplay or changing playback permission.
 all('video').forEach(v=>v.addEventListener('play',()=>all('video').forEach(other=>{if(other!==v)other.pause();})));
