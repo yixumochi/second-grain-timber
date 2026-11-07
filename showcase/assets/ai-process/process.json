@@ -1,0 +1,915 @@
+{
+  "schema": "SecondGrainAIProcessEvidence/1",
+  "publicationDate": "2026-11-07",
+  "scope": "Curated extracts and exact copies of saved local evidence; no new AI or solver execution.",
+  "material99397": {
+    "id": "99397",
+    "title": "Giant Live Edge Cedar Slab 5 x 31 x 82",
+    "sellerUrl": "https://ewsalvage.com/lumber-inventory/?item=99397-giant_live_edge_cedar_slab_5_x_31_x_82",
+    "capturedAt": "2026-09-11T07:04:06.693238+00:00",
+    "sellerDimensionsMm": {
+      "thickness_mm": 127.0,
+      "width_mm": 787.4,
+      "length_mm": 2082.8
+    },
+    "dimensionsBasis": "Seller reported; not applied as a metric scale to the point cloud.",
+    "photoCount": 2,
+    "pointCounts": {
+      "01": 7414,
+      "02": 7872
+    },
+    "mergedPointCount": 15286,
+    "masks": [
+      {
+        "viewId": "01",
+        "manual": false,
+        "status": "VISIBLE_REGION_CANDIDATE"
+      },
+      {
+        "viewId": "02",
+        "manual": false,
+        "status": "VISIBLE_REGION_CANDIDATE"
+      }
+    ],
+    "vggt": {
+      "status": "COMPLETE",
+      "finished": "20260924T104433327280Z",
+      "signature": "28e820bd934d025d30cb0634b8baafc836afb40e8a195ca66ba6d3f2416ee26f"
+    },
+    "stages": [
+      {
+        "id": "photos",
+        "label": "Seller photographs",
+        "role": "Commercial source",
+        "files": [
+          "99397_photo_01.jpg",
+          "99397_photo_02.jpg"
+        ],
+        "finding": "Two oblique photographs and seller dimensions begin the record."
+      },
+      {
+        "id": "masks",
+        "label": "Isolate the timber",
+        "role": "SAM2",
+        "files": [
+          "99397_active_mask_overlay_01.jpg",
+          "99397_active_mask_overlay_02.jpg"
+        ],
+        "finding": "Saved SAM2-derived masks isolate the visible target in each photograph; manual_mask is false."
+      },
+      {
+        "id": "views",
+        "label": "Recover per-view support",
+        "role": "VGGT + saved filtering",
+        "files": [
+          "99397_cloud_view_01.png",
+          "99397_cloud_view_02.png"
+        ],
+        "finding": "7,414 and 7,872 retained points preserve the contributions of the two views."
+      },
+      {
+        "id": "common",
+        "label": "Read the common scene",
+        "role": "Saved geometry visualization",
+        "files": [
+          "99397_cloud_merged_by_view.png"
+        ],
+        "finding": "15,286 saved points share the original VGGT scene. Blue and orange reveal view provenance."
+      },
+      {
+        "id": "surface",
+        "label": "Keep observed evidence visible",
+        "role": "Photo patches + proxy",
+        "files": [
+          "99397_observed_patches_and_proxy.png"
+        ],
+        "finding": "Observed patches remain partial; transparent and unobserved areas are not filled in."
+      }
+    ],
+    "limits": [
+      "Both photographs belong to listing 99397; the same physical slab has not been certified.",
+      "Combined means retaining the saved VGGT common-scene alignment, not a new registration or watertight reconstruction.",
+      "Both photo patches associate with one candidate proxy face; two views do not prove two physical faces.",
+      "Saved CPU renders visualize evidence. No new SAM2 or VGGT execution took place for this publication."
+    ]
+  },
+  "defect115200": {
+    "id": "115200",
+    "detector": "CPU_BLACKHAT_LOCAL_CONTRAST_v1",
+    "automaticCandidateCount": 30,
+    "detectorRole": "Classical computer vision; not a trained crack classifier or an LLM diagnosis.",
+    "candidateId": "C01",
+    "candidateStatus": "CRACK_LIKE_CANDIDATE",
+    "mappedCloudPoints": 18,
+    "candidateReason": "Multi-scale dark ridge with connected longitudinal support; grain, seam and shadow remain possible.",
+    "sellerLengthMm": 1104.9,
+    "retainedLengthMm": 828.24,
+    "sourceFile": "115200-source-detail.jpg",
+    "detectionFile": "115200-automatic-detail.jpg",
+    "cloudFile": "115200-saved-cloud-render.png",
+    "scenarios": [
+      {
+        "id": "CUT_8017f06906dc",
+        "status": "PROPOSED_SCENARIO_ONLY",
+        "demandMm": 900,
+        "before": "OPTIMAL",
+        "after": "INFEASIBLE",
+        "bufferMm": 20,
+        "settings": {
+          "kerf_mm": 3,
+          "minimum_piece_length_mm": 300,
+          "allow_cut": true,
+          "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data."
+        },
+        "partition": {
+          "parts": [
+            {
+              "kind": "retained",
+              "interval_mm": [
+                0.0,
+                828.24
+              ],
+              "length_mm": 828.24
+            },
+            {
+              "kind": "preparation_kerf",
+              "interval_mm": [
+                828.24,
+                831.24
+              ],
+              "length_mm": 3.0
+            },
+            {
+              "kind": "excluded",
+              "interval_mm": [
+                831.24,
+                1104.9
+              ],
+              "length_mm": 273.6600000000001
+            }
+          ],
+          "totals": {
+            "excluded": 273.6600000000001,
+            "preparation_kerf": 3.0,
+            "retained": 828.24
+          },
+          "maximum_continuous_mm": 828.24,
+          "accounting_error_mm": 0.0
+        },
+        "afterCutting": {
+          "source_length_mm": 1104.9,
+          "used_mm": 0.0,
+          "excluded_mm": 273.6600000000001,
+          "preparation_kerf_mm": 3.0,
+          "allocation_kerf_mm": 0.0,
+          "selected_offcut_mm": 0.0,
+          "retained_unselected_mm": 828.24,
+          "accounting_error_mm": 0.0,
+          "allocation_kerf_intervals": [],
+          "offcut_intervals": []
+        },
+        "currentProjectModified": false,
+        "demandBasis": "Explicit isolated length-compatibility probe, not a recorded building member. Uses the real seller section and one existing slot; no new form or physical stock.",
+        "mappingBasis": "115200 view 01 shows both ends of the illustrated beam. Source-photo top/bottom end positions selected for this demonstration; seller nominal length 1104.9 mm. Perspective and end placement are approximate. Not a scaled cloud."
+      },
+      {
+        "id": "CUT_f53711f9ea12",
+        "status": "PROPOSED_SCENARIO_ONLY",
+        "demandMm": 600,
+        "before": "OPTIMAL",
+        "after": "OPTIMAL",
+        "bufferMm": 20,
+        "settings": {
+          "kerf_mm": 3,
+          "minimum_piece_length_mm": 300,
+          "allow_cut": true,
+          "fabrication_source": "User-confirmed geometry research assumptions, 2026-09-09: kerf 3 mm and minimum cut member 300 mm. Not code requirements or measured tool data."
+        },
+        "partition": {
+          "parts": [
+            {
+              "kind": "retained",
+              "interval_mm": [
+                0.0,
+                828.24
+              ],
+              "length_mm": 828.24
+            },
+            {
+              "kind": "preparation_kerf",
+              "interval_mm": [
+                828.24,
+                831.24
+              ],
+              "length_mm": 3.0
+            },
+            {
+              "kind": "excluded",
+              "interval_mm": [
+                831.24,
+                1104.9
+              ],
+              "length_mm": 273.6600000000001
+            }
+          ],
+          "totals": {
+            "excluded": 273.6600000000001,
+            "preparation_kerf": 3.0,
+            "retained": 828.24
+          },
+          "maximum_continuous_mm": 828.24,
+          "accounting_error_mm": 0.0
+        },
+        "afterCutting": {
+          "source_length_mm": 1104.9,
+          "used_mm": 600.0,
+          "excluded_mm": 273.6600000000001,
+          "preparation_kerf_mm": 3.0,
+          "allocation_kerf_mm": 3.0,
+          "selected_offcut_mm": 225.24,
+          "retained_unselected_mm": 0,
+          "accounting_error_mm": 0.0,
+          "allocation_kerf_intervals": [
+            [
+              600.0,
+              603.0
+            ]
+          ],
+          "offcut_intervals": [
+            [
+              603.0,
+              828.24
+            ]
+          ]
+        },
+        "currentProjectModified": false,
+        "demandBasis": "Explicit isolated length-compatibility probe, not a recorded building member. Uses the real seller section and one existing slot; no new form or physical stock.",
+        "mappingBasis": "115200 view 01 shows both ends of the illustrated beam. Source-photo top/bottom end positions selected for this demonstration; seller nominal length 1104.9 mm. Perspective and end placement are approximate. Not a scaled cloud."
+      }
+    ],
+    "limits": [
+      "Different specimen from the 99397 two-view example.",
+      "18 existing points are linked through same-view source pixels; crack depth and cross-view support remain unresolved.",
+      "20 mm buffer and 3 mm kerf are research/fabrication assumptions, not a building-code crack tolerance.",
+      "The 600 mm and 900 mm probes are isolated allocation experiments; neither modifies a final building allocation."
+    ]
+  },
+  "agentPrompts": [
+    {
+      "id": "prompt_1",
+      "recordId": "AGENT_20260922T152335746923Z",
+      "mode": "REAL_API",
+      "prompt": "Keep the reading pavilion interior completely open.\nDo not introduce internal supports.\nDo not splice members.",
+      "parserModel": "gpt-5.4-mini",
+      "hardConstraints": {
+        "area_m2": 2.9972,
+        "height_m": 2.05,
+        "envelope_mm": [
+          2360.0,
+          1270.0,
+          2050.0
+        ],
+        "entrance_face": "WEST",
+        "entrance_width_mm": 900.0,
+        "entrance_height_mm": 1800.0,
+        "no_splicing": true,
+        "internal_support_forbidden": true
+      },
+      "preferences": {
+        "open_interior": "UNSPECIFIED",
+        "fabrication": "UNSPECIFIED"
+      },
+      "allowedChanges": {
+        "support_strategy": [
+          "PERIMETER_ONLY"
+        ]
+      },
+      "assumptions": [
+        "Retained controlled envelope and entrance from current brief.",
+        "Retained research floor load; LLM supplies no engineering values."
+      ],
+      "unknowns": [
+        "Seller grade/MOE/strength",
+        "Complete loads and code compliance",
+        "Connections and stability"
+      ],
+      "validation": {
+        "status": "PASS",
+        "errors": [],
+        "schema": "Pydantic extended existing Brief/Decision + deterministic controlled-brief checks",
+        "hard_constraints_over_preferences": true,
+        "structural_authority": "experiment.py",
+        "llm_selects_stock": false,
+        "llm_calculates_structure": false
+      },
+      "brief": {
+        "location": "Seattle, Washington, USA",
+        "form_description": "Controlled rectangular pavilion envelope, retained unchanged.",
+        "internal_columns_allowed": false,
+        "jointing_allowed": false,
+        "stock_policy": "existing_reclaimed_stock_only"
+      },
+      "linkedRuns": {
+        "baseline": "runs/AB_20260922T152342893900Z",
+        "counterfactual": "runs/AB_20260922T152343328732Z"
+      },
+      "limit": "Recorded intent parsing in a controlled pavilion experiment. Not a transcript of the later bench or shelter revisions."
+    },
+    {
+      "id": "prompt_2",
+      "recordId": "AGENT_20260922T152343693208Z",
+      "mode": "REAL_API",
+      "prompt": "Keep the reading space open if possible,\nbut allow one internal support line if it improves compatibility\nwith the available reclaimed timber.\nDo not splice members.",
+      "parserModel": "gpt-5.4-mini",
+      "hardConstraints": {
+        "area_m2": 2.9972,
+        "height_m": 2.05,
+        "envelope_mm": [
+          2360.0,
+          1270.0,
+          2050.0
+        ],
+        "entrance_face": "WEST",
+        "entrance_width_mm": 900.0,
+        "entrance_height_mm": 1800.0,
+        "no_splicing": true,
+        "internal_support_forbidden": false
+      },
+      "preferences": {
+        "open_interior": "PREFERRED",
+        "fabrication": "UNSPECIFIED"
+      },
+      "allowedChanges": {
+        "support_strategy": [
+          "PERIMETER_ONLY",
+          "ONE_INTERNAL_SUPPORT_LINE"
+        ]
+      },
+      "assumptions": [
+        "Interpreted 'do not splice members' as retaining jointing_allowed=false.",
+        "Interpreted 'keep the reading space open if possible' as a preference, not a hard prohibition on internal support.",
+        "Retained controlled envelope and entrance from current brief.",
+        "Retained research floor load; LLM supplies no engineering values."
+      ],
+      "unknowns": [
+        "Seller grade/MOE/strength",
+        "Complete loads and code compliance",
+        "Connections and stability"
+      ],
+      "validation": {
+        "status": "PASS",
+        "errors": [],
+        "schema": "Pydantic extended existing Brief/Decision + deterministic controlled-brief checks",
+        "hard_constraints_over_preferences": true,
+        "structural_authority": "experiment.py",
+        "llm_selects_stock": false,
+        "llm_calculates_structure": false
+      },
+      "brief": {
+        "location": "Seattle, Washington, USA",
+        "form_description": "Controlled rectangular pavilion envelope, retained unchanged.",
+        "internal_columns_allowed": true,
+        "jointing_allowed": false,
+        "stock_policy": "existing_reclaimed_stock_only"
+      },
+      "linkedRuns": {
+        "baseline": "runs/AB_20260922T152348751191Z",
+        "counterfactual": "runs/AB_20260922T152351135267Z"
+      },
+      "limit": "Recorded intent parsing in a controlled pavilion experiment. Not a transcript of the later bench or shelter revisions."
+    },
+    {
+      "id": "prompt_3",
+      "recordId": "AGENT_20260922T152353100091Z",
+      "mode": "REAL_API",
+      "prompt": "Use the same pavilion requirements.\nAllow the same structural changes,\nbut prioritize fewer cuts and less fabrication.",
+      "parserModel": "gpt-5.4-mini",
+      "hardConstraints": {
+        "area_m2": 2.9972,
+        "height_m": 2.05,
+        "envelope_mm": [
+          2360.0,
+          1270.0,
+          2050.0
+        ],
+        "entrance_face": "WEST",
+        "entrance_width_mm": 900.0,
+        "entrance_height_mm": 1800.0,
+        "no_splicing": true,
+        "internal_support_forbidden": false
+      },
+      "preferences": {
+        "open_interior": "PREFERRED",
+        "fabrication": "FEWER_CUTS"
+      },
+      "allowedChanges": {
+        "support_strategy": [
+          "PERIMETER_ONLY",
+          "ONE_INTERNAL_SUPPORT_LINE"
+        ]
+      },
+      "assumptions": [
+        "Retained controlled envelope and entrance from current brief.",
+        "Retained research floor load; LLM supplies no engineering values."
+      ],
+      "unknowns": [
+        "Seller grade/MOE/strength",
+        "Complete loads and code compliance",
+        "Connections and stability"
+      ],
+      "validation": {
+        "status": "PASS",
+        "errors": [],
+        "schema": "Pydantic extended existing Brief/Decision + deterministic controlled-brief checks",
+        "hard_constraints_over_preferences": true,
+        "structural_authority": "experiment.py",
+        "llm_selects_stock": false,
+        "llm_calculates_structure": false
+      },
+      "brief": {
+        "location": "Seattle, Washington, USA",
+        "form_description": "Controlled rectangular pavilion envelope, retained unchanged.",
+        "internal_columns_allowed": true,
+        "jointing_allowed": false,
+        "stock_policy": "existing_reclaimed_stock_only"
+      },
+      "linkedRuns": {
+        "baseline": "runs/AB_20260922T152357769447Z",
+        "counterfactual": "runs/AB_20260922T152400405645Z"
+      },
+      "limit": "Recorded intent parsing in a controlled pavilion experiment. Not a transcript of the later bench or shelter revisions."
+    }
+  ],
+  "bench": {
+    "geometryFile": "bench-geometry.json",
+    "before": {
+      "geometryId": "GEOM_CASE2_7aedfe18d87a41a1",
+      "lengthMm": 3622.7833036955044,
+      "pitchMm": 45.569601304345966,
+      "sectionMm": [
+        22.784800652172983,
+        56.98881589422121
+      ],
+      "dimensionLabel": "Illustrative size · source units unconfirmed",
+      "bounds": {
+        "min": [
+          -0.8246943614162514,
+          0.0,
+          -11.156520940091703
+        ],
+        "max": [
+          1456.616211232071,
+          3622.7833036955044,
+          580.874119749042
+        ]
+      }
+    },
+    "after": {
+      "geometryId": "GEOM_CASE2_FULL_f7c344c7a354e884",
+      "lengthMm": 6057.900000000001,
+      "pitchMm": 76.2,
+      "sectionMm": [
+        38.1,
+        88.9
+      ],
+      "dimensionLabel": "Working scale: 100 mm/source unit; not physically measured",
+      "bounds": {
+        "min": [
+          -1.937607630317765,
+          0.0,
+          -11.156520940091703
+        ],
+        "max": [
+          1456.6162115615527,
+          6057.900000000001,
+          580.874119749042
+        ]
+      }
+    },
+    "preservedMemberIds": 716,
+    "preservedContacts": 1264,
+    "validation": {
+      "status": "PASS",
+      "source_member_count": 716,
+      "adapted_member_count": 716,
+      "source_ids_exact": true,
+      "source_axes_exact": true,
+      "original_contact_count": 1264,
+      "actual_contact_count": 1264,
+      "retained_contact_count": 1264,
+      "contact_graph_status": "UNCHANGED",
+      "minimum_same_layer_clearance_mm": 1.0000000000000915,
+      "maximum_corresponding_corner_movement_xz_mm": 31.911294181845506,
+      "structural_verification": false
+    },
+    "allocation": {
+      "complete_allocation": true,
+      "demand_count": 716,
+      "assigned_blank_count": 716,
+      "source_bar_count": 120,
+      "material_listing_count": 6,
+      "minimum_part_length_mm": 125,
+      "exact_section_mm": [
+        38.1,
+        88.9
+      ],
+      "optimum_scope": "Two recorded balanced partitions across actual source length groups; original MILP objective and constraints unchanged.",
+      "structural_verification": false
+    },
+    "runId": "ALLOC_CASE2_FULL_20261003T072129Z_464628f7",
+    "allocationStatus": "OPTIMAL",
+    "allocationStageModelCalls": 0,
+    "limit": "Source Blender units are unconfirmed. Both geometries use the recorded working scale of 100 mm per source unit; not physically measured.",
+    "agentAttribution": "Material-driven geometry and allocation records. The saved full-bench run reports zero model calls; do not attribute this geometry change to the earlier LLM prompt experiment.",
+    "stockCapacity": {
+      "scope": "Necessary capacity screen within the recorded menu of at most six pieces per source bar; not a proof of global infeasibility.",
+      "demand": {
+        "parts": 716,
+        "length_sum_mm": 199647.97825392894,
+        "minimum_mm": 127.66677374772588,
+        "maximum_mm": 413.7208075108294,
+        "minimum_source_bars_at_six": 120
+      },
+      "families": [
+        {
+          "section_mm": [
+            19.05,
+            69.85
+          ],
+          "source_slot_count": 6,
+          "source_length_mm": 17621.25,
+          "max_parts_at_six": 36,
+          "part_count_shortfall": 680,
+          "necessary_capacity_pass": false
+        },
+        {
+          "section_mm": [
+            19.05,
+            82.55
+          ],
+          "source_slot_count": 29,
+          "source_length_mm": 60198.000000000015,
+          "max_parts_at_six": 174,
+          "part_count_shortfall": 542,
+          "necessary_capacity_pass": false
+        },
+        {
+          "section_mm": [
+            19.05,
+            88.9
+          ],
+          "source_slot_count": 33,
+          "source_length_mm": 70675.50000000001,
+          "max_parts_at_six": 198,
+          "part_count_shortfall": 518,
+          "necessary_capacity_pass": false
+        },
+        {
+          "section_mm": [
+            38.1,
+            88.9
+          ],
+          "source_slot_count": 279,
+          "source_length_mm": 674604.9500000012,
+          "max_parts_at_six": 1674,
+          "part_count_shortfall": 0,
+          "necessary_capacity_pass": true
+        }
+      ]
+    }
+  },
+  "shelter": {
+    "revision": 44,
+    "geometryId": "GEOM_6619b278297dc9d7",
+    "allocationId": "ALLOC_20260929T103241_f1495f",
+    "allocationStatus": "OPTIMAL",
+    "parts": 155,
+    "sourceBars": 87,
+    "analysisId": "KARAMBA_BUILDING_20260929T103501_27f3a8",
+    "analysisStatus": "COMPLETED_CONCEPTUAL",
+    "caseComparison": [
+      {
+        "case": "SENSITIVITY_D_WY_NEG",
+        "previous_mm": 56.22418014997383,
+        "current_mm": 18.037754495305556,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "D",
+        "previous_mm": 3.064917940089412,
+        "current_mm": 13.682488550915988,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "WX_POS",
+        "previous_mm": 0.706113432567867,
+        "current_mm": 0.7060457682214673,
+        "current_member_id": "JAMB_WEST_1"
+      },
+      {
+        "case": "WY_POS",
+        "previous_mm": 56.17814915708422,
+        "current_mm": 11.793470272535137,
+        "current_member_id": "WALL_STUD_SOUTH_1"
+      },
+      {
+        "case": "SENSITIVITY_D_WY_POS",
+        "previous_mm": 56.23959533662309,
+        "current_mm": 18.051708028351143,
+        "current_member_id": "WALL_STUD_SOUTH_1"
+      },
+      {
+        "case": "WX_NEG",
+        "previous_mm": 14.523029420351023,
+        "current_mm": 14.523329219419397,
+        "current_member_id": "WALL_STUD_EAST_1"
+      },
+      {
+        "case": "SERVICE_D_S",
+        "previous_mm": 3.0772922534871108,
+        "current_mm": 13.689655101240621,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "SENSITIVITY_D_WX_POS",
+        "previous_mm": 3.0674179486981,
+        "current_mm": 13.68327965081196,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "SENSITIVITY_D_WX_NEG",
+        "previous_mm": 14.512884759136691,
+        "current_mm": 14.51340174019864,
+        "current_member_id": "WALL_STUD_EAST_1"
+      },
+      {
+        "case": "WY_NEG",
+        "previous_mm": 56.1777624708667,
+        "current_mm": 11.793002494482234,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "L",
+        "previous_mm": 1.9483259995561915,
+        "current_mm": 1.9483259911019568,
+        "current_member_id": "SECONDARY_FLOOR_003"
+      },
+      {
+        "case": "SERVICE_D_L",
+        "previous_mm": 3.0670862212865058,
+        "current_mm": 13.685054951018808,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "W_UP",
+        "previous_mm": 0.25113234564949655,
+        "current_mm": 0.25109666290402527,
+        "current_member_id": "ROOF_BACKING_002"
+      },
+      {
+        "case": "SENSITIVITY_D_W_UP",
+        "previous_mm": 3.0597786214620535,
+        "current_mm": 13.679508124401288,
+        "current_member_id": "WALL_STUD_NORTH_1"
+      },
+      {
+        "case": "S",
+        "previous_mm": 0.602717629556848,
+        "current_mm": 0.6026319909703659,
+        "current_member_id": "ROOF_BACKING_002"
+      }
+    ],
+    "changedMembers": [
+      "WALL_RAIL_NORTH_0",
+      "WALL_RAIL_NORTH_1",
+      "WALL_RAIL_SOUTH_0",
+      "WALL_RAIL_SOUTH_1",
+      "WALL_STUD_NORTH_0",
+      "WALL_STUD_NORTH_1",
+      "WALL_STUD_NORTH_2",
+      "WALL_STUD_SOUTH_0",
+      "WALL_STUD_SOUTH_1",
+      "WALL_STUD_SOUTH_2"
+    ],
+    "roofClearanceAdjustmentMm": 12.7,
+    "preservedEnclosure": true,
+    "unchangedSuccessfulAllocation": true,
+    "physicalJointDetailsUnresolved": 6,
+    "notStructurallyVerified": true,
+    "image": "backing-assembled-model-render.png",
+    "explodedImage": "backing-exploded-model-render.png",
+    "limits": [
+      "Conceptual analysis of a saved backing revision; physical joints and foundations are not fully verified.",
+      "Y-wind response improves while gravity response increases. Compare named load cases, not one universal improvement score.",
+      "This revision is not asserted to be the direct output of the separate controlled prompt experiment."
+    ]
+  },
+  "images": [
+    {
+      "file": "99397_photo_01.jpg",
+      "bytes": 139307,
+      "sha256": "667ad345a42c63f38f9eddaed444867961924bcb1c36d81b94a80aeb806cf2f8"
+    },
+    {
+      "file": "99397_photo_02.jpg",
+      "bytes": 148263,
+      "sha256": "d4b335fc42e323292770f9f8ca0cd2d5bedd22193c2b78d794eabfa6b60c3ea2"
+    },
+    {
+      "file": "99397_active_mask_01.png",
+      "bytes": 3696,
+      "sha256": "8edc5dc08746e15f67171d30a1de674b0e4c0f7f4b4dc12b1cf002331972a393"
+    },
+    {
+      "file": "99397_active_mask_02.png",
+      "bytes": 4115,
+      "sha256": "2eadd0d9cc4c1b2624b5d289bce613418f8ff579a58b68130e2e7e6ab1c9a788"
+    },
+    {
+      "file": "99397_active_mask_overlay_01.jpg",
+      "bytes": 78798,
+      "sha256": "758c381e2a7d393c58ecfde9251e66d6199a3b47a39215b5bff8bedd36fff3d4"
+    },
+    {
+      "file": "99397_active_mask_overlay_02.jpg",
+      "bytes": 78879,
+      "sha256": "eade698c562504092c58ca3cb56cd3bab58517ce33d78a38dc9967a5c7c01b6d"
+    },
+    {
+      "file": "99397_cloud_view_01.png",
+      "bytes": 364522,
+      "sha256": "7a26d3f18752252ea69ff35968e601cdda28f80bdabe6458b0d185dfa9263810"
+    },
+    {
+      "file": "99397_cloud_view_02.png",
+      "bytes": 320569,
+      "sha256": "09a81154168ff4a43b84428314ac24734943c597ce41bf37d33810c3f0cdc70b"
+    },
+    {
+      "file": "99397_cloud_merged.png",
+      "bytes": 449633,
+      "sha256": "3fad2405862228549bee31ace28abf49a80104b6aaeb042eeac4972c619e0c1f"
+    },
+    {
+      "file": "99397_cloud_merged_by_view.png",
+      "bytes": 436595,
+      "sha256": "545f92c806e524c044b51c17a39c8288d8c6fb3296a6393476cd4003be6a4a39"
+    },
+    {
+      "file": "99397_observed_patches_and_proxy.png",
+      "bytes": 866171,
+      "sha256": "b10be9956e351e9f13efae013107720a615644ceb9feca5894ae5666904823db"
+    },
+    {
+      "file": "115200-source-detail.jpg",
+      "bytes": 48224,
+      "sha256": "e62771bc4bc43b4746d1999b33033b1441f068650d1da73697cefd8c46920e44"
+    },
+    {
+      "file": "115200-automatic-detail.jpg",
+      "bytes": 49128,
+      "sha256": "c2c6f44c192cb1cdc2013e0d67cffd41ae57fe07594e2a8bb66ca1efc8e24565"
+    },
+    {
+      "file": "115200-saved-cloud-render.png",
+      "bytes": 116400,
+      "sha256": "44fa0785fa578d1121b3973dddcdb67f92c9864a3625d74cb6f44a79288392ef"
+    },
+    {
+      "file": "backing-assembled-model-render.png",
+      "bytes": 1019664,
+      "sha256": "b46d2cf0061d740d708cc92a5c5545841d8f5700b80d775b19c53eada113dd05"
+    },
+    {
+      "file": "backing-exploded-model-render.png",
+      "bytes": 1096159,
+      "sha256": "d59dafe8cb284654ad23c04d7450459b857ef7a6731612a2c824727679cab1f0"
+    }
+  ],
+  "provenance": [
+    {
+      "record": "99397_photo_01.jpg",
+      "sha256": "667ad345a42c63f38f9eddaed444867961924bcb1c36d81b94a80aeb806cf2f8"
+    },
+    {
+      "record": "99397_photo_02.jpg",
+      "sha256": "d4b335fc42e323292770f9f8ca0cd2d5bedd22193c2b78d794eabfa6b60c3ea2"
+    },
+    {
+      "record": "99397_active_mask_01.png",
+      "sha256": "8edc5dc08746e15f67171d30a1de674b0e4c0f7f4b4dc12b1cf002331972a393"
+    },
+    {
+      "record": "99397_active_mask_02.png",
+      "sha256": "2eadd0d9cc4c1b2624b5d289bce613418f8ff579a58b68130e2e7e6ab1c9a788"
+    },
+    {
+      "record": "99397_active_mask_overlay_01.jpg",
+      "sha256": "758c381e2a7d393c58ecfde9251e66d6199a3b47a39215b5bff8bedd36fff3d4"
+    },
+    {
+      "record": "99397_active_mask_overlay_02.jpg",
+      "sha256": "eade698c562504092c58ca3cb56cd3bab58517ce33d78a38dc9967a5c7c01b6d"
+    },
+    {
+      "record": "99397_cloud_view_01.png",
+      "sha256": "7a26d3f18752252ea69ff35968e601cdda28f80bdabe6458b0d185dfa9263810"
+    },
+    {
+      "record": "99397_cloud_view_02.png",
+      "sha256": "09a81154168ff4a43b84428314ac24734943c597ce41bf37d33810c3f0cdc70b"
+    },
+    {
+      "record": "99397_cloud_merged.png",
+      "sha256": "3fad2405862228549bee31ace28abf49a80104b6aaeb042eeac4972c619e0c1f"
+    },
+    {
+      "record": "99397_cloud_merged_by_view.png",
+      "sha256": "545f92c806e524c044b51c17a39c8288d8c6fb3296a6393476cd4003be6a4a39"
+    },
+    {
+      "record": "99397_observed_patches_and_proxy.png",
+      "sha256": "b10be9956e351e9f13efae013107720a615644ceb9feca5894ae5666904823db"
+    },
+    {
+      "record": "115200-source-detail.jpg",
+      "sha256": "e62771bc4bc43b4746d1999b33033b1441f068650d1da73697cefd8c46920e44"
+    },
+    {
+      "record": "115200-automatic-detail.jpg",
+      "sha256": "c2c6f44c192cb1cdc2013e0d67cffd41ae57fe07594e2a8bb66ca1efc8e24565"
+    },
+    {
+      "record": "115200-saved-cloud-render.png",
+      "sha256": "44fa0785fa578d1121b3973dddcdb67f92c9864a3625d74cb6f44a79288392ef"
+    },
+    {
+      "record": "backing-assembled-model-render.png",
+      "sha256": "b46d2cf0061d740d708cc92a5c5545841d8f5700b80d775b19c53eada113dd05"
+    },
+    {
+      "record": "backing-exploded-model-render.png",
+      "sha256": "d59dafe8cb284654ad23c04d7450459b857ef7a6731612a2c824727679cab1f0"
+    },
+    {
+      "record": "99397_material_record.json",
+      "sha256": "321579ebca6482eec3b418296b93e948d2c1e64dea4999bf36c025a8dd63f283"
+    },
+    {
+      "record": "99397/manifest.json",
+      "sha256": "836575d179cfee28b437ec9e3cc428cd57df05ee0d5cdb6fa46fdf68afc6d211"
+    },
+    {
+      "record": "99397_vggt_stage.json",
+      "sha256": "39b369f648a0ec9a2fc2ac885f73774cd47bd1bc9a5820ce8cc61feb808f81ab"
+    },
+    {
+      "record": "99397/README.md",
+      "sha256": "7ee5b0d57498b97c13b1eb970a2ec9a42f2fd1aa7837215954b0fc783d9436b1"
+    },
+    {
+      "record": "CUT_8017f06906dc/revision-0001.json",
+      "sha256": "ca45ef0a63647512c6eddd2287949f3b7dc5368fa0d4456b2ac94f0b82d70563"
+    },
+    {
+      "record": "CUT_f53711f9ea12/revision-0001.json",
+      "sha256": "0d91be5f466a4ed637913a741ee396818c17898d31060a27fbe5235590a16241"
+    },
+    {
+      "record": "DEFECT_115200_01_37b96e7a987af96d/automatic.json",
+      "sha256": "0dde4905d9026d1ce32f3a33cb13430632e3800971ac2f30fef88fd0c311a004"
+    },
+    {
+      "record": "timber-defect-to-cut-v1/IMPLEMENTATION.md",
+      "sha256": "cbd2ea9548acfcae3c0755e9aa82bd549fbdbd902c96646efb3538b5c2ad6785"
+    },
+    {
+      "record": "saved_case_summary.json",
+      "sha256": "9420844bae3843816d2425836df45ddcfebaa64a6376f5bded222ba0166af34c"
+    },
+    {
+      "record": "GEOM_CASE2_7aedfe18d87a41a1/geometry.json",
+      "sha256": "74827190c9768667fd718571539f8711b73c92f1375bf48f3339ca19a0a083f0"
+    },
+    {
+      "record": "GEOM_CASE2_FULL_f7c344c7a354e884/geometry.json",
+      "sha256": "d89346baaae08307e9d3a5c323641c7e0cf4c9ac3558fb0c508c848e610d4411"
+    },
+    {
+      "record": "timber-case2-contour-bench/progress.json",
+      "sha256": "8580f7fc0c3a5d413e2507ef55fe60b2c0c72e91ff2699670a951c26482b784e"
+    },
+    {
+      "record": "case2/stock-audit-full.json",
+      "sha256": "3093b5d82b2bfb548656d54a2881317287fecfc3f8390893f92ff71eb3137a73"
+    },
+    {
+      "record": "backing-revision-20260929/completion.json",
+      "sha256": "12f95682ec5b8d756e272970d4690c88e939224c3621c6466dffdc1d9e4e5b86"
+    },
+    {
+      "record": "backing-revision-20260929/geometry-audit.json",
+      "sha256": "decc261ac86f231133abc3dffd4cf443bf76f95b643ca93a3dc2e592f794d62f"
+    }
+  ]
+}

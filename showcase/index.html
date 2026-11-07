@@ -7,10 +7,12 @@
 <meta name="description" content="Real reclaimed-timber evidence, designer-agent decisions and three stock-aware design cases.">
 <link rel="stylesheet" href="narrative.css">
 <link rel="preload" href="../assets/fonts/newsreader.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="editorial.css?v=20261107">
-<script defer src="navigation.js?v=20261107">
+<link rel="stylesheet" href="editorial.css?v=20261107-ai1">
+<link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
+<script defer src="navigation.js?v=20261107-ai1">
 </script>
-<script type="module" src="research.js?v=20261107"></script></head>
+<script type="module" src="research.js?v=20261107-ai1"></script>
+<script type="module" src="ai-pathways.js?v=20261107-ai1"></script></head>
 <body>
 <a class="skip" href="#main">Skip to research</a>
 <header class="mast">
@@ -21,8 +23,8 @@
 </header>
 <nav class="chapter-nav" aria-label="Research chapters">
 <a href="#overview" aria-current="page">Overview</a>
-<a href="#materials">Material evidence</a>
-<a href="#algorithm">Design method</a>
+<a href="#materials">Material AI</a>
+<a href="#algorithm">Design Agent</a>
 <a href="#cases">Three cases</a>
 </nav>
 <main id="main">
@@ -34,11 +36,11 @@
       <h1 id="research-title">Design from<br>
 <em>what exists.</em>
 </h1>
-      <p class="research-deck">Source-linked reclaimed timber.<br>Stock-first design. Traceable assembly.</p>
-      <p class="research-abstract">Reclaimed stock carries dimensions, quantity and incomplete evidence. A shared project connects those limits to design decisions, fabrication and assembly.</p>
+      <p class="research-deck">Visual AI reads the material.<br>A design Agent makes intent actionable.</p>
+      <p class="research-abstract">Follow two research lines: sparse seller photographs become material evidence; design intent meets stock, code and structure to reshape architectural form.</p>
       <div class="entry-actions">
-<a class="button primary" href="#cases">Explore the three cases</a>
-<a class="text-link" href="#materials">Read the material evidence <span aria-hidden="true">↗</span>
+<a class="button primary" href="#materials">Follow the material AI</a>
+<a class="text-link" href="#algorithm">Explore the design Agent <span aria-hidden="true">↗</span>
 </a>
 </div>
     </div>
@@ -52,14 +54,11 @@
 </figcaption>
     </figure>
   </section>
-  <section class="research-question" aria-labelledby="question-title">
-    <h2 id="question-title">What if material availability became a design state?</h2>
-    <div>
-<p>The Agent proposes. You confirm. MILP allocates the confirmed demand. Karamba evaluates the recorded analytical model.</p>
-<p class="caption">MILP: mixed-integer linear programming. This presentation uses saved evidence and recorded runs.</p>
-<a class="text-link" href="#algorithm">Follow the design method <span aria-hidden="true">↗</span>
-</a>
-</div>
+  <section class="ai-overview-paths" aria-labelledby="pathways-title">
+    <div class="section-heading"><h2 id="pathways-title">Where AI enters.<br>What changes because of it.</h2><p>Follow the inputs, model outputs and decisions—not only the final objects. Each step links to saved research evidence.</p></div>
+    <a class="ai-path-row" href="#materials"><img src="assets/ai-process/99397_cloud_merged_by_view.png" alt="Two source views distinguished in the saved VGGT point cloud" loading="lazy"><div><h3>Material AI</h3><p>Seller photographs → SAM2 masks → VGGT point support → condition evidence → a proposed usable interval.</p></div><span>See what a piece can supply</span></a>
+    <a class="ai-path-row" href="#algorithm"><img src="../case2/assets/case2-bench.jpg" alt="Contour Bench after stock adaptation" loading="lazy"><div><h3>Design Agent</h3><p>Your intent → explicit constraints → material and structural tools → reviewed changes to the form.</p></div><span>See why the form changes</span></a>
+    <p class="caption">Saved material experiments, real API interpretations and computed building revisions are shown with their own provenance. Their complete orchestration remains a research direction.</p>
   </section>
   <section class="study-index" aria-labelledby="study-title">
     <div class="section-heading">
@@ -111,11 +110,55 @@
 </div>
 
 <div data-chapter="materials" id="materials" hidden>
+<section class="ai-opening" aria-labelledby="material-ai-title">
+  <h1 id="material-ai-title">From scattered photographs<br>to material decisions.</h1>
+  <p class="ai-deck">Visual AI makes incomplete timber listings inspectable. The evidence then meets the requirements for reuse—and changes what a piece can supply.</p>
+  <div class="ai-inputs">
+    <div><h2>The available evidence</h2><p>A few seller photographs, awkward viewpoints, nominal dimensions and descriptions. Hidden surfaces and internal condition remain unknown.</p></div>
+    <div><h2>The evidence we need</h2><p>Identity, geometry, condition and a suitable reuse pathway. Seattle’s timber provisions help define the questions before a material is assigned to a building.</p></div>
+  </div>
+</section>
+<section class="ai-material-reader" aria-labelledby="visual-ai-title">
+  <div class="section-heading"><h2 id="visual-ai-title">Watch a listing become<br>spatial evidence.</h2><p>Earthwise 99397 · Cedar slab<br>Two source photographs. One saved VGGT scene. Choose a stage to inspect its actual output.</p></div>
+  <div class="ai-reader">
+    <div class="ai-stage-list" role="group" aria-label="Material evidence stages">
+      <button data-material-stage="source" aria-pressed="true" aria-controls="material-stage-output"><span>1. Start with the seller’s photographs</span><small>Input · two incomplete views</small></button>
+      <button data-material-stage="mask" aria-pressed="false" aria-controls="material-stage-output"><span>2. Separate timber from background</span><small>Visual AI · saved SAM2 masks</small></button>
+      <button data-material-stage="views" aria-pressed="false" aria-controls="material-stage-output"><span>3. Recover support from each view</span><small>Visual AI · saved VGGT point support</small></button>
+      <button data-material-stage="points" aria-pressed="false" aria-controls="material-stage-output"><span>4. Bring the views into one scene</span><small>Visual AI · saved VGGT point support</small></button>
+      <button data-material-stage="surface" aria-pressed="false" aria-controls="material-stage-output"><span>5. Keep observation and inference visible</span><small>Evidence assembly · patches and proxy</small></button>
+      <p class="caption">Saved research outputs, September 2026. Selecting a stage changes the evidence on view; it does not run a new model.</p>
+    </div>
+    <div class="ai-stage-output" id="material-stage-output">
+      <div class="ai-evidence-images" id="material-stage-images">
+        <img src="assets/ai-process/99397_photo_01.jpg" alt="Seller photograph of cedar slab 99397, view one" width="630" height="840" loading="lazy">
+        <img src="assets/ai-process/99397_photo_02.jpg" alt="Seller photograph of cedar slab 99397, view two" width="630" height="840" loading="lazy">
+      </div>
+      <div class="ai-stage-caption" aria-live="polite" aria-atomic="true"><h3 id="material-stage-title">Two photographs, incomplete coverage.</h3><p id="material-stage-description">The seller lists 127 × 787.4 × 2082.8 mm. These are seller-reported dimensions; they have not been applied as a metric scale to this point cloud.</p><p class="caption" id="material-stage-limit">The photographs do not establish the unseen faces, internal condition or a verified physical identity across views.</p></div>
+    </div>
+  </div>
+  <details class="ai-evidence-detail"><summary>Open the source and method record</summary><p>View 1 contributes 7,414 retained points; view 2 contributes 7,872. The combined 15,286 points retain their original VGGT common-scene placement. No new registration, hole filling or unseen geometry was created for this presentation.</p><a href="assets/ai-process/process.json" download>Download the extracted process record</a></details>
+</section>
+<section class="ai-defect-story" id="ai-defect" aria-labelledby="defect-ai-title">
+  <div class="section-heading"><h2 id="defect-ai-title">A suspected crack changes<br>the allocation question.</h2><p>A second specimen: Earthwise 115200, a rough-sawn beam chunk. This recorded experiment connects a visual candidate to a proposed usable interval.</p></div>
+  <div class="ai-split">
+    <figure class="ai-defect-figure"><div class="ai-switches" role="group" aria-label="Crack evidence view"><button data-crack-view="source" aria-pressed="false">Source photograph</button><button data-crack-view="candidate" aria-pressed="true">Detected candidate</button><button data-crack-view="cloud" aria-pressed="false">Mapped points</button></div><img id="crack-evidence-image" src="assets/ai-process/115200-automatic-detail.jpg" alt="Saved automatic crack-like candidate on specimen 115200" loading="lazy"><figcaption id="crack-evidence-caption">C01 · Local-contrast computer vision identifies a crack-like candidate. The saved mapping links 18 points to the same source view; depth is unresolved.</figcaption></figure>
+    <div class="ai-decision-copy"><h3>Detection becomes a decision<br>through review.</h3><ol class="ai-decision-steps"><li><strong>Locate the candidate.</strong> A CPU black-hat/local-contrast detector marks a visible split-like opening. This is a candidate, not a certified defect grade.</li><li><strong>Check what can be concluded.</strong> Review the image, the material’s reuse pathway and the evidence still needed. Crack depth and internal condition are not established.</li><li><strong>Test a trim scenario.</strong> The saved experiment uses a 20 mm research buffer and a 3 mm preparation kerf. Its photo-to-length mapping is approximate.</li><li><strong>Re-run the allocation question.</strong> A shorter usable interval can remove a previously feasible cutting option.</li></ol></div>
+  </div>
+  <div class="ai-cut-experiment">
+    <div><h3>What can this piece supply now?</h3><p>Choose one of the two saved demand probes.</p><div class="ai-switches" role="group" aria-label="Saved demand probe"><button data-demand="900" aria-pressed="true">900 mm member</button><button data-demand="600" aria-pressed="false">600 mm member</button></div></div>
+    <div class="ai-cut-result"><div class="ai-bar-label"><span>Seller length</span><strong>1104.90 mm</strong></div><div class="ai-stock-bar" aria-label="Retained 828.24 millimetres, preparation kerf 3 millimetres, excluded 273.66 millimetres"><span class="ai-retained">828.24 mm retained</span><span class="ai-kerf"></span><span class="ai-excluded">273.66 mm excluded</span></div><p class="caption">3 mm preparation kerf between retained and excluded intervals.</p><div id="demand-result" aria-live="polite" aria-atomic="true"><p class="ai-result-line"><span>Before trim: feasible</span><strong>After trim: infeasible</strong></p><p id="demand-explanation">The 900 mm demand no longer fits the proposed 828.24 mm usable interval.</p></div></div>
+  </div>
+  <details class="ai-evidence-detail"><summary>Where the building code enters—and what this experiment establishes</summary><p>The research’s Seattle 2021 code map separates material eligibility, grading, design properties and member checks. Section [W] 2303.1.1.3 addresses qualifying used solid-sawn dimensional lumber in good condition and without decay. A large beam cannot simply be assigned that fallback from its photographs.</p><p>The 20 mm buffer is a research assumption, not a crack allowance supplied by this clause. The 600/900 mm tests are isolated allocation probes; this trim was not applied to the three final building allocations.</p><div class="ai-source-links"><a href="https://www.seattle.gov/documents/departments/sdci/codes/seattlebuildingcode/2021sbcchapter23.pdf" target="_blank" rel="noopener">Seattle 2021 · Chapter 23</a><a href="assets/narrative/DEFECT_TO_CODE_EVIDENCE_MATRIX.md">Saved defect-to-code evidence matrix</a><a href="assets/narrative/defect-experiments.json" download>Saved cutting experiments</a></div></details>
+</section>
+<section class="ai-bridge" aria-labelledby="material-bridge-title"><h2 id="material-bridge-title">The material decision becomes<br>a design constraint.</h2><p>A required span becomes harder to supply when usable stock gets shorter. The design workflow must then compare another source, a different span or an allowed support strategy—and seek more evidence where needed.</p><p class="caption">This is the proposed connection between the two research lines. The saved material probes and building studies below are separate records, not one demonstrated end-to-end run.</p><a class="button primary" href="#algorithm">Follow the design Agent</a><a class="text-link" href="#material-inspection">Inspect the detailed material viewers</a></section>
+
+<details class="ai-archive-block" id="material-tools"><summary>Detailed material viewers & source archive</summary><div class="ai-archive-content">
 <section class="material-opening">
 <div class="opening-copy">
-<h1>Real stock.<br>
+<h2>Real stock.<br>
 <em>Incomplete evidence.</em>
-</h1>
+</h2>
 <p>Seller photographs arrive with dimensions and descriptions.<br>Geometry, condition and usable length still need evidence.</p>
 </div>
 <div class="source-and-process">
@@ -491,15 +534,34 @@
 <p class="caption">Designed for repeatable updates as seller stock changes. This public-facing preview uses a saved snapshot, not a continuously polling live feed. New evidence can enter a new inventory version; accepted case runs keep their original snapshot.</p>
 <a class="button primary" href="#algorithm">Continue to designer + agent →</a>
 </section>
+</div></details>
 </div>
 <div data-chapter="algorithm" id="algorithm" hidden>
+<section class="ai-opening" aria-labelledby="design-ai-title"><h1 id="design-ai-title">Intent becomes constraints.<br>Constraints reshape form.</h1><p class="ai-deck">The Agent interprets what you want to preserve and what may change. Material allocation and structural analysis test those choices. The designer reviews the consequences.</p><ol class="ai-role-flow"><li><strong>Designer</strong><span>Intent &amp; initial form</span></li><li><strong>Language model</strong><span>Explicit constraints</span></li><li><strong>Rules &amp; solvers</strong><span>Material fit &amp; response</span></li><li><strong>Designer</strong><span>Review &amp; revision</span></li></ol></section>
+<section class="ai-intent" aria-labelledby="intent-title"><div class="section-heading"><h2 id="intent-title">A change in your words<br>changes the available choices.</h2><p>Three saved, real API interpretations of a controlled pavilion brief. Switch the request to see the recorded constraint change.</p></div>
+  <div class="ai-switches" role="group" aria-label="Recorded Agent requests"><button data-prompt="0" aria-pressed="true">Keep the interior open</button><button data-prompt="1" aria-pressed="false">Allow a support line</button><button data-prompt="2" aria-pressed="false">Prioritize fewer cuts</button></div>
+  <div class="ai-prompt-grid"><div><h3>The actual request</h3><blockquote id="agent-raw-prompt">Keep the reading pavilion interior completely open.<br>Do not introduce internal supports.<br>Do not splice members.</blockquote><p class="caption" id="agent-record-id">Saved API interpretation · 22 September 2026</p><p class="caption">The controlled 2360 × 1270 × 2050 mm envelope stays fixed in these parser comparisons.</p></div><div id="agent-constraint-output" aria-live="polite" aria-atomic="true"><h3 id="agent-constraint-title">Openness is a hard constraint.</h3><dl class="ai-constraints"><div><dt>Interior support</dt><dd id="constraint-support">Forbidden</dd></div><div><dt>Splicing</dt><dd>Forbidden</dd></div><div><dt>Permitted strategies</dt><dd id="constraint-strategies">Perimeter supports only</dd></div><div><dt>Fabrication preference</dt><dd id="constraint-fabrication">Unspecified</dd></div></dl><p id="agent-constraint-effect">An internal support line is excluded from the design choices. The Agent cannot trade away this requirement to make stock fit.</p></div></div>
+  <details class="ai-evidence-detail"><summary>What the Agent did in these records</summary><p>The language model parsed the requests into the existing Brief/Decision schema. Deterministic validation gave hard constraints priority over preferences. It did not calculate structural values or select stock itself. These request comparisons do not prove that the later three buildings were generated by these exact turns.</p><a href="assets/ai-process/process.json" download>Download the original prompts and extracted constraints</a></details>
+</section>
+<section class="ai-code-bridge" aria-labelledby="design-code-title"><div class="section-heading"><h2 id="design-code-title">Code and structure enter<br>as explicit conditions.</h2><p>The research separates what a designer asks for from what the material and analytical model can support.</p></div><div class="ai-rule-rows"><div><h3>Use &amp; location</h3><p>The saved Shelter brief specifies Seattle, a public-exhibition research use and no internal columns. These establish the context for loads and design choices.</p><a href="assets/case1-design-brief.json" download>Read the confirmed brief</a></div><div><h3>Material eligibility</h3><p>The code map identifies the reuse pathway and missing condition or grading evidence before strength properties can be relied on.</p><a href="assets/narrative/SEATTLE_RECLAIMED_TIMBER_CODE_MAP.md">Read the saved code map</a></div><div><h3>Assembly response</h3><p>Sections, spans, supports, connections and recorded loads enter the structural model. Its results become evidence for a revision.</p><a href="#ai-structural-change">See an actual structural revision</a></div></div><p class="caption">These are documented research inputs and mappings. They are not evidence of autonomous code retrieval, permit approval or a complete compliance check.</p></section>
+<section class="ai-form-story" id="ai-form-change" aria-labelledby="form-title"><div class="section-heading"><h2 id="form-title">The same contour.<br>A different material rhythm.</h2><p>Contour Bench · A saved geometry adaptation shows how stock section and layer thickness change the longitudinal extent of a form.</p></div>
+  <div class="ai-bench-controls"><div class="ai-switches" role="group" aria-label="Bench geometry view"><button data-bench-view="side" aria-pressed="false">Side elevation</button><button data-bench-view="axon" aria-pressed="true">Axonometric</button></div><p class="caption">Both versions share one camera and scale. Actual saved polygons; no interpolated iterations.</p></div>
+  <div class="ai-bench-pair"><figure><h3>Before stock adaptation</h3><canvas id="bench-before" width="1100" height="460" role="img" aria-label="Original working-scale bench geometry, 716 parts, longitudinal extent 3622.78 mm"></canvas><figcaption>Working-scale source · 3.623 m long<br>45.57 mm station pitch · illustrative 22.78 × 56.99 mm section</figcaption></figure><figure><h3>After stock adaptation</h3><canvas id="bench-after" width="1100" height="460" role="img" aria-label="Stock-adapted bench geometry, the same 716 part IDs, longitudinal extent 6057.9 mm"></canvas><figcaption>Recorded adaptation · 6.058 m long<br>76.20 mm station pitch · 38.10 × 88.90 mm stock section</figcaption></figure></div>
+  <p id="bench-geometry-status" class="caption" role="status">The saved geometry diagrams load when this chapter opens. Numerical comparisons remain available below.</p>
+  <div class="ai-change-columns"><div><h3>What changed</h3><p>The selected section thickens each layer and increases station pitch. The original thin-section option did not cover demand in the saved bounded pattern menu. Local placement repairs resolve collisions.</p></div><div><h3>What was retained</h3><p>All 716 source part IDs and all 1,264 original contact pairs. The longitudinal extent grows by about 2.44 m while the contour’s organization remains traceable.</p></div><div><h3>What the result establishes</h3><p>A complete recorded allocation to 120 source bars. This adaptation was computed by geometry and allocation tools; it is not a recorded LLM generation or a structural certification.</p></div></div>
+  <details class="ai-evidence-detail"><summary>Geometry provenance and scale</summary><p>The source model’s physical units were unconfirmed. These comparisons use its recorded working scale, not a measured built object. The original and adapted geometries retain their saved coordinates and bounded placement changes.</p><div class="ai-source-links"><a href="assets/ai-process/bench-geometry.json" download>Download paired geometry</a><a href="assets/ai-process/process.json" download>Read the adaptation evidence</a><a href="#case2">Explore the final Contour Bench</a></div></details>
+</section>
+<section class="ai-structure-story" id="ai-structural-change" aria-labelledby="structural-change-title"><div class="section-heading"><h2 id="structural-change-title">Structural feedback changes<br>the supporting assembly.</h2><p>Timber Shelter · The saved backing revision changes wall rails and studs and adjusts roof clearance. The enclosure and successful allocation remain recorded.</p></div><div class="ai-split"><figure class="ai-shelter-figure"><img src="assets/ai-process/backing-assembled-model-render.png" alt="Saved assembled model after the Timber Shelter backing revision" loading="lazy"><figcaption>Actual saved CPU model render after the revision. It is not a generated design-history frame.</figcaption></figure><div><h3>Compare the same load case.</h3><p>The positive Y wind case shows less displacement after the revision. Gravity displacement increases, so the result must be read by load case.</p><div class="ai-table-wrap"><table class="ai-result-table"><caption>Recorded maximum displacement · mm</caption><thead><tr><th scope="col">Load case</th><th scope="col">Before</th><th scope="col">After</th></tr></thead><tbody><tr><th scope="row">Positive Y wind</th><td>56.178</td><td>11.793</td></tr><tr><th scope="row">Dead load</th><td>3.065</td><td>13.682</td></tr><tr><th scope="row">Dead + positive Y wind sensitivity</th><td>56.240</td><td>18.052</td></tr></tbody></table></div><p>155 installed parts, 87 source bars. Analysis status: <strong>completed conceptual</strong>. Six physical joint details remain unresolved.</p><a class="text-link" href="assets/ai-process/process.json" download>Inspect all recorded load-case changes</a></div></div></section>
+<section class="ai-bridge" aria-labelledby="design-loop-title"><h2 id="design-loop-title">Two lines of research.<br>One proposed feedback loop.</h2><ol class="ai-feedback-loop"><li><strong>Design asks</strong><span>A section, a span, a support strategy.</span></li><li><strong>Material evidence responds</strong><span>Available stock, usable intervals, missing observations.</span></li><li><strong>Tools compare</strong><span>Allocation feasibility and assembly response.</span></li><li><strong>The designer revises</strong><span>Keep the intent; reconsider the permitted variables.</span></li></ol><p>The next design request can target the evidence that matters most. A material concern can send the design back to another source, a shorter span or an allowed support.</p><p class="caption">The page distinguishes saved API interpretations, material experiments and computed building revisions. Their end-to-end orchestration is a research direction, not a claimed completed autonomous run.</p><div class="entry-actions"><a class="button primary" href="#cases">Explore the three final forms</a><a class="text-link" href="#materials">Return to material evidence</a></div></section>
+
+<details class="ai-archive-block" id="method-tools"><summary>Allocation tools & illustrated case summaries</summary><div class="ai-archive-content">
 <section class="method-opening">
 <div class="section-heading">
 <div>
-<h1>You set the intent.<br>The agent makes it explicit.</h1>
+<h2>Illustrated summaries of the three cases.</h2>
 <p class="figure-context">HUMAN INTENT + RECORDED CONSTRAINTS</p>
 </div>
-<p>Use, site, form and material constraints are negotiated together. Replay an edited summary of the saved decisions.</p>
+<p>These films present saved final geometry in stages. They are illustrated summaries, not historical geometry iterations.</p>
 </div>
 <div class="controls agent-tabs">
 <button data-agent-case="1" aria-pressed="true">01 / Timber Shelter</button>
@@ -509,7 +571,7 @@
 <video controls playsinline preload="none" poster="assets/narrative/case1-agent-v2-poster.jpg" id="agent-film">
 <source src="assets/narrative/case1-agent-v2.mp4" type="video/mp4">
 </video>
-<p id="agent-basis" class="caption">Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.</p>
+<p id="agent-basis" class="caption">Edited paraphrase of saved instructions and decisions. Final geometry shown in presentation stages; not historical iterations, a verbatim transcript or a live API response.</p>
 </section>
 
 <section>
@@ -677,6 +739,7 @@
 <p>The same pipeline meets three different user needs and material strategies.</p>
 <a class="button primary" href="#cases">Explore the three cases →</a>
 </div>
+</div></details>
 </div>
 <div data-chapter="cases" id="cases" hidden>
 <section class="cases-opening">
@@ -772,6 +835,7 @@
 <b>87</b> unique source bars</span>
 <span>Independent inventory scenario<br>Saved allocation + preliminary analysis</span>
 </div>
+<p><a class="text-link" href="#ai-structural-change">See how structural feedback changed the supporting assembly</a></p>
 </section>
 <section>
 <div class="section-heading">
@@ -784,7 +848,7 @@
 <video controls playsinline preload="none" poster="assets/narrative/case1-agent-v2-poster.jpg" class="agent-video">
 <source src="assets/narrative/case1-agent-v2.mp4" type="video/mp4">
 </video>
-<p class="caption">Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.</p>
+<p class="caption">Edited paraphrase of saved instructions and decisions. Final geometry shown in presentation stages; not historical iterations, a verbatim transcript or a live API response.</p>
 <details>
 <summary>Read the dialogue summary</summary>
 <p>
@@ -906,6 +970,7 @@
 <b>120</b> unique source bars</span>
 <span>Independent inventory scenario<br>Saved allocation + preliminary analysis</span>
 </div>
+<p><a class="text-link" href="#ai-form-change">Compare the geometry before and after stock adaptation</a></p>
 </section>
 <section>
 <div class="section-heading">
@@ -918,7 +983,7 @@
 <video controls playsinline preload="none" poster="assets/narrative/case2-agent-v2-poster.jpg" class="agent-video">
 <source src="assets/narrative/case2-agent-v2.mp4" type="video/mp4">
 </video>
-<p class="caption">Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.</p>
+<p class="caption">Edited paraphrase of saved instructions and decisions. Final geometry shown in presentation stages; not historical iterations, a verbatim transcript or a live API response.</p>
 <details>
 <summary>Read the dialogue summary</summary>
 <p>
@@ -1040,6 +1105,7 @@
 <b>52</b> unique source bars</span>
 <span>Independent inventory scenario<br>Saved allocation + preliminary analysis</span>
 </div>
+<p><a class="text-link" href="#design-code-title">See how intent, material eligibility and structure enter the design</a></p>
 </section>
 <section>
 <div class="section-heading">
@@ -1052,7 +1118,7 @@
 <video controls playsinline preload="none" poster="assets/narrative/case3-agent-v2-poster.jpg" class="agent-video">
 <source src="assets/narrative/case3-agent-v2.mp4" type="video/mp4">
 </video>
-<p class="caption">Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.</p>
+<p class="caption">Edited paraphrase of saved instructions and decisions. Final geometry shown in presentation stages; not historical iterations, a verbatim transcript or a live API response.</p>
 <details>
 <summary>Read the dialogue summary</summary>
 <p>

@@ -2,7 +2,7 @@
 (() => {
   const aliases = {evidence:'materials',comparison:'cases',boundaries:'cases'};
   const archiveRoutes = new Set(['nodes','revision-decisions']);
-  const titles = {overview:'Designing with reclaimed timber',materials:'Material evidence',algorithm:'Design method',cases:'Three cases',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion'};
+  const titles = {overview:'Designing with reclaimed timber',materials:'Material AI',algorithm:'Design Agent',cases:'Three cases',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion'};
   let active;
   function navigate() {
     let hash;
@@ -28,6 +28,7 @@
       if (heading) { heading.tabIndex = -1; heading.focus({preventScroll:true}); }
       window.scrollTo({top:0,behavior:'instant'});
     }
+    if (anchor && hash !== 'main') { let disclosure=anchor.closest('details'); while(disclosure){disclosure.open=true;disclosure=disclosure.parentElement?.closest('details');} }
     if (anchor && hash !== 'main') anchor.scrollIntoView({block:'start',behavior:'instant'});
     if (hash === 'main') { const main=document.getElementById('main');main.tabIndex=-1;main.focus({preventScroll:true}); }
     active = chapter;
