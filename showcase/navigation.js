@@ -5,6 +5,26 @@
   const titles = {cover:'Reclaimed timber research',overview:'Designing with reclaimed timber',materials:'Material AI',algorithm:'Design Agent',cases:'Case Studies',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion','film-design-agent':'Design Agent Video','film-stock-allocation':'Stock → Cut Part → Building'};
   const primaryRoutes = {materials:'material-workflow',algorithm:'design-workflow'};
   let active;
+  function hydrateMedia(panel) {
+    const attributes = ['src', 'srcset', 'poster', 'href'];
+    const pending = panel.querySelectorAll(attributes.map(name => '[data-media-' + name + ']').join(','));
+    const videos = new Set();
+    pending.forEach(element => {
+      if (element.closest('[hidden]')) return;
+      for (const name of attributes) {
+        const key = 'data-media-' + name;
+        const value = element.getAttribute(key);
+        if (value === null) continue;
+        if (!element.hasAttribute(name)) element.setAttribute(name, value);
+        element.removeAttribute(key);
+        if (name === 'src') {
+          const video = element.closest('video');
+          if (video) videos.add(video);
+        }
+      }
+    });
+    videos.forEach(video => video.load());
+  }
   function navigate() {
     let hash;
     try { hash = decodeURIComponent(location.hash.slice(1)); } catch { hash = ''; }
@@ -41,6 +61,7 @@
     } else {
       delete document.body.dataset.chapterView;
     }
+    hydrateMedia(panel);
     document.querySelectorAll('video').forEach(video => { if (video.closest('[hidden]')) video.pause(); });
     const anchor = target && target !== panel && !target.matches('[data-diagram-view]') && !target.closest('[hidden]') ? target : null;
     const entering = (changed || viewChanged) && active;
