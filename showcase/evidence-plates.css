@@ -118,6 +118,12 @@ main > div > .research-index {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.research-index-grid.case-study-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.case-study-grid img {
+  height: clamp(115px, 19vw, 260px);
+}
 .research-index-number {
   justify-self: center;
   padding: 4px 14px;

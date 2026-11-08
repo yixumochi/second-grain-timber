@@ -2,7 +2,7 @@
 (() => {
   const aliases = {evidence:'materials',comparison:'cases',boundaries:'cases',films:'overview'};
   const archiveRoutes = new Set(['nodes','revision-decisions']);
-  const titles = {cover:'Reclaimed timber research',overview:'Designing with reclaimed timber',materials:'Material AI',algorithm:'Design Agent',cases:'Three cases',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion','film-design-agent':'Design Agent Video','film-stock-allocation':'Stock → Cut Part → Building'};
+  const titles = {cover:'Reclaimed timber research',overview:'Designing with reclaimed timber',materials:'Material AI',algorithm:'Design Agent',cases:'Case Studies',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion','film-design-agent':'Design Agent Video','film-stock-allocation':'Stock → Cut Part → Building'};
   const primaryRoutes = {materials:'material-workflow',algorithm:'design-workflow'};
   let active;
   function navigate() {
@@ -63,7 +63,8 @@
       if (entering) {
         const heading = [...panel.querySelectorAll('h1,h2')].find(item => !item.closest('[hidden]'));
         const previousRoute = /^case\d$/.test(active) ? 'cases' : primaryRoutes[active] || active;
-        const card = chapter === 'overview' && panel.querySelector(`.research-index-card[href="#${previousRoute}"]`);
+        const cardRoute = chapter === 'overview' ? previousRoute : active;
+        const card = panel.querySelector(`.research-index-card[href="#${cardRoute}"]`);
         if (card) card.focus({preventScroll:true});
         else if (heading) { heading.tabIndex = -1; heading.focus({preventScroll:true}); }
       }
