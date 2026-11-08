@@ -2,7 +2,7 @@
 (() => {
   const aliases = {evidence:'materials',comparison:'cases',boundaries:'cases',films:'overview'};
   const archiveRoutes = new Set(['nodes','revision-decisions']);
-  const titles = {overview:'Designing with reclaimed timber',materials:'Material AI',algorithm:'Design Agent',cases:'Three cases',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion','film-design-agent':'Design Agent Video','film-stock-allocation':'Stock → Cut Part → Building'};
+  const titles = {cover:'Reclaimed timber research',overview:'Designing with reclaimed timber',materials:'Material AI',algorithm:'Design Agent',cases:'Three cases',case1:'Timber Shelter',case2:'Contour Bench',case3:'Open Pavilion','film-design-agent':'Design Agent Video','film-stock-allocation':'Stock → Cut Part → Building'};
   const indexRoutes = {materials:'material-workflow',algorithm:'design-workflow'};
   let active;
   function navigate() {
@@ -12,7 +12,7 @@
     const target = document.getElementById(hash);
     const requested = aliases[hash] || (target?.closest('[data-chapter]')?.dataset.chapter) || hash;
     // Skip links and in-figure anchors must never select a different chapter.
-    const chapter = Object.hasOwn(titles,requested) ? requested : (hash && active ? active : 'overview');
+    const chapter = Object.hasOwn(titles,requested) ? requested : hash ? active || 'overview' : 'cover';
     const changed = active !== chapter;
     const navChapter = /^case\d$/.test(chapter) ? 'cases' : chapter;
     document.querySelectorAll('[data-chapter]').forEach(el => { el.hidden = el.dataset.chapter !== chapter; });
@@ -42,6 +42,10 @@
       delete document.body.dataset.chapterView;
     }
     document.querySelectorAll('video').forEach(video => { if (video.closest('[hidden]')) video.pause(); });
+    const coverVideo = panel.querySelector('[data-cover-video]');
+    if (coverVideo && changed && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      coverVideo.play().catch(() => {});
+    }
     const anchor = target && target !== panel && !target.matches('[data-diagram-view]') && !target.closest('[hidden]') ? target : null;
     const entering = (changed || viewChanged) && active;
     if (anchor && hash !== 'main') {

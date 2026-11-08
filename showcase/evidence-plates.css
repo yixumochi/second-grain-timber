@@ -1,4 +1,57 @@
 /* Diagram chapters show the approved drawing before any supporting material. */
+body[data-active-chapter="cover"] {
+  background: var(--portfolio-blue);
+  color: var(--paper);
+}
+body[data-active-chapter="cover"] > :is(.skip, .mast, .chapter-nav, .footer) { display: none; }
+main > div > .project-cover {
+  display: grid;
+  align-content: center;
+  gap: clamp(16px, 3vh, 28px);
+  width: min(90%, max(420px, calc((100svh - 218px) * 16 / 9)), 1320px);
+  min-height: 100svh;
+  padding: 24px 0;
+  border: 0;
+}
+.project-cover-heading p {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+.project-cover-heading h1 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(35px, 5vw, 74px);
+  line-height: .95;
+  font-weight: 400;
+}
+.project-cover-entry {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.project-cover-entry video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--paper);
+}
+.project-cover-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 0 0;
+  font-size: clamp(12px, 1.3vw, 17px);
+}
+.project-cover-caption strong {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-cover-entry:hover { color: #fff; }
+.project-cover-entry:focus-visible { outline: 2px solid var(--paper); outline-offset: 6px; }
+
 main > div > .research-index {
   display: grid;
   grid-template-columns: minmax(190px, .85fr) minmax(0, 3fr);

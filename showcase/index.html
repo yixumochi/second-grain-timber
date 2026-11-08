@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="narrative.css">
 <link rel="stylesheet" href="editorial.css?v=20261107-ai1">
 <link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
-<link rel="stylesheet" href="evidence-plates.css?v=20261108-tabs">
-<script defer src="navigation.js?v=20261108-tabs">
+<link rel="stylesheet" href="evidence-plates.css?v=20261108-cover">
+<script defer src="navigation.js?v=20261108-cover">
 </script>
 <script type="module" src="research.js?v=20261108-object"></script>
 <script type="module" src="ai-pathways.js?v=20261107-ai1"></script>
@@ -20,7 +20,7 @@
 <body>
 <a class="skip" href="#main">Skip to research</a>
 <header class="mast">
-<a class="brand" href="#overview">SECOND GRAIN<small>Reclaimed matter · Computational design</small>
+<a class="brand" href="#cover">SECOND GRAIN<small>Reclaimed matter · Computational design</small>
 </a>
 <a class="archive-link" href="technical.html">Evidence archive <span aria-hidden="true">↗</span>
 </a>
@@ -36,7 +36,24 @@
 <main id="main">
 <p id="load-status" role="status" hidden>Loading saved evidence…</p>
 
-<div data-chapter="overview" id="overview">
+<div data-chapter="cover" id="cover">
+  <section class="project-cover" aria-labelledby="cover-title">
+    <header class="project-cover-heading">
+      <p>RECLAIMED TIMBER RESEARCH</p>
+      <h1 id="cover-title">SECOND GRAIN</h1>
+    </header>
+    <a class="project-cover-entry" href="#overview">
+      <video data-cover-video muted playsinline preload="none" width="960" height="540" poster="assets/narrative/allocation-cover.jpg" aria-hidden="true">
+        <source src="assets/narrative/allocation-cover.webm" type="video/webm">
+      </video>
+      <span class="project-cover-caption">
+        <span>Stock → Cut Part → Building</span>
+        <strong>Enter project <span aria-hidden="true">↗</span></strong>
+      </span>
+    </a>
+  </section>
+</div>
+<div data-chapter="overview" id="overview" hidden>
   <section class="research-index" aria-labelledby="research-title">
     <div class="research-index-intro">
       <p class="figure-context">RECLAIMED TIMBER / RESEARCH INDEX</p>
