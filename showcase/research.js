@@ -17,7 +17,7 @@ function start(path) {
 }
 function activate() {
   const chapter=document.body.dataset.activeChapter;
-  if (!chapter || chapter==='overview'||chapter==='films'||document.body.dataset.chapterView==='diagram') return;
+  if (!chapter || chapter==='overview'||chapter==='films'||chapter.startsWith('film-')||document.body.dataset.chapterView==='diagram') return;
   if(chapter==='materials'&&!document.getElementById('material-tools').open) return;
   if(chapter==='algorithm'&&!document.getElementById('method-tools').open) return;
   start('./workflow.js');

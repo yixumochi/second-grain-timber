@@ -74,7 +74,7 @@ body[data-chapter-view="diagram"] > .chapter-nav {
   min-height: 48px;
 }
 body[data-chapter-view="diagram"] > .chapter-nav a { padding-block: 12px; }
-body:is([data-chapter-view="diagram"], [data-active-chapter="films"]) #load-status {
+body:is([data-chapter-view="diagram"], [data-active-chapter^="film"]) #load-status {
   display: none;
 }
 
@@ -233,6 +233,46 @@ main > div > .research-films {
   margin: 0 0 clamp(26px, 4vw, 56px);
   color: var(--portfolio-blue);
   text-transform: uppercase;
+}
+.film-entry {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+.film-entry:hover img, .film-entry:focus-visible img {
+  outline: 1px solid var(--portfolio-blue);
+}
+.film-entry img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--night);
+}
+.film-entry-number { color: var(--muted); font-size: 12px; }
+.film-entry h2 { margin: 0; padding-right: 26px; font-size: clamp(21px, 2.2vw, 34px); }
+.film-entry-open { position: absolute; bottom: 15px; right: 3px; color: var(--portfolio-blue); }
+
+body[data-active-chapter^="film-"] > .mast { display: none; }
+main > div > .film-player {
+  padding: 14px 0 20px;
+  max-width: 1600px;
+  border: 0;
+}
+.film-player h1 {
+  margin: 0 0 13px;
+  font-size: clamp(23px, 3vw, 44px);
+}
+@media (min-width: 850px) {
+  main > div > .film-player {
+    max-width: min(1600px, calc(max(280px, 100dvh - 191px) * 16 / 9));
+  }
 }
 .research-film {
   border-top: 1px solid var(--line);

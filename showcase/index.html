@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="narrative.css">
 <link rel="stylesheet" href="editorial.css?v=20261107-ai1">
 <link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
-<link rel="stylesheet" href="evidence-plates.css?v=20261108-wide">
-<script defer src="navigation.js?v=20261108-films">
+<link rel="stylesheet" href="evidence-plates.css?v=20261108-players">
+<script defer src="navigation.js?v=20261108-players">
 </script>
-<script type="module" src="research.js?v=20261108-films"></script>
+<script type="module" src="research.js?v=20261108-players"></script>
 <script type="module" src="ai-pathways.js?v=20261107-ai1"></script>
 <link rel="stylesheet" href="../assets/blueprint.css?v=20261108-films">
 </head>
@@ -764,25 +764,41 @@
 <div data-chapter="films" id="films" hidden>
   <section class="research-films" aria-labelledby="films-title">
     <h1 id="films-title">Films</h1>
-    <article class="research-film" id="film-design-agent" aria-labelledby="film-design-agent-title">
+    <a class="film-entry" id="film-design-agent-entry" href="#film-design-agent">
+      <img src="assets/narrative/case1-agent-v2-poster.jpg" width="1280" height="720" alt="">
+      <span class="film-entry-number">01 / TIMBER SHELTER</span>
+      <h2>Design Agent</h2>
+      <span class="film-entry-open" aria-hidden="true">↗</span>
+    </a>
+    <a class="film-entry" id="film-stock-allocation-entry" href="#film-stock-allocation">
+      <img src="assets/narrative/case1-allocation-poster.jpg" width="1280" height="720" alt="">
+      <span class="film-entry-number">02 / TIMBER SHELTER</span>
+      <h2>Stock → Cut Part → Building</h2>
+      <span class="film-entry-open" aria-hidden="true">↗</span>
+    </a>
+  </section>
+</div>
+<div data-chapter="film-design-agent" id="film-design-agent" class="film-chapter" hidden>
+  <section class="research-film film-player" aria-labelledby="film-design-agent-title">
       <p class="figure-context">01 / TIMBER SHELTER</p>
-      <h2 id="film-design-agent-title">Design Agent</h2>
+      <h1 id="film-design-agent-title">Design Agent</h1>
       <video controls playsinline preload="metadata" width="1280" height="720" aria-labelledby="film-design-agent-title" poster="assets/narrative/case1-agent-v2-poster.jpg">
         <source src="assets/narrative/case1-agent-v2.mp4" type="video/mp4">
         <a href="assets/narrative/case1-agent-v2.mp4">Open the Design Agent film</a>
       </video>
       <p class="caption">Illustrated summary of the saved brief and design decisions.</p>
-    </article>
-    <article class="research-film" id="film-stock-allocation" aria-labelledby="film-stock-allocation-title">
+      </section>
+</div>
+<div data-chapter="film-stock-allocation" id="film-stock-allocation" class="film-chapter" hidden>
+  <section class="research-film film-player" aria-labelledby="film-stock-allocation-title">
       <p class="figure-context">02 / TIMBER SHELTER</p>
-      <h2 id="film-stock-allocation-title">Stock → Cut Part → Building</h2>
+      <h1 id="film-stock-allocation-title">Stock → Cut Part → Building</h1>
       <video controls playsinline preload="metadata" width="1280" height="720" aria-labelledby="film-stock-allocation-title" poster="assets/narrative/case1-allocation-poster.jpg">
         <source src="assets/narrative/case1-allocation.mp4" type="video/mp4">
         <a href="assets/narrative/case1-allocation.mp4">Open the stock allocation film</a>
       </video>
       <p class="caption">Saved allocation replay with instrumental music.</p>
-    </article>
-  </section>
+      </section>
 </div>
 <div data-chapter="cases" id="cases" hidden>
 <section class="cases-opening">
