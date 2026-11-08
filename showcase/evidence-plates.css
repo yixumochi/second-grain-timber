@@ -97,6 +97,7 @@ main > div > .evidence-plate {
 .evidence-plate-scroll { overflow-x: auto; scrollbar-width: thin; }
 .evidence-plate-sheet { position: relative; }
 .evidence-plate-sheet > img { display: block; width: 100%; height: auto; }
+.wide-evidence-plate { display: none; }
 
 .evidence-hotspot {
   position: absolute;
@@ -188,9 +189,30 @@ main > div > .evidence-plate {
     overflow: visible;
   }
   .evidence-plate-sheet {
-    width: min(100cqw, calc(100cqh * 1800 / 1480));
+    width: min(100cqw, calc(100cqh * 16 / 9));
     outline: 1px solid var(--line);
   }
+  .evidence-plate-sheet > :is(img, .evidence-hotspot) { display: none; }
+  .wide-evidence-plate {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: var(--body);
+  }
+  .wide-evidence-hit { fill: transparent; }
+  .wide-evidence-badge { fill: #f6f1e8e6; pointer-events: none; }
+  .wide-evidence-arrow {
+    fill: var(--portfolio-blue);
+    font-size: 16px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  .wide-evidence-link:is(:hover, :focus-visible) .wide-evidence-hit {
+    stroke: var(--portfolio-blue);
+    stroke-width: 2;
+  }
+  .wide-evidence-link:is(:hover, :focus-visible) .wide-evidence-badge { fill: var(--portfolio-blue); }
+  .wide-evidence-link:is(:hover, :focus-visible) .wide-evidence-arrow { fill: var(--paper); }
   .evidence-plate-tools {
     position: fixed;
     top: 0;
