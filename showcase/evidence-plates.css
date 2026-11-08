@@ -4,6 +4,7 @@ body[data-active-chapter="cover"] {
   color: var(--paper);
 }
 body[data-active-chapter="cover"] > :is(.skip, .mast, .chapter-nav, .footer) { display: none; }
+body[data-active-chapter="cover"] #load-status { display: none; }
 main > div > .project-cover {
   display: grid;
   align-content: center;
