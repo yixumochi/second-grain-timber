@@ -422,7 +422,7 @@
     ],
     "dialogue_basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.",
     "film": "assets/narrative/case1-allocation.mp4",
-    "agent_film": "assets/narrative/case1-agent-cream.mp4"
+    "agent_film": "assets/narrative/case1-agent-clean.mp4"
   },
   {
     "id": 2,
