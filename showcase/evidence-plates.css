@@ -342,6 +342,10 @@ main > div > .film-player {
   aspect-ratio: 16 / 9;
   background: var(--night);
 }
+#film-design-agent .research-film video {
+  background: var(--paper);
+  object-fit: cover;
+}
 .research-film .caption { margin: 10px 0 0; }
 
 @media (max-width: 1120px) {
