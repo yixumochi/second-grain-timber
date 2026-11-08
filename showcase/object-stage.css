@@ -35,7 +35,7 @@ main > div > .object-stage {
   font-size: clamp(36px, 4.5vw, 64px);
   line-height: .98;
 }
-.object-workflow, .object-evidence-link {
+.object-evidence-link {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -152,7 +152,6 @@ main > div > .object-stage {
   .object-steps button { min-height: 42px; }
   .object-media { height: clamp(246px, 45svh, 400px); }
   .object-stage-header h1 { font-size: 34px; }
-  .object-workflow { flex-shrink: 0; font-size: 12px; }
   .object-evidence > img { height: 124px; }
 }
 @media (min-width: 701px) and (max-width: 950px) {

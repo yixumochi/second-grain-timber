@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="narrative.css">
 <link rel="stylesheet" href="editorial.css?v=20261107-ai1">
 <link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
-<link rel="stylesheet" href="evidence-plates.css?v=20261108-players">
-<script defer src="navigation.js?v=20261108-object">
+<link rel="stylesheet" href="evidence-plates.css?v=20261108-tabs">
+<script defer src="navigation.js?v=20261108-tabs">
 </script>
 <script type="module" src="research.js?v=20261108-object"></script>
 <script type="module" src="ai-pathways.js?v=20261107-ai1"></script>
 <link rel="stylesheet" href="../assets/blueprint.css?v=20261108-films">
-<link rel="stylesheet" href="object-stage.css?v=20261108-object">
+<link rel="stylesheet" href="object-stage.css?v=20261108-tabs">
 <script type="module" src="object-stage.js?v=20261108-object"></script>
 </head>
 <body>
@@ -29,7 +29,8 @@
 <a href="#overview" data-index-link aria-current="page">Index</a>
 <a href="#materials">Material AI</a>
 <a href="#algorithm">Design Agent</a>
-<a href="#films">Films</a>
+<a href="#film-design-agent">Design Video</a>
+<a href="#film-stock-allocation">Allocation Video</a>
 <a href="#cases">Three cases</a>
 </nav>
 <main id="main">
@@ -40,32 +41,38 @@
     <div class="research-index-intro">
       <p class="figure-context">RECLAIMED TIMBER / RESEARCH INDEX</p>
       <h1 id="research-title">Design from<br>what exists.</h1>
-      <p>Four entries into the research, from material evidence and design decisions to films and built-form studies.</p>
+      <p>Two AI workflows, two Timber Shelter videos and three reclaimed-timber case studies.</p>
     </div>
     <nav class="research-index-grid" aria-label="Numbered research index">
-      <a class="research-index-card" href="#materials">
+      <a class="research-index-card" href="#material-workflow">
         <h2>Material AI</h2>
         <img src="assets/diagrams/material-ai.webp" alt="" decoding="async">
-        <p>Photographs to usable stock</p>
+        <p>View workflow <span aria-hidden="true">↗</span></p>
         <span class="research-index-number" aria-hidden="true">01</span>
       </a>
-      <a class="research-index-card" href="#algorithm">
+      <a class="research-index-card" href="#design-workflow">
         <h2>Design Agent</h2>
         <img src="assets/diagrams/design-agent.webp" alt="" decoding="async">
-        <p>Brief, stock and code</p>
+        <p>View workflow <span aria-hidden="true">↗</span></p>
         <span class="research-index-number" aria-hidden="true">02</span>
       </a>
-      <a class="research-index-card" href="#films">
-        <h2>Films</h2>
-        <img src="assets/narrative/case1-allocation-poster.jpg" alt="" decoding="async">
-        <p>Two Timber Shelter films</p>
+      <a class="research-index-card" href="#film-design-agent">
+        <h2>Design Video</h2>
+        <img src="assets/narrative/case1-agent-v2-poster.jpg" alt="" decoding="async">
+        <p>Watch video <span aria-hidden="true">↗</span></p>
         <span class="research-index-number" aria-hidden="true">03</span>
+      </a>
+      <a class="research-index-card" href="#film-stock-allocation">
+        <h2>Allocation Video</h2>
+        <img src="assets/narrative/case1-allocation-poster.jpg" alt="" decoding="async">
+        <p>Watch video <span aria-hidden="true">↗</span></p>
+        <span class="research-index-number" aria-hidden="true">04</span>
       </a>
       <a class="research-index-card" href="#cases">
         <h2>Three Cases</h2>
         <img src="../assets/update/assembled.webp" alt="" decoding="async">
         <p>Shelter, bench and pavilion</p>
-        <span class="research-index-number" aria-hidden="true">04</span>
+        <span class="research-index-number" aria-hidden="true">05</span>
       </a>
     </nav>
   </section>
@@ -74,7 +81,6 @@
 <section class="object-stage" data-object-view data-object="materials" aria-labelledby="material-stage-title">
   <header class="object-stage-header">
     <div><p class="figure-context">01 / RECLAIMED BEAM 115200</p><h1 id="material-stage-title">Material AI</h1></div>
-    <a class="object-workflow" href="#material-workflow">View workflow <span aria-hidden="true">↗</span></a>
   </header>
   <div class="object-stage-layout">
     <div class="object-steps" role="group" aria-label="Material AI views">
@@ -121,7 +127,7 @@
     </div>
   </figure>
   <div class="evidence-plate-tools">
-    <a href="#materials"><span aria-hidden="true">←</span> Back to object</a>
+    <a href="#materials">Explore beam <span aria-hidden="true">↗</span></a>
     <button type="button" class="evidence-zoom" data-diagram-zoom aria-controls="material-ai-diagram" aria-pressed="false">Zoom diagram</button>
     <a href="#material-tools">Evidence archive <span aria-hidden="true">↗</span></a>
   </div>
@@ -561,7 +567,6 @@
 <section class="object-stage" data-object-view data-object="algorithm" aria-labelledby="design-stage-title">
   <header class="object-stage-header">
     <div><p class="figure-context">02 / TIMBER SHELTER</p><h1 id="design-stage-title">Design Agent</h1></div>
-    <a class="object-workflow" href="#design-workflow">View workflow <span aria-hidden="true">↗</span></a>
   </header>
   <div class="object-stage-layout">
     <div class="object-steps" role="group" aria-label="Design Agent views">
@@ -611,7 +616,7 @@
     </div>
   </figure>
   <div class="evidence-plate-tools">
-    <a href="#algorithm"><span aria-hidden="true">←</span> Back to object</a>
+    <a href="#algorithm">Explore shelter <span aria-hidden="true">↗</span></a>
     <button type="button" class="evidence-zoom" data-diagram-zoom aria-controls="design-agent-diagram" aria-pressed="false">Zoom diagram</button>
     <a href="#method-tools">Evidence archive <span aria-hidden="true">↗</span></a>
   </div>
@@ -824,23 +829,6 @@
 </div>
 </div></details>
 </div>
-</div>
-<div data-chapter="films" id="films" hidden>
-  <section class="research-films" aria-labelledby="films-title">
-    <h1 id="films-title">Films</h1>
-    <a class="film-entry" id="film-design-agent-entry" href="#film-design-agent">
-      <img src="assets/narrative/case1-agent-v2-poster.jpg" width="1280" height="720" alt="">
-      <span class="film-entry-number">01 / TIMBER SHELTER</span>
-      <h2>Design Agent</h2>
-      <span class="film-entry-open" aria-hidden="true">↗</span>
-    </a>
-    <a class="film-entry" id="film-stock-allocation-entry" href="#film-stock-allocation">
-      <img src="assets/narrative/case1-allocation-poster.jpg" width="1280" height="720" alt="">
-      <span class="film-entry-number">02 / TIMBER SHELTER</span>
-      <h2>Stock → Cut Part → Building</h2>
-      <span class="film-entry-open" aria-hidden="true">↗</span>
-    </a>
-  </section>
 </div>
 <div data-chapter="film-design-agent" id="film-design-agent" class="film-chapter" hidden>
   <section class="research-film film-player" aria-labelledby="film-design-agent-title">
