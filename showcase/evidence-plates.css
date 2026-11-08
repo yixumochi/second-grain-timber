@@ -121,6 +121,7 @@ main > div > .research-index {
 .research-index-grid.case-study-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+body[data-active-chapter="cases"] #load-status:not(.error) { display: none; }
 .case-study-grid img {
   height: clamp(115px, 19vw, 260px);
 }
