@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SECOND GRAIN — Designing with reclaimed timber</title>
 <meta name="description" content="Real reclaimed-timber evidence, designer-agent decisions and three stock-aware design cases.">
+<link rel="preload" as="image" href="assets/narrative/allocation-shelter-cover-loop.webp" media="(prefers-reduced-motion: no-preference)">
+<link rel="preload" as="image" href="assets/narrative/allocation-shelter-cover.webp" media="(prefers-reduced-motion: reduce)">
 <link rel="stylesheet" href="narrative.css">
 <link rel="stylesheet" href="editorial.css?v=20261107-ai1">
 <link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
-<link rel="stylesheet" href="evidence-plates.css?v=20261108-index-aligned">
-<script defer src="navigation.js?v=20261108-case-studies">
+<link rel="stylesheet" href="evidence-plates.css?v=20261108-cover-loop">
+<script defer src="navigation.js?v=20261108-cover-loop">
 </script>
 <script type="module" src="research.js?v=20261108-cover"></script>
 <script type="module" src="ai-pathways.js?v=20261107-ai1"></script>
@@ -43,9 +45,10 @@
       <h1 id="cover-title">SECOND GRAIN</h1>
     </header>
     <a class="project-cover-entry" href="#overview">
-      <video data-cover-video muted playsinline preload="none" width="1920" height="1080" poster="assets/narrative/allocation-shelter-cover.webp" aria-hidden="true">
-        <source src="assets/narrative/allocation-shelter-cover.webm" type="video/webm">
-      </video>
+      <picture>
+        <source media="(prefers-reduced-motion: reduce)" srcset="assets/narrative/allocation-shelter-cover.webp">
+        <img src="assets/narrative/allocation-shelter-cover-loop.webp" width="960" height="540" alt="">
+      </picture>
       <span class="project-cover-caption">
         <span>Stock → Cut Part → Building</span>
         <strong>Enter project <span aria-hidden="true">↗</span></strong>

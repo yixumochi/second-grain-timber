@@ -42,10 +42,6 @@
       delete document.body.dataset.chapterView;
     }
     document.querySelectorAll('video').forEach(video => { if (video.closest('[hidden]')) video.pause(); });
-    const coverVideo = panel.querySelector('[data-cover-video]');
-    if (coverVideo && changed && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      coverVideo.play().catch(() => {});
-    }
     const anchor = target && target !== panel && !target.matches('[data-diagram-view]') && !target.closest('[hidden]') ? target : null;
     const entering = (changed || viewChanged) && active;
     if (anchor && hash !== 'main') {
