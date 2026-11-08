@@ -1,0 +1,183 @@
+/* SECOND GRAIN / portfolio palette. The figures retain their evidence colors. */
+:root {
+  --portfolio-blue: #001eff;
+  --paper: #f6f1e8;
+  --panel: #fbf8f1;
+  --ink: #111d63;
+  --muted: #424a73;
+  --night: #101d86;
+  --olive: var(--portfolio-blue);
+  --rust: #1732c4;
+  --line: #c6c8db;
+  --acid: #e0e5ff;
+  --pale: #ecebfa;
+  --soft: #e7eaff;
+  --title: #e4e8ff;
+  --gold: #b5bfff;
+  --body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --display: var(--body);
+}
+
+html { scrollbar-color: #7d8cff var(--paper); }
+body { color: var(--ink); background: var(--paper); }
+/* Legacy viewers declare individual font shorthands. Keep their sizing. */
+body, body :not(svg, svg *, pre, pre *, code, code *) {
+  font-family: var(--body) !important;
+}
+::selection { background: var(--portfolio-blue); color: var(--paper); }
+:is(h1,h2,h3) { letter-spacing: -.026em; }
+h1, h2 { font-weight: 400; }
+body > header, .mast, .research-nav {
+  background: var(--portfolio-blue);
+  color: var(--paper);
+  border-color: #f6f1e869;
+}
+.mast .brand, .mast .brand small, .mast > .archive-link,
+body > header .brand, body > header .brand small, body > header .brand b,
+.research-nav a, .research-nav a[aria-current="page"] { color: var(--paper); }
+.mast a:hover, .research-nav a:hover { color: white; text-decoration: underline; }
+.mast .brand { font-weight: 400; letter-spacing: .045em; }
+.chapter-nav {
+  background: var(--portfolio-blue);
+  border-color: #f6f1e869;
+  color: var(--paper);
+}
+.chapter-nav a, .chapter-nav a:hover { color: var(--paper); }
+.chapter-nav a[aria-current="page"] { color: var(--paper); border-color: var(--paper); }
+:is(.mast,.chapter-nav,.research-nav) a:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: -3px;
+}
+
+/* Broad blue fields frame the overview and the two research chapters. */
+main > div > .research-opening {
+  width: 100%;
+  max-width: none;
+  padding-inline: var(--gutter);
+  background: var(--portfolio-blue);
+  color: var(--paper);
+}
+.research-intro h1 {
+  max-width: 14ch;
+  font-size: clamp(42px, 6.1vw, 88px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.research-intro h1 em, .research-deck, .research-abstract,
+.research-opening .text-link, .research-opening figcaption { color: var(--paper); }
+.research-opening .research-object > a { background: var(--paper); }
+.research-opening .research-object figcaption { border-color: #f6f1e869; }
+.research-opening .button.primary {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--portfolio-blue);
+}
+.research-opening .button.primary:hover { background: white; color: var(--portfolio-blue); }
+.research-opening .entry-actions a:focus-visible { outline-color: var(--paper); }
+
+.evidence-plate-head {
+  align-items: center;
+  padding: clamp(16px, 3vw, 40px);
+  background: var(--portfolio-blue);
+}
+.evidence-plate-head > div {
+  width: fit-content;
+  max-width: 100%;
+  padding: clamp(12px, 2vw, 26px) clamp(12px, 2.2vw, 32px);
+  background: var(--paper);
+  color: var(--portfolio-blue);
+}
+.evidence-plate-head .figure-context {
+  margin: 0 0 9px;
+  color: inherit;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.evidence-plate-head h1 {
+  font-size: clamp(28px, 4.1vw, 60px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.evidence-plate-head > p { color: var(--paper); }
+.evidence-plate-scroll { border-color: var(--line); background: var(--paper); }
+.evidence-hotspot {
+  color: var(--portfolio-blue);
+  border: 0;
+  border-radius: 0;
+}
+.evidence-hotspot span {
+  top: 1px;
+  right: 1px;
+  width: 14px;
+  height: 14px;
+  background: #f6f1e8e6;
+  border: 0;
+  border-radius: 0;
+  font: 700 11px/1 var(--body);
+}
+.evidence-hotspot:hover, .evidence-hotspot:focus-visible {
+  background: transparent;
+  outline: 1px solid var(--portfolio-blue);
+  outline-offset: -1px;
+}
+.evidence-hotspot:hover span, .evidence-hotspot:focus-visible span {
+  background: var(--portfolio-blue);
+  color: var(--paper);
+}
+.evidence-plate-shortcuts a { color: var(--portfolio-blue); }
+.evidence-plate-shortcuts a:hover { background: var(--acid); }
+
+.button.primary, .ai-switches button[aria-pressed="true"],
+.ai-stage-list button[aria-pressed="true"] {
+  background: var(--portfolio-blue);
+  border-color: var(--portfolio-blue);
+  color: var(--paper);
+}
+.button.primary:hover { background: var(--night); color: var(--paper); }
+.button:hover, .study-row:hover, .ai-path-row:hover,
+.ai-switches button:hover:not([aria-pressed="true"]),
+.ai-stage-list button:hover:not([aria-pressed="true"]),
+.mask-explanation { background: var(--acid); }
+.ai-stage-list button[aria-pressed="true"] small { color: var(--paper); }
+.material-opening, .geometry-texture .cloud-stage, .texture-stage,
+.defect-spatial .cloud-stage { background: var(--night); color: var(--paper); }
+.opening-copy > p, .source-pipeline small, .source-pipeline > p,
+.seller-card > .caption, .raw-source dt, .cloud-stage .caption,
+.geometry-texture .caption, .defect-spatial .cloud-stage .caption,
+.cloud-stage .figure-context { color: var(--acid); }
+.seller-card { border-color: #aeb9ff; }
+.raw-source figcaption, .cloud-stage button, .cloud-stage select {
+  background: var(--night);
+  color: var(--paper);
+  border-color: #aeb9ff;
+}
+
+/* The archive and linked case viewers share the same palette and type. */
+.window {
+  background: var(--panel);
+  border-color: var(--line);
+  box-shadow: none;
+}
+.titlebar, .unified-section .assembly-gallery > header {
+  background: var(--portfolio-blue);
+  color: var(--paper);
+  border-color: var(--portfolio-blue);
+}
+.titlebar a, .titlebar b { color: inherit; }
+.research-scope {
+  background: var(--panel);
+  color: var(--ink);
+  border-color: var(--line);
+  border-left-color: var(--portfolio-blue);
+  box-shadow: none;
+}
+.research-scope a { color: var(--portfolio-blue); }
+.overview-jumps a { color: var(--portfolio-blue); }
+.research-flow li, .boundary-grid article, .evidence-levels > div,
+.evidence-levels > div:last-child, .experiment-status, .node-summary > div,
+.node-decision, .revision-panel {
+  background: var(--acid);
+  border-color: var(--line);
+}
+.research-flow span, .case-grid dt { color: var(--muted); }
+.case-grid dd, .decision-chain b, .node-findings b { color: var(--ink); }
