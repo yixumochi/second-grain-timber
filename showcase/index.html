@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="narrative.css">
 <link rel="stylesheet" href="editorial.css?v=20261107-ai1">
 <link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
-<link rel="stylesheet" href="evidence-plates.css?v=20261108">
-<script defer src="navigation.js?v=20261107-ai1">
+<link rel="stylesheet" href="evidence-plates.css?v=20261108-films">
+<script defer src="navigation.js?v=20261108-films">
 </script>
-<script type="module" src="research.js?v=20261108"></script>
+<script type="module" src="research.js?v=20261108-films"></script>
 <script type="module" src="ai-pathways.js?v=20261107-ai1"></script>
-<link rel="stylesheet" href="../assets/blueprint.css?v=20261108-blue">
+<link rel="stylesheet" href="../assets/blueprint.css?v=20261108-films">
 </head>
 <body>
 <a class="skip" href="#main">Skip to research</a>
@@ -24,101 +24,55 @@
 </a>
 </header>
 <nav class="chapter-nav" aria-label="Research chapters">
-<a href="#overview" aria-current="page">Overview</a>
+<a href="#overview" data-index-link aria-current="page">Index</a>
 <a href="#materials">Material AI</a>
 <a href="#algorithm">Design Agent</a>
+<a href="#films">Films</a>
 <a href="#cases">Three cases</a>
 </nav>
 <main id="main">
 <p id="load-status" role="status" hidden>Loading saved evidence…</p>
 
 <div data-chapter="overview" id="overview">
-  <section class="research-opening" aria-labelledby="research-title">
-    <div class="research-intro">
-      <h1 id="research-title">Design from<br>
-<em>what exists.</em>
-</h1>
-      <p class="research-deck">Visual AI reads the material.<br>A design Agent makes intent actionable.</p>
-      <p class="research-abstract">Follow two research lines: sparse seller photographs become material evidence; design intent meets stock, code and structure to reshape architectural form.</p>
-      <div class="entry-actions">
-<a class="button primary" href="#materials">Follow the material AI</a>
-<a class="text-link" href="#algorithm">Explore the design Agent <span aria-hidden="true">↗</span>
-</a>
-</div>
+  <section class="research-index" aria-labelledby="research-title">
+    <div class="research-index-intro">
+      <p class="figure-context">RECLAIMED TIMBER / RESEARCH INDEX</p>
+      <h1 id="research-title">Design from<br>what exists.</h1>
+      <p>Four entries into the research, from material evidence and design decisions to films and built-form studies.</p>
     </div>
-    <figure class="research-object">
-      <a href="#case1" aria-label="Explore the Timber Shelter case">
-<img src="../assets/update/assembled.webp" alt="Saved Timber Shelter allocation model showing the different source timber pieces" width="1600" height="1333" fetchpriority="high" decoding="async">
-</a>
-      <figcaption>
-<span>Timber Shelter · Saved allocation model</span>
-<span>155 installed parts / 87 source bars</span>
-</figcaption>
-    </figure>
+    <nav class="research-index-grid" aria-label="Numbered research index">
+      <a class="research-index-card" href="#materials">
+        <h2>Material AI</h2>
+        <img src="assets/diagrams/material-ai.webp" alt="" decoding="async">
+        <p>Photographs to usable stock</p>
+        <span class="research-index-number" aria-hidden="true">01</span>
+      </a>
+      <a class="research-index-card" href="#algorithm">
+        <h2>Design Agent</h2>
+        <img src="assets/diagrams/design-agent.webp" alt="" decoding="async">
+        <p>Brief, stock and code</p>
+        <span class="research-index-number" aria-hidden="true">02</span>
+      </a>
+      <a class="research-index-card" href="#films">
+        <h2>Films</h2>
+        <img src="assets/narrative/case1-allocation-poster.jpg" alt="" decoding="async">
+        <p>Two Timber Shelter films</p>
+        <span class="research-index-number" aria-hidden="true">03</span>
+      </a>
+      <a class="research-index-card" href="#cases">
+        <h2>Three Cases</h2>
+        <img src="../assets/update/assembled.webp" alt="" decoding="async">
+        <p>Shelter, bench and pavilion</p>
+        <span class="research-index-number" aria-hidden="true">04</span>
+      </a>
+    </nav>
   </section>
-  <section class="ai-overview-paths" aria-labelledby="pathways-title">
-    <div class="section-heading"><h2 id="pathways-title">Where AI enters.<br>What changes because of it.</h2><p>Follow the inputs, model outputs and decisions—not only the final objects. Each step links to saved research evidence.</p></div>
-    <a class="ai-path-row" href="#materials"><img src="assets/ai-process/115200-saved-cloud-render.png" alt="Saved point cloud of beam 115200 with the candidate region marked" loading="lazy"><div><h3>Material AI</h3><p>Seller photographs → SAM2 masks → VGGT point support → condition evidence → a proposed usable interval.</p></div><span>See what a piece can supply</span></a>
-    <a class="ai-path-row" href="#algorithm"><img src="assets/ai-process/backing-assembled-model-render.png" alt="Saved Timber Shelter model after the backing revision" loading="lazy"><div><h3>Design Agent</h3><p>Your intent → explicit constraints → material and structural tools → reviewed changes to the form.</p></div><span>See why the form changes</span></a>
-    <p class="caption">Saved material experiments, real API interpretations and computed building revisions are shown with their own provenance. Their complete orchestration remains a research direction.</p>
-  </section>
-  <section class="study-index" aria-labelledby="study-title">
-    <div class="section-heading">
-<h2 id="study-title">One inventory.<br>Three design questions.</h2>
-<p>Each case starts independently from the complete recorded inventory.</p>
 </div>
-    <a class="study-row" href="#case1">
-<span class="study-id">01</span>
-<img src="../assets/update/assembled.webp" alt="Saved Timber Shelter model" loading="lazy" width="1600" height="1333" decoding="async">
-<div>
-<h3>Timber Shelter</h3>
-<p>A small public exhibition shelter</p>
-</div>
-<span class="study-strategy">Mixed sections<br>Multiple building roles</span>
-<span class="study-open" aria-hidden="true">↗</span>
-</a>
-    <a class="study-row" href="#case2">
-<span class="study-id">02</span>
-<img src="../case2/assets/case2-bench.jpg" alt="Saved Contour Bench model" loading="lazy" width="1420" height="545" decoding="async">
-<div>
-<h3>Contour Bench</h3>
-<p>A continuous seat for resting and gathering</p>
-</div>
-<span class="study-strategy">Straight strips<br>Broad-face overlap</span>
-<span class="study-open" aria-hidden="true">↗</span>
-</a>
-    <a class="study-row" href="#case3">
-<span class="study-id">03</span>
-<img src="../case3/assets/pavilion-complete.jpg" alt="Saved Open Pavilion model" loading="lazy" width="1280" height="720" decoding="async">
-<div>
-<h3>Open Pavilion</h3>
-<p>An open, gable-roof gathering space</p>
-</div>
-<span class="study-strategy">Repeated frames<br>Stock-adapted spans</span>
-<span class="study-open" aria-hidden="true">↗</span>
-</a>
-  </section>
-  <section class="research-records" aria-labelledby="records-title">
-<h2 id="records-title">Read the evidence<br>behind the result.</h2>
-<div>
-<p>Source identity, cutting intervals and installed positions remain connected. Saved calculations and representative appearance are documented separately from physical verification.</p>
-<div class="record-links">
-<a href="technical.html">Evidence &amp; research boundaries</a>
-<a href="assets/narrative/cases.json" download>Case records · JSON</a>
-<a href="../assets/update/allocation.json" download>Allocation ledger · JSON</a>
-</div>
-</div>
-</section>
-</div>
-
 <div data-chapter="materials" id="materials" hidden>
-<section class="evidence-plate" aria-labelledby="material-ai-plate-title">
-  <header class="evidence-plate-head">
-    <div><p class="figure-context">SECOND GRAIN / RESEARCH PATHWAYS</p><h1 id="material-ai-plate-title">Material AI</h1></div>
-    <p>Follow one reclaimed beam, 115200, from the original listing to a proposed usable interval.</p>
-  </header>
+<section class="evidence-plate" data-diagram-view aria-labelledby="material-ai-plate-title">
+  <h1 id="material-ai-plate-title" class="evidence-plate-title">Material AI</h1>
   <figure class="evidence-plate-figure">
-    <div class="evidence-plate-scroll" tabindex="0" role="region" aria-label="Material AI diagram. Scroll horizontally on small screens.">
+    <div id="material-ai-diagram" class="evidence-plate-scroll" tabindex="0" role="region" aria-label="Material AI diagram. Select a marked region to explore the evidence.">
       <div class="evidence-plate-sheet">
         <img src="assets/diagrams/material-ai.webp" width="1800" height="1480" loading="lazy" decoding="async" alt="Three photographs of beam 115200 lead to masks, view-specific point clouds, a shared VGGT scene and a separate defect review. Seattle code sets review requirements. The proposed trim retains 828.24 mm.">
         <a href="https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5" target="_blank" rel="noopener" class="evidence-hotspot" style="--x:6.3889%;--y:23.3784%;--w:18.6111%;--h:13.9189%" aria-label="Earthwise seller listing" title="Earthwise seller listing"><span aria-hidden="true">↗</span></a>
@@ -131,18 +85,14 @@
 <a href="#ai-defect" class="evidence-hotspot" style="--x:52.8889%;--y:83.6486%;--w:39.8889%;--h:7.7027%" aria-label="Compare the saved trim scenarios" title="Compare the saved trim scenarios"><span aria-hidden="true">↗</span></a>
       </div>
     </div>
-    <figcaption><span><b aria-hidden="true">↗</b> Select a marked area to open its source.</span><span class="evidence-plate-mobile">Swipe to see the full diagram.</span></figcaption>
   </figure>
-  <nav class="evidence-plate-shortcuts" aria-label="Material AI evidence shortcuts">
-    <a href="https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5" target="_blank" rel="noopener">Earthwise seller listing <span aria-hidden="true">↗</span></a>
-<a href="#material-cloud-evidence">Rotate the saved VGGT points <span aria-hidden="true">↗</span></a>
-<a href="https://www.seattle.gov/documents/Departments/SDCI/Codes/SeattleBuildingCode/2021SBCChapter23.pdf" target="_blank" rel="noopener">Seattle Building Code · Chapter 23 <span aria-hidden="true">↗</span></a>
-<a href="#ai-defect">Compare the saved trim scenarios <span aria-hidden="true">↗</span></a>
-  </nav>
-  <details class="evidence-plate-index"><summary>All links in the diagram</summary>
-    <ul><li><a href="https://ewsalvage.com/lumber-inventory/?item=115200-rough_sawn_fir_beam_chunk_7.125_x_7.375_x_43.5" target="_blank" rel="noopener">Earthwise seller listing <span aria-hidden="true">↗</span></a></li><li><a href="#material-mask-evidence">Saved SAM 2 masks <span aria-hidden="true">↗</span></a></li><li><a href="#material-cloud-evidence">Rotate the saved VGGT points <span aria-hidden="true">↗</span></a></li><li><a href="#material-cloud-evidence">Open the shared 3D scene <span aria-hidden="true">↗</span></a></li><li><a href="https://www.seattle.gov/documents/Departments/SDCI/Codes/SeattleBuildingCode/2021SBCChapter23.pdf" target="_blank" rel="noopener">Seattle Building Code · Chapter 23 <span aria-hidden="true">↗</span></a></li><li><a href="#defect-inspection">Inspect the linked defect points <span aria-hidden="true">↗</span></a></li><li><a href="assets/ai-process/115200-automatic-detail.jpg" target="_blank" rel="noopener">Open the marked source photograph <span aria-hidden="true">↗</span></a></li><li><a href="#ai-defect">Compare the saved trim scenarios <span aria-hidden="true">↗</span></a></li></ul>
-  </details>
+  <div class="evidence-plate-tools">
+    <button type="button" class="evidence-zoom" data-diagram-zoom aria-controls="material-ai-diagram" aria-pressed="false">Zoom diagram</button>
+    <a href="#material-tools">Evidence archive <span aria-hidden="true">↗</span></a>
+  </div>
 </section>
+<div class="evidence-records" data-evidence-view hidden>
+  <p class="evidence-return"><a href="#materials"><span aria-hidden="true">←</span> Back to Material AI diagram</a></p>
 <details class="ai-archive-block"><summary>Method notes, secondary specimen and trim trials</summary><div class="ai-archive-content">
 <section class="ai-opening" aria-labelledby="material-ai-title">
   <h1 id="material-ai-title">From scattered photographs<br>to material decisions.</h1>
@@ -571,20 +521,18 @@
 </section>
 </div></details>
 </div>
+</div>
 <div data-chapter="algorithm" id="algorithm" hidden>
-<section class="evidence-plate" aria-labelledby="design-agent-plate-title">
-  <header class="evidence-plate-head">
-    <div><p class="figure-context">SECOND GRAIN / RESEARCH PATHWAYS</p><h1 id="design-agent-plate-title">Design Agent</h1></div>
-    <p>See how the brief, Seattle code and available stock shape the saved Timber Shelter study.</p>
-  </header>
+<section class="evidence-plate" data-diagram-view aria-labelledby="design-agent-plate-title">
+  <h1 id="design-agent-plate-title" class="evidence-plate-title">Design Agent</h1>
   <figure class="evidence-plate-figure">
-    <div class="evidence-plate-scroll" tabindex="0" role="region" aria-label="Design Agent diagram. Scroll horizontally on small screens.">
+    <div id="design-agent-diagram" class="evidence-plate-scroll" tabindex="0" role="region" aria-label="Design Agent diagram. Select a marked region to explore the evidence.">
       <div class="evidence-plate-sheet">
         <img src="assets/diagrams/design-agent.webp" width="1800" height="1480" loading="lazy" decoding="async" alt="The design Agent interprets the brief. Allocation and Karamba load-case comparisons inform a revised shelter. The stock branch shows actual sections, lengths, quantities and cuts.">
         <a href="#ai-agent-briefs" class="evidence-hotspot" style="--x:7.3753%;--y:23.3069%;--w:15.1844%;--h:18.2938%" aria-label="Compare the recorded Agent briefs" title="Compare the recorded Agent briefs"><span aria-hidden="true">↗</span></a>
 <a href="#ai-agent-briefs" class="evidence-hotspot" style="--x:30.1518%;--y:25.2419%;--w:15.9074%;--h:4.6614%" aria-label="Open the saved Agent interpretations" title="Open the saved Agent interpretations"><span aria-hidden="true">↗</span></a>
-<a href="#agent-film" class="evidence-hotspot" style="--x:8.6045%;--y:47.4934%;--w:13.9552%;--h:20.1407%" aria-label="Watch the Timber Shelter design film" title="Watch the Timber Shelter design film"><span aria-hidden="true">↗</span></a>
-<a href="#allocation-cinema" class="evidence-hotspot" style="--x:31.5980%;--y:36.7634%;--w:15.9798%;--h:4.4855%" aria-label="Watch stock turn into cut parts" title="Watch stock turn into cut parts"><span aria-hidden="true">↗</span></a>
+<a href="#film-design-agent" class="evidence-hotspot" style="--x:8.6045%;--y:47.4934%;--w:13.9552%;--h:20.1407%" aria-label="Watch the Timber Shelter design film" title="Watch the Timber Shelter design film"><span aria-hidden="true">↗</span></a>
+<a href="#film-stock-allocation" class="evidence-hotspot" style="--x:31.5980%;--y:36.7634%;--w:15.9798%;--h:4.4855%" aria-label="Watch stock turn into cut parts" title="Watch stock turn into cut parts"><span aria-hidden="true">↗</span></a>
 <a href="#ai-structural-change" class="evidence-hotspot" style="--x:49.8915%;--y:36.4996%;--w:18.0766%;--h:4.7493%" aria-label="Compare the saved load cases" title="Compare the saved load cases"><span aria-hidden="true">↗</span></a>
 <a href="#case1" class="evidence-hotspot" style="--x:39.6240%;--y:46.5259%;--w:16.9197%;--h:23.8347%" aria-label="Explore the revised Timber Shelter" title="Explore the revised Timber Shelter"><span aria-hidden="true">↗</span></a>
 <a href="#method-response-canvas" class="evidence-hotspot" style="--x:59.0745%;--y:50.7476%;--w:13.1598%;--h:15.7432%" aria-label="Open the Karamba response viewer" title="Open the Karamba response viewer"><span aria-hidden="true">↗</span></a>
@@ -592,22 +540,18 @@
 <a href="https://www.seattle.gov/documents/Departments/SDCI/Codes/SeattleBuildingCode/2021SBCChapter23.pdf" target="_blank" rel="noopener" class="evidence-hotspot" style="--x:77.0788%;--y:43.7995%;--w:19.0166%;--h:7.8276%" aria-label="Seattle Building Code · Chapter 23" title="Seattle Building Code · Chapter 23"><span aria-hidden="true">↗</span></a>
 <a href="../assets/source-117803.jpg" target="_blank" rel="noopener" class="evidence-hotspot" style="--x:10.1229%;--y:85.2243%;--w:13.4490%;--h:9.8505%" aria-label="See the 117803 source photograph" title="See the 117803 source photograph"><span aria-hidden="true">↗</span></a>
 <a href="#assembly" class="evidence-hotspot" style="--x:32.2487%;--y:85.5761%;--w:15.8351%;--h:9.3228%" aria-label="Inspect the saved allocation" title="Inspect the saved allocation"><span aria-hidden="true">↗</span></a>
-<a href="#allocation-cinema" class="evidence-hotspot" style="--x:54.0853%;--y:85.4002%;--w:15.4013%;--h:9.4987%" aria-label="Watch the allocation replay" title="Watch the allocation replay"><span aria-hidden="true">↗</span></a>
+<a href="#film-stock-allocation" class="evidence-hotspot" style="--x:54.0853%;--y:85.4002%;--w:15.4013%;--h:9.4987%" aria-label="Watch the allocation replay" title="Watch the allocation replay"><span aria-hidden="true">↗</span></a>
 <a href="#assembly" class="evidence-hotspot" style="--x:74.6204%;--y:85.5761%;--w:20.4628%;--h:9.7625%" aria-label="Trace a cut to its installed member" title="Trace a cut to its installed member"><span aria-hidden="true">↗</span></a>
       </div>
     </div>
-    <figcaption><span><b aria-hidden="true">↗</b> Select a marked area to open its source.</span><span class="evidence-plate-mobile">Swipe to see the full diagram.</span></figcaption>
   </figure>
-  <nav class="evidence-plate-shortcuts" aria-label="Design Agent evidence shortcuts">
-    <a href="#ai-agent-briefs">Compare the recorded Agent briefs <span aria-hidden="true">↗</span></a>
-<a href="#allocation-cinema">Watch stock turn into cut parts <span aria-hidden="true">↗</span></a>
-<a href="#ai-structural-change">Compare the saved load cases <span aria-hidden="true">↗</span></a>
-<a href="#case1">Explore the revised Timber Shelter <span aria-hidden="true">↗</span></a>
-  </nav>
-  <details class="evidence-plate-index"><summary>All links in the diagram</summary>
-    <ul><li><a href="#ai-agent-briefs">Compare the recorded Agent briefs <span aria-hidden="true">↗</span></a></li><li><a href="#ai-agent-briefs">Open the saved Agent interpretations <span aria-hidden="true">↗</span></a></li><li><a href="#agent-film">Watch the Timber Shelter design film <span aria-hidden="true">↗</span></a></li><li><a href="#allocation-cinema">Watch stock turn into cut parts <span aria-hidden="true">↗</span></a></li><li><a href="#ai-structural-change">Compare the saved load cases <span aria-hidden="true">↗</span></a></li><li><a href="#case1">Explore the revised Timber Shelter <span aria-hidden="true">↗</span></a></li><li><a href="#method-response-canvas">Open the Karamba response viewer <span aria-hidden="true">↗</span></a></li><li><a href="https://www.seattle.gov/documents/Departments/SDCI/Codes/SeattleBuildingCode/2021SBCChapter16.pdf" target="_blank" rel="noopener">Seattle Building Code · Chapter 16 <span aria-hidden="true">↗</span></a></li><li><a href="https://www.seattle.gov/documents/Departments/SDCI/Codes/SeattleBuildingCode/2021SBCChapter23.pdf" target="_blank" rel="noopener">Seattle Building Code · Chapter 23 <span aria-hidden="true">↗</span></a></li><li><a href="../assets/source-117803.jpg" target="_blank" rel="noopener">See the 117803 source photograph <span aria-hidden="true">↗</span></a></li><li><a href="#assembly">Inspect the saved allocation <span aria-hidden="true">↗</span></a></li><li><a href="#allocation-cinema">Watch the allocation replay <span aria-hidden="true">↗</span></a></li><li><a href="#assembly">Trace a cut to its installed member <span aria-hidden="true">↗</span></a></li></ul>
-  </details>
+  <div class="evidence-plate-tools">
+    <button type="button" class="evidence-zoom" data-diagram-zoom aria-controls="design-agent-diagram" aria-pressed="false">Zoom diagram</button>
+    <a href="#method-tools">Evidence archive <span aria-hidden="true">↗</span></a>
+  </div>
 </section>
+<div class="evidence-records" data-evidence-view hidden>
+  <p class="evidence-return"><a href="#algorithm"><span aria-hidden="true">←</span> Back to Design Agent diagram</a></p>
 <details class="ai-archive-block"><summary>Brief experiments, geometry studies and load results</summary><div class="ai-archive-content">
 <section class="ai-opening" aria-labelledby="design-ai-title"><h1 id="design-ai-title">Intent becomes constraints.<br>Constraints reshape form.</h1><p class="ai-deck">The Agent interprets what you want to preserve and what may change. Material allocation and structural analysis test those choices. The designer reviews the consequences.</p><ol class="ai-role-flow"><li><strong>Designer</strong><span>Intent &amp; initial form</span></li><li><strong>Language model</strong><span>Explicit constraints</span></li><li><strong>Rules &amp; solvers</strong><span>Material fit &amp; response</span></li><li><strong>Designer</strong><span>Review &amp; revision</span></li></ol></section>
 <section class="ai-intent" id="ai-agent-briefs" aria-labelledby="intent-title"><div class="section-heading"><h2 id="intent-title">A change in your words<br>changes the available choices.</h2><p>Three saved, real API interpretations of a controlled pavilion brief. Switch the request to see the recorded constraint change.</p></div>
@@ -813,6 +757,30 @@
 <a class="button primary" href="#cases">Explore the three cases →</a>
 </div>
 </div></details>
+</div>
+</div>
+<div data-chapter="films" id="films" hidden>
+  <section class="research-films" aria-labelledby="films-title">
+    <h1 id="films-title">Films</h1>
+    <article class="research-film" id="film-design-agent" aria-labelledby="film-design-agent-title">
+      <p class="figure-context">01 / TIMBER SHELTER</p>
+      <h2 id="film-design-agent-title">Design Agent</h2>
+      <video controls playsinline preload="metadata" width="1280" height="720" aria-labelledby="film-design-agent-title" poster="assets/narrative/case1-agent-v2-poster.jpg">
+        <source src="assets/narrative/case1-agent-v2.mp4" type="video/mp4">
+        <a href="assets/narrative/case1-agent-v2.mp4">Open the Design Agent film</a>
+      </video>
+      <p class="caption">Illustrated summary of the saved brief and design decisions.</p>
+    </article>
+    <article class="research-film" id="film-stock-allocation" aria-labelledby="film-stock-allocation-title">
+      <p class="figure-context">02 / TIMBER SHELTER</p>
+      <h2 id="film-stock-allocation-title">Stock → Cut Part → Building</h2>
+      <video controls playsinline preload="metadata" width="1280" height="720" aria-labelledby="film-stock-allocation-title" poster="assets/narrative/case1-allocation-poster.jpg">
+        <source src="assets/narrative/case1-allocation.mp4" type="video/mp4">
+        <a href="assets/narrative/case1-allocation.mp4">Open the stock allocation film</a>
+      </video>
+      <p class="caption">Saved allocation replay with instrumental music.</p>
+    </article>
+  </section>
 </div>
 <div data-chapter="cases" id="cases" hidden>
 <section class="cases-opening">

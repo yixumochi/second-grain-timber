@@ -75,58 +75,6 @@ main > div > .research-opening {
 .research-opening .button.primary:hover { background: white; color: var(--portfolio-blue); }
 .research-opening .entry-actions a:focus-visible { outline-color: var(--paper); }
 
-.evidence-plate-head {
-  align-items: center;
-  padding: clamp(16px, 3vw, 40px);
-  background: var(--portfolio-blue);
-}
-.evidence-plate-head > div {
-  width: fit-content;
-  max-width: 100%;
-  padding: clamp(12px, 2vw, 26px) clamp(12px, 2.2vw, 32px);
-  background: var(--paper);
-  color: var(--portfolio-blue);
-}
-.evidence-plate-head .figure-context {
-  margin: 0 0 9px;
-  color: inherit;
-  font-size: 11px;
-  letter-spacing: .08em;
-}
-.evidence-plate-head h1 {
-  font-size: clamp(28px, 4.1vw, 60px);
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.evidence-plate-head > p { color: var(--paper); }
-.evidence-plate-scroll { border-color: var(--line); background: var(--paper); }
-.evidence-hotspot {
-  color: var(--portfolio-blue);
-  border: 0;
-  border-radius: 0;
-}
-.evidence-hotspot span {
-  top: 1px;
-  right: 1px;
-  width: 14px;
-  height: 14px;
-  background: #f6f1e8e6;
-  border: 0;
-  border-radius: 0;
-  font: 700 11px/1 var(--body);
-}
-.evidence-hotspot:hover, .evidence-hotspot:focus-visible {
-  background: transparent;
-  outline: 1px solid var(--portfolio-blue);
-  outline-offset: -1px;
-}
-.evidence-hotspot:hover span, .evidence-hotspot:focus-visible span {
-  background: var(--portfolio-blue);
-  color: var(--paper);
-}
-.evidence-plate-shortcuts a { color: var(--portfolio-blue); }
-.evidence-plate-shortcuts a:hover { background: var(--acid); }
-
 .button.primary, .ai-switches button[aria-pressed="true"],
 .ai-stage-list button[aria-pressed="true"] {
   background: var(--portfolio-blue);
