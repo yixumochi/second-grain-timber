@@ -129,9 +129,17 @@ export function mountCloud(canvas,data,controls){
   $('#defect-focus').addEventListener('click',()=>{detail.state.focus=true;detail.reset();pick(0);});
   $('#defect-whole').addEventListener('click',()=>{detail.state.focus=false;detail.reset();});
   $('#defect-highlight').addEventListener('change',e=>{detail.state.highlight=e.target.checked;detail.request();});
-  addEventListener('hashchange',stop);
+  function openEvidenceStage(){
+   if(location.hash==='#material-mask-evidence')setStage('mask');
+   if(location.hash==='#material-cloud-evidence'){
+    setStage('cloud');
+    $('#views-all').click();
+   }
+  }
+  addEventListener('hashchange',()=>{stop();openEvidenceStage();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
   controls.filter.value='0';views([0],'View 01 / original photo colors');setStage('mask');
+  openEvidenceStage();
  }).catch(()=>{
   const section=$('#material-inspection');
   if(!section.querySelector('.figure-error')){

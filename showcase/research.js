@@ -6,7 +6,8 @@ function start(path) {
       const status=document.getElementById('load-status');
       if(!status.classList.contains('error')){status.hidden=false;status.textContent='Loading saved evidence…';}
     }
-    started.set(path, import(path+'?v=20261107-ai1').catch(() => {
+    const version=path==='./workflow.js'?'20261108':'20261107-ai1';
+    started.set(path, import(path+'?v='+version).catch(() => {
       started.delete(path);
       const status=document.getElementById('load-status');
       status.hidden=false;status.className='error';
