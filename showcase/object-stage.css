@@ -1,0 +1,161 @@
+body[data-chapter-view="object"] > :is(.mast, .footer), body[data-chapter-view="object"] #load-status {
+  display: none;
+}
+body[data-chapter-view="object"] > .chapter-nav {
+  border-top: 0;
+  min-height: 48px;
+}
+body[data-chapter-view="object"] > .chapter-nav a { padding-block: 12px; }
+
+main > div > .object-stage {
+  --stage-rule: #c5c8d7;
+  --stage-field: #fcfbf7;
+  width: calc(100% - 2 * var(--gutter));
+  max-width: 1540px;
+  padding: clamp(18px, 2vw, 34px) 0 10px;
+  border: 0;
+}
+.object-stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--stage-rule);
+}
+.object-stage-header .figure-context, .object-evidence .figure-context {
+  margin: 0 0 7px;
+  color: var(--portfolio-blue);
+  font-size: 11px;
+  letter-spacing: .075em;
+}
+.object-stage-header h1 {
+  color: var(--ink);
+  margin: 0;
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: .98;
+}
+.object-workflow, .object-evidence-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 7px;
+  color: var(--portfolio-blue);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.object-stage-layout {
+  display: grid;
+  grid-template-columns: minmax(138px, .62fr) minmax(0, 3.1fr) minmax(211px, 1fr);
+  gap: clamp(13px, 2vw, 32px);
+  align-items: start;
+  padding-top: 18px;
+}
+.object-steps { border-top: 1px solid var(--stage-rule); }
+.object-steps button {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px;
+  border: 0;
+  border-bottom: 1px solid var(--stage-rule);
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.object-steps button span { color: var(--portfolio-blue); font-size: 12px; font-variant-numeric: tabular-nums; }
+.object-steps button:hover { background: var(--acid); }
+.object-steps button[aria-pressed="true"] {
+  color: var(--paper);
+  background: var(--portfolio-blue);
+}
+.object-steps button[aria-pressed="true"] span { color: inherit; }
+.object-scene { margin: 0; min-width: 0; }
+.object-media {
+  position: relative;
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: center;
+  height: clamp(275px, calc(100svh - 244px), 740px);
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid var(--stage-rule);
+  background: var(--stage-field);
+}
+.object-media > img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.object-media .object-silhouette {
+  mask-image: url("assets/115200-1-mask.png");
+  mask-mode: luminance;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+.object-media canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+.object-media canvas:active { cursor: grabbing; }
+.object-media canvas:focus-visible { outline-offset: -4px; }
+.object-scene-instruction {
+  position: absolute;
+  margin: 0;
+  bottom: 12px;
+  left: 15px;
+  color: var(--muted);
+  background: var(--stage-field);
+  font-size: 12px;
+  pointer-events: none;
+}
+.object-scene figcaption { padding-top: 8px; font-size: 12px; }
+.object-evidence {
+  min-width: 0;
+  border-top: 1px solid var(--stage-rule);
+  padding-top: 11px;
+}
+.object-evidence > img {
+  display: block;
+  width: 100%;
+  height: clamp(94px, 20vh, 172px);
+  object-fit: contain;
+  background: var(--stage-field);
+}
+.object-evidence h2 {
+  font-size: clamp(19px, 1.7vw, 26px);
+  margin: 13px 0 6px;
+  line-height: 1.15;
+}
+.object-evidence p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+
+@media (max-width: 910px) {
+  .object-stage-layout { grid-template-columns: minmax(0, 1fr) minmax(185px, .48fr); }
+  .object-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  .object-stage-layout { grid-template-columns: 1fr; gap: 12px; }
+  .object-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .object-steps button { min-height: 42px; }
+  .object-media { height: clamp(246px, 45svh, 400px); }
+  .object-stage-header h1 { font-size: 34px; }
+  .object-workflow { flex-shrink: 0; font-size: 12px; }
+  .object-evidence > img { height: 124px; }
+}
+@media (min-width: 701px) and (max-width: 950px) {
+  .evidence-plate-tools { gap: 8px; }
+  .evidence-plate-tools a { font-size: 12px; gap: 3px; }
+}

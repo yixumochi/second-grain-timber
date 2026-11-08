@@ -9,11 +9,13 @@
 <link rel="stylesheet" href="editorial.css?v=20261107-ai1">
 <link rel="stylesheet" href="ai-pathways.css?v=20261107-ai1">
 <link rel="stylesheet" href="evidence-plates.css?v=20261108-players">
-<script defer src="navigation.js?v=20261108-players">
+<script defer src="navigation.js?v=20261108-object">
 </script>
-<script type="module" src="research.js?v=20261108-players"></script>
+<script type="module" src="research.js?v=20261108-object"></script>
 <script type="module" src="ai-pathways.js?v=20261107-ai1"></script>
 <link rel="stylesheet" href="../assets/blueprint.css?v=20261108-films">
+<link rel="stylesheet" href="object-stage.css?v=20261108-object">
+<script type="module" src="object-stage.js?v=20261108-object"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to research</a>
@@ -69,7 +71,38 @@
   </section>
 </div>
 <div data-chapter="materials" id="materials" hidden>
-<section class="evidence-plate" data-diagram-view aria-labelledby="material-ai-plate-title">
+<section class="object-stage" data-object-view data-object="materials" aria-labelledby="material-stage-title">
+  <header class="object-stage-header">
+    <div><p class="figure-context">01 / RECLAIMED BEAM 115200</p><h1 id="material-stage-title">Material AI</h1></div>
+    <a class="object-workflow" href="#material-workflow">View workflow <span aria-hidden="true">↗</span></a>
+  </header>
+  <div class="object-stage-layout">
+    <div class="object-steps" role="group" aria-label="Material AI views">
+      <button type="button" data-object-step="source" aria-pressed="true" aria-controls="material-visual material-evidence"><span aria-hidden="true">01</span> Source</button>
+      <button type="button" data-object-step="mask" aria-pressed="false" aria-controls="material-visual material-evidence"><span aria-hidden="true">02</span> Segmentation</button>
+      <button type="button" data-object-step="cloud" aria-pressed="false" aria-controls="material-visual material-evidence"><span aria-hidden="true">03</span> Point cloud</button>
+      <button type="button" data-object-step="trim" aria-pressed="false" aria-controls="material-visual material-evidence"><span aria-hidden="true">04</span> Defect &amp; trim</button>
+    </div>
+    <figure class="object-scene" id="material-visual">
+      <div class="object-media">
+        <img data-object-image class="object-silhouette" src="assets/115200-1-photo.webp" alt="Seller view 01 of beam 115200, isolated with its saved mask" loading="lazy" decoding="async">
+        <canvas hidden tabindex="0" data-object-cloud aria-label="Beam 115200 point cloud. Drag or use the arrow keys to rotate."></canvas>
+        <p hidden class="object-scene-instruction" data-cloud-instruction>Drag or use arrow keys to rotate</p>
+      </div>
+      <figcaption data-object-caption>Seller view 01 · isolated with its saved mask</figcaption>
+    </figure>
+    <aside class="object-evidence" id="material-evidence" aria-label="Material AI evidence">
+      <p class="figure-context" data-object-kicker>01 / SELLER RECORD</p>
+      <img data-object-evidence-image src="assets/115200-1-photo.webp" alt="" loading="lazy" decoding="async">
+      <div aria-live="polite">
+        <h2 data-object-heading>One beam, three views</h2>
+        <p data-object-copy>The listing reports a length of 1,104.9 mm. Grade, decay and unseen faces still need evidence.</p>
+      </div>
+      <a class="object-evidence-link" data-object-link href="#material-tools">See the seller record <span aria-hidden="true">↗</span></a>
+    </aside>
+  </div>
+</section>
+<section class="evidence-plate" data-diagram-view id="material-workflow" hidden aria-labelledby="material-ai-plate-title">
   <h1 id="material-ai-plate-title" class="evidence-plate-title">Material AI</h1>
   <figure class="evidence-plate-figure">
     <div id="material-ai-diagram" class="evidence-plate-scroll" tabindex="0" role="region" aria-label="Material AI diagram. Select a marked region to explore the evidence.">
@@ -88,12 +121,13 @@
     </div>
   </figure>
   <div class="evidence-plate-tools">
+    <a href="#materials"><span aria-hidden="true">←</span> Back to object</a>
     <button type="button" class="evidence-zoom" data-diagram-zoom aria-controls="material-ai-diagram" aria-pressed="false">Zoom diagram</button>
     <a href="#material-tools">Evidence archive <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 <div class="evidence-records" data-evidence-view hidden>
-  <p class="evidence-return"><a href="#materials"><span aria-hidden="true">←</span> Back to Material AI diagram</a></p>
+  <p class="evidence-return"><a href="#materials"><span aria-hidden="true">←</span> Back to Material AI</a></p>
 <details class="ai-archive-block"><summary>Method notes, secondary specimen and trim trials</summary><div class="ai-archive-content">
 <section class="ai-opening" aria-labelledby="material-ai-title">
   <h1 id="material-ai-title">From scattered photographs<br>to material decisions.</h1>
@@ -524,7 +558,36 @@
 </div>
 </div>
 <div data-chapter="algorithm" id="algorithm" hidden>
-<section class="evidence-plate" data-diagram-view aria-labelledby="design-agent-plate-title">
+<section class="object-stage" data-object-view data-object="algorithm" aria-labelledby="design-stage-title">
+  <header class="object-stage-header">
+    <div><p class="figure-context">02 / TIMBER SHELTER</p><h1 id="design-stage-title">Design Agent</h1></div>
+    <a class="object-workflow" href="#design-workflow">View workflow <span aria-hidden="true">↗</span></a>
+  </header>
+  <div class="object-stage-layout">
+    <div class="object-steps" role="group" aria-label="Design Agent views">
+      <button type="button" data-object-step="shelter" aria-pressed="true" aria-controls="design-visual design-evidence"><span aria-hidden="true">01</span> Revised shelter</button>
+      <button type="button" data-object-step="frame" aria-pressed="false" aria-controls="design-visual design-evidence"><span aria-hidden="true">02</span> Structural frame</button>
+      <button type="button" data-object-step="allocation" aria-pressed="false" aria-controls="design-visual design-evidence"><span aria-hidden="true">03</span> Stock allocation</button>
+      <button type="button" data-object-step="loads" aria-pressed="false" aria-controls="design-visual design-evidence"><span aria-hidden="true">04</span> Load cases</button>
+    </div>
+    <figure class="object-scene" id="design-visual">
+      <div class="object-media">
+        <img data-object-image  src="../assets/update/assembled.webp" alt="Saved timber shelter assembly with reclaimed wood cladding" loading="lazy" decoding="async">
+      </div>
+      <figcaption data-object-caption>Saved Timber Shelter revision · assembled</figcaption>
+    </figure>
+    <aside class="object-evidence" id="design-evidence" aria-label="Design Agent evidence">
+      <p class="figure-context" data-object-kicker>01 / SAVED REVISION</p>
+      <img data-object-evidence-image src="../assets/update/p09-structure-and-backing.webp" alt="" loading="lazy" decoding="async">
+      <div aria-live="polite">
+        <h2 data-object-heading>A revised shelter</h2>
+        <p data-object-copy>The saved revision adjusts 10 rails and studs. The enclosure and successful stock allocation are retained.</p>
+      </div>
+      <a class="object-evidence-link" data-object-link href="#case1">Explore the Shelter case <span aria-hidden="true">↗</span></a>
+    </aside>
+  </div>
+</section>
+<section class="evidence-plate" data-diagram-view id="design-workflow" hidden aria-labelledby="design-agent-plate-title">
   <h1 id="design-agent-plate-title" class="evidence-plate-title">Design Agent</h1>
   <figure class="evidence-plate-figure">
     <div id="design-agent-diagram" class="evidence-plate-scroll" tabindex="0" role="region" aria-label="Design Agent diagram. Select a marked region to explore the evidence.">
@@ -548,12 +611,13 @@
     </div>
   </figure>
   <div class="evidence-plate-tools">
+    <a href="#algorithm"><span aria-hidden="true">←</span> Back to object</a>
     <button type="button" class="evidence-zoom" data-diagram-zoom aria-controls="design-agent-diagram" aria-pressed="false">Zoom diagram</button>
     <a href="#method-tools">Evidence archive <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 <div class="evidence-records" data-evidence-view hidden>
-  <p class="evidence-return"><a href="#algorithm"><span aria-hidden="true">←</span> Back to Design Agent diagram</a></p>
+  <p class="evidence-return"><a href="#algorithm"><span aria-hidden="true">←</span> Back to Design Agent</a></p>
 <details class="ai-archive-block"><summary>Brief experiments, geometry studies and load results</summary><div class="ai-archive-content">
 <section class="ai-opening" aria-labelledby="design-ai-title"><h1 id="design-ai-title">Intent becomes constraints.<br>Constraints reshape form.</h1><p class="ai-deck">The Agent interprets what you want to preserve and what may change. Material allocation and structural analysis test those choices. The designer reviews the consequences.</p><ol class="ai-role-flow"><li><strong>Designer</strong><span>Intent &amp; initial form</span></li><li><strong>Language model</strong><span>Explicit constraints</span></li><li><strong>Rules &amp; solvers</strong><span>Material fit &amp; response</span></li><li><strong>Designer</strong><span>Review &amp; revision</span></li></ol></section>
 <section class="ai-intent" id="ai-agent-briefs" aria-labelledby="intent-title"><div class="section-heading"><h2 id="intent-title">A change in your words<br>changes the available choices.</h2><p>Three saved, real API interpretations of a controlled pavilion brief. Switch the request to see the recorded constraint change.</p></div>

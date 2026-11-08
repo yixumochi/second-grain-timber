@@ -31,16 +31,20 @@
     const records = panel.querySelector(':scope > [data-evidence-view]');
     let viewChanged = false;
     if (records) {
-      const showingRecords = hash === 'main' ? !records.hidden : Boolean(target && records.contains(target));
-      viewChanged = records.hidden === showingRecords;
-      records.hidden = !showingRecords;
-      panel.querySelector(':scope > [data-diagram-view]').hidden = showingRecords;
-      document.body.dataset.chapterView = showingRecords ? 'evidence' : 'diagram';
+      const diagram = panel.querySelector(':scope > [data-diagram-view]');
+      const scene = panel.querySelector(':scope > [data-object-view]');
+      const view = hash === 'main' ? document.body.dataset.chapterView
+        : records.contains(target) ? 'evidence' : diagram.contains(target) ? 'diagram' : 'object';
+      viewChanged = document.body.dataset.chapterView !== view;
+      records.hidden = view !== 'evidence';
+      diagram.hidden = view !== 'diagram';
+      scene.hidden = view !== 'object';
+      document.body.dataset.chapterView = view;
     } else {
       delete document.body.dataset.chapterView;
     }
     document.querySelectorAll('video').forEach(video => { if (video.closest('[hidden]')) video.pause(); });
-    const anchor = target && target !== panel && !target.closest('[hidden]') ? target : null;
+    const anchor = target && target !== panel && !target.matches('[data-diagram-view]') && !target.closest('[hidden]') ? target : null;
     const entering = (changed || viewChanged) && active;
     if (anchor && hash !== 'main') {
       let disclosure = anchor.closest('details');
@@ -55,7 +59,7 @@
       anchor.scrollIntoView({block:'start',behavior:'instant'});
     } else if ((entering || target === panel) && hash !== 'main') {
       if (entering) {
-        const heading = panel.querySelector('h1,h2');
+        const heading = [...panel.querySelectorAll('h1,h2')].find(item => !item.closest('[hidden]'));
         const previousRoute = /^case\d$/.test(active) ? 'cases' : active;
         const card = chapter === 'overview'
           ? panel.querySelector(`.research-index-card[href="#${previousRoute}"]`)
