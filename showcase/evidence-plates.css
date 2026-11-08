@@ -113,7 +113,18 @@ main > div > .research-index {
   color: var(--muted);
   font-size: 13px;
 }
-.research-index-card:is([href$="-workflow"], [href^="#film-"]) p {
+#overview .research-index-card h2 {
+  line-height: 1.1;
+  min-block-size: 2.2em;
+}
+#overview .research-index-card img {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+#overview .research-index-card p {
+  line-height: 1.4;
+  min-block-size: 2.8em;
+  align-content: center;
   color: var(--portfolio-blue);
   text-decoration: underline;
   text-underline-offset: 3px;
