@@ -546,7 +546,7 @@
       }
     ],
     "dialogue_basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.",
-    "film": "assets/narrative/case2-allocation-focus-hd.mp4",
+    "film": "assets/narrative/case2-allocation-focus-hd-blue.mp4",
     "agent_film": "assets/narrative/case2-design-focus-hd.mp4"
   },
   {
@@ -804,7 +804,7 @@
       }
     ],
     "dialogue_basis": "Edited English paraphrase of saved user instructions, brief and decisions. Not a verbatim transcript, live API response or live weather query.",
-    "film": "assets/narrative/case3-allocation-focus-hd.mp4",
+    "film": "assets/narrative/case3-allocation-focus-hd-blue.mp4",
     "agent_film": "assets/narrative/case3-design-focus-hd.mp4"
   }
 ]
